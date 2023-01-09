@@ -66,6 +66,16 @@ body{
         border: 0px;
         border-radius: 5px;
     }
+    .back{
+        color: black;
+        text-decoration: none;
+        position: relative;
+        left: 50px;
+        font-size: 20px;
+    }
+    .back:hover{
+        color:#21EFEF;
+    }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px){
     .logo{
@@ -155,6 +165,16 @@ body{
         border: 0px;
         border-radius: 5px;
     }
+    .back{
+        color: black;
+        text-decoration: none;
+        position: relative;
+        left: 40px;
+        font-size: 20px;
+    }
+    .back:hover{
+        color:#21EFEF;
+    }
 }
 @media only screen and (min-width: 769px) and (max-width: 1280px){
     .logo{
@@ -166,9 +186,9 @@ body{
     #navbar{
         display: flex;
         flex-direction: column;
-        width: 13%;
+        width: 15%;
         position: fixed;
-        height: 850px;
+        height: 1500px;
         background-color: #181818;
         color: #999696;
     }
@@ -243,6 +263,16 @@ body{
         left: 300px;
         border: 0px;
         border-radius: 5px;
+    }
+    .back{
+        color: black;
+        text-decoration: none;
+        position: relative;
+        left: 40px;
+        font-size: 20px;
+    }
+    .back:hover{
+        color:#21EFEF;
     }
 }
 @media only screen and (min-width: 1440px){
@@ -332,5 +362,15 @@ body{
         left: 500px;
         border: 0px;
         border-radius: 5px;
+    }
+    .back{
+        color: black;
+        text-decoration: none;
+        position: relative;
+        left: 40px;
+        font-size: 20px;
+    }
+    .back:hover{
+        color:#21EFEF;
     }
 }
