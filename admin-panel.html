@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width, initial-scale=1.0">
+        <title>Admin Panel</title>
+        <link rel="stylesheet" href="admin-panel.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <div id="home">
+                    <a class="landing-page" href="index.html#landing-page"> 
+                        <img class="logo" src="images/logo.png">
+                     </a>
+                     <p>Web Developer</p>
+                </div>
+                <a class="add-post" href="#add-post">Add a post</a><hr>
+                <a class="blogs-articles" href="#blog-articles">Blogs/Articles</a><hr>
+                <a class="queries" href="#queries-socials">Queries & Socials</a><hr>
+
+                <a href="index.html"><button id="logoutbtn" type="button">Logout</button></a>
+            </nav>
+        </header>
+
+        <h2 class="admin-title">Admin Panel</h2>
+
+        <section id="add-post">
+            <h2>Add a Post</h2>
+
+            <form class="add-post-form">
+                <label id="labels" for="topic">Topic of the Blog/Article</label>
+                <input id="topic" type="text">
+                <label id="labels" for="title">Title of the Blog/Article</label>
+                <input id="title" type="text">
+                <label id="labels" for="post">Blog/Article Description</label>
+                <textarea id="post"></textarea>
+                <button id="blog-image-btn" type="button">Add image</button>
+                <a href="preview-blog.html"><button id="postbtn" type="button">Preview</button></a>
+            </form>
+        </section>
+
+        <section id="blog-articles">
+            <h2 class="blog-title">Blogs</h2>
+            <div class="blogs-part">
+                <p class="blog1">Title of the blog</p>
+                <button id="editbtn-b1" type="button">Edit</button>
+                <button id="deletebtn-b1" type="button">Delete</button>
+
+                <p class="blog2">Title of the blog</p>
+                <button id="editbtn-b2" type="button">Edit</button>
+                <button id="deletebtn-b2" type="button">Delete</button>
+
+                <p class="blog3">Title of the blog</p>
+                <button id="editbtn-b3" type="button">Edit</button>
+                <button id="deletebtn-b3" type="button">Delete</button>
+
+                <p class="blog4">Title of the blog</p>
+                <button id="editbtn-b4" type="button">Edit</button>
+                <button id="deletebtn-b4" type="button">Delete</button>
+
+                <p class="blog5">Title of the blog</p>
+                <button id="editbtn-b5" type="button">Edit</button>
+                <button id="deletebtn-b5" type="button">Delete</button>
+            </div>
+
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+
+            <h2 class="articles-title">Articles</h2>
+            <div class="articles-part">
+                <p class="article1">Title of the article</p>
+                <button id="editbtn-a1" type="button">Edit</button>
+                <button id="deletebtn-a1" type="button">Delete</button>
+
+                <p class="article2">Title of the article</p>
+                <button id="editbtn-a2" type="button">Edit</button>
+                <button id="deletebtn-a2" type="button">Delete</button>
+
+                <p class="article3">Title of the article</p>
+                <button id="editbtn-a3" type="button">Edit</button>
+                <button id="deletebtn-a3" type="button">Delete</button>
+
+                <p class="article4">Title of the article</p>
+                <button id="editbtn-a4" type="button">Edit</button>
+                <button id="deletebtn-a4" type="button">Delete</button>
+
+                <p class="article5">Title of the article</p>
+                <button id="editbtn-a5" type="button">Edit</button>
+                <button id="deletebtn-a5" type="button">Delete</button>
+            </div>
+
+            <div class="triangle3"></div>
+            <div class="triangle4"></div>
+
+        </section>
+           
+
+        <section id="queries-socials">
+            <h2 class="socials">Queries & Socials</h2>
+            <h4 class="media-visits">Social Media Visits</h4>
+            <div class="media-container">
+                <img class="ig-logo" src="images/instagram.png">
+                <p>10</p>
+                <img class="in-logo" src="images/linkedin.png">
+                <p>3</p>
+                <img class="gt-logo" src="images/github.png">
+                <p>5</p>
+            </div>
+
+            <div class="triangle5"></div>
+
+            <h4 class="new-queries">New Queries</h4>
+            <div class="new-queries-container">
+                <p class="q-name">Name: Boris</p>
+                <p class="q-email">Email: kirengaboris5@gmail.com</p>
+                <p class="q-message">Message: Sed ut perspiciatis unde <br>
+                    omnis iste natus error sitSed</p>
+            </div>
+
+            <div class="triangle6"></div>
+
+            <button id="msg-deletebtn" type="button">Delete</button>
+
+            <h4 class="all-queries">List Of All Queries</h4>
+
+            <div class="all-queries-container">
+                <p class="c-name">Name: Boris</p>
+                <p class="c-email">Email: kirengaboris5@gmail.com</p>
+                <p class="c-message">Message: Sed ut perspiciatis unde <br>
+                    omnis iste natus error sitSed</p>
+            </div>
+        </section>
+
+        <script src="admin-panel.js"></script>
+    </body>
+</html>

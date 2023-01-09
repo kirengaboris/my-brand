@@ -1,0 +1,794 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1D1D1D;
+    color: black;  
+    font-family: 'Roboto'; 
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 425px){
+  #navbar{
+    display: none;
+  } 
+  body{
+    background-color: #999696;
+    overflow-x: hidden;
+    font-family: 'Forum'; 
+  }
+  h1,
+  h2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 45px;
+  }
+  .blog-pic{
+    width: 75%;
+   position: relative;
+   left: 75px;
+  }
+  h3{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  #para1,
+  #para2,
+  #para3,
+  #para4,
+  #para5,
+  #para6,
+  #para7,
+  #para8{
+        padding: 10px 20px 10px 20px;
+        position: relative;
+        left: 30px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+        left: 50px;
+    }
+    a.back:hover{
+        color: #21EFEF;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 50px;
+        top: 10px;
+    }
+    .comments-form{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px 10px 40px;
+    }
+    #name{
+        width: 80%;
+        height: 30px;
+        font-family: Forum;
+        font-size: 15px;
+        position: relative;
+        border: 0px;
+        border-radius: 5px;
+        margin-bottom: 1px;
+    }
+    #comment{
+        width: 80%;
+        height: 50px;
+        font-family: Forum;
+        font-size: 15px;
+        position: relative;
+        border: 0px;
+        border-radius: 5px;
+        margin-bottom: 1px;
+    }
+    #commentbtn{
+        width: 25%;
+        font-family: Forum;
+        font-size: 15px;
+        position: relative;
+        border: 0px;
+        border-radius: 5px;
+    }
+    .comments-list{
+        background-color: whitesmoke;
+        width: 95%;
+        height: auto;
+        padding: 10px 0px 10px 0px;
+        position: relative;
+        left: 40px;
+        border-radius: 5px;
+        border: 0px;
+    }
+    .c-title{
+        position: relative;
+        left: 50px;
+        padding-bottom: 5px;
+    }
+    .comment,
+    .name{
+        padding-left: 5px;
+    }
+    .comment{
+        padding-bottom: 5px;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    .logo{
+        width:70px;
+    }
+    #home{
+        background-color: black;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        position: fixed;
+        height: 1500px;
+        background-color: #181818;
+        color: #999696;
+    }
+    #navbar p{
+        font-size: 15px;
+        padding: 10px 0px 20px 10px;
+    }
+    #navbar a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
+    }
+    
+    a.section1{
+        padding: 20px 20px 10px 10px;
+        position: relative;
+        left: 15px;
+    }
+    a.section2,
+    a.section3,
+    a.section4,
+    a.section5,
+    a.section6,
+    a.section7,
+    a.section8{
+        padding-bottom: 10px;
+        position: relative;
+        left: 15px;
+    }
+    h1,
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+    #para1,
+    #para2,
+    #para3,
+    #para4,
+    #para5,
+    #para6,
+    #para7,
+    #para8{
+        padding: 0px 20px 20px 20px;
+    }
+    .blog-container{
+        background-color: #999696;
+        width: 88%;
+        position: relative;
+        left: 150px;
+        top: 30px;
+        font-family: Forum;
+    }
+    .blog-pic{
+        width: 400px;
+        height: 200px;
+        position: relative;
+        left: 140px;
+    }
+    .comments-likes{
+        width: 89%;
+        background-color: #1D1D1D;
+        position: relative;
+        left: 150px;
+        top: 50px;
+        padding: 10px 0px 10px 0px;
+    }
+    a.back{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        left: 10px;
+        bottom: 30px;
+        font-size: 20px;
+        font-family: Forum;
+    }
+    a.back:hover{
+        color: #21EFEF;
+    }
+    .blog-container h3,
+    .blog-container p{
+        padding: 10px 20px 0px 20px;
+    }
+    .blog-container h3{
+       display: flex;
+       justify-content: center;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 180px;
+    }
+    #name{
+        width: 20%;
+        height: 30px;
+        padding-left: 5px;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        left: 330px;
+        bottom: 55px;
+        border: 0px;
+        border-radius: 10px;
+    
+    }
+    #comment{
+        width: 25%;
+        border: 0px;
+        font-size: 20px;
+        padding: 5px 0px 5px 10px;
+        height: 40px;
+        font-family: Forum;
+        position: relative;
+        bottom: 46px;
+        left: 330px;
+        border-radius: 7px;
+    }
+    #commentbtn{
+        width: 5%;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        bottom: 51px;
+        left: 330px;
+        border: 0px;
+        border-radius: 5px;
+    }
+    .comments-list{
+        background-color: #999696;
+        width: 98.9%;
+        height: auto;
+        position: relative;
+        left: 10px;
+        bottom: 20px;
+        border-radius: 10px;
+        border: 0px;
+    }
+    .comments-likes p{
+        color: white;
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        font-family: Forum;
+        font-size: 20px;   
+    }
+    .comments-list p{
+        color: black;
+        position: relative;
+        top: 2px;
+    }
+    .comment{
+        padding:0px 0px 10px 0px;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1280px){
+    .logo{
+        width:100px;
+    }
+    #home{
+        background-color: black;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        width: 13%;
+        position: fixed;
+        height: 850px;
+        background-color: #181818;
+        color: #999696;
+    }
+    #navbar p{
+        font-size: 15px;
+        padding: 10px 0px 20px 20px;
+    }
+    #navbar a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
+    }
+    
+    a.section1{
+        padding: 20px 20px 10px 10px;
+        position: relative;
+        left: 15px;
+    }
+    a.section2,
+    a.section3,
+    a.section4,
+    a.section5,
+    a.section6,
+    a.section7,
+    a.section8{
+        padding-bottom: 10px;
+        position: relative;
+        left: 15px;
+    }
+    h1,
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+    #para1,
+    #para2,
+    #para3,
+    #para4,
+    #para5,
+    #para6,
+    #para7,
+    #para8{
+        padding: 0px 20px 20px 20px;
+    }
+    .blog-container{
+        background-color: #999696;
+        width: 80%;
+        position: relative;
+        left: 170px;
+        top: 30px;
+        font-family: Forum;
+    }
+    .blog-pic{
+        width: 400px;
+        height: 200px;
+        position: relative;
+        left: 200px;
+    }
+    .comments-likes{
+        width: 81%;
+        background-color: #1D1D1D;
+        position: relative;
+        left: 150px;
+        top: 50px;
+        padding: 10px 0px 10px 0px;
+    }
+    a.back{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        left: 20px;
+        bottom: 30px;
+        font-size: 20px;
+        font-family: Forum;
+    }
+    a.back:hover{
+        color: #21EFEF;
+    }
+    .blog-container h3,
+    .blog-container p{
+        padding: 10px 20px 0px 20px;
+    }
+    .blog-container h3{
+       display: flex;
+       justify-content: center;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 278px;
+    }
+    #name{
+        width: 20%;
+        height: 30px;
+        padding-left: 5px;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        left: 421px;
+        bottom: 55px;
+        border: 0px;
+        border-radius: 10px;
+    
+    }
+    #comment{
+        width: 25%;
+        border: 0px;
+        font-size: 20px;
+        padding: 5px 0px 5px 10px;
+        height: 40px;
+        font-family: Forum;
+        position: relative;
+        bottom: 46px;
+        left: 420px;
+        border-radius: 7px;
+    }
+    #commentbtn{
+        width: 5%;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        bottom: 51px;
+        left: 418px;
+        border: 0px;
+        border-radius: 5px;
+    }
+    .comments-list{
+        background-color: #999696;
+        width: 98.9%;
+        height: auto;
+        position: relative;
+        left: 20px;
+        bottom: 20px;
+        border-radius: 10px;
+        border: 0px;
+    }
+    .comments-likes p{
+        color: white;
+        position: relative;
+        bottom: 30px;
+        font-family: Forum;
+        font-size: 20px;   
+    }
+    .comments-list p{
+        color: black;
+        position: relative;
+        top: 2px;
+        left: 5px;
+    }
+    .comment{
+        padding:0px 0px 10px 0px;
+    }
+    .c-title{
+        position: relative;
+        left: 25px;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1439px){
+    .logo{
+        width:100px;
+    }
+    #home{
+        background-color: black;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        width: 13%;
+        position: fixed;
+        height: 750px;
+        background-color: #181818;
+        color: #999696;
+    }
+    #navbar p{
+        font-size: 15px;
+        padding: 10px 0px 20px 20px;
+    }
+    #navbar a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
+    }
+    
+    a.section1{
+        padding: 20px 20px 10px 10px;
+        position: relative;
+        left: 15px;
+    }
+    a.section2,
+    a.section3,
+    a.section4,
+    a.section5,
+    a.section6,
+    a.section7,
+    a.section8{
+        padding-bottom: 10px;
+        position: relative;
+        left: 15px;
+    }
+    h1,
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+    #para1,
+    #para2,
+    #para3,
+    #para4,
+    #para5,
+    #para6,
+    #para7,
+    #para8{
+        padding: 0px 20px 20px 20px;
+    }
+    .blog-container{
+        background-color: #999696;
+        width: 88%;
+        position: relative;
+        left: 155px;
+        top: 30px;
+        font-family: Forum;
+    }
+    .blog-pic{
+        width: 400px;
+        height: 200px;
+        position: relative;
+        left: 250px;
+    }
+    .comments-likes{
+        width: 89%;
+        background-color: #1D1D1D;
+        position: relative;
+        left: 150px;
+        top: 50px;
+        padding: 10px 0px 10px 0px;
+    }
+    a.back{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        left: 10px;
+        bottom: 30px;
+        font-size: 20px;
+        font-family: Forum;
+    }
+    a.back:hover{
+        color: #21EFEF;
+    }
+    .blog-container h3,
+    .blog-container p{
+        padding: 10px 20px 0px 20px;
+    }
+    .blog-container h3{
+       display: flex;
+       justify-content: center;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 300px;
+    }
+    #name{
+        width: 20%;
+        height: 30px;
+        padding-left: 5px;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        left: 445px;
+        bottom: 55px;
+        border: 0px;
+        border-radius: 10px;
+    
+    }
+    #comment{
+        width: 25%;
+        border: 0px;
+        font-size: 20px;
+        padding: 5px 0px 5px 10px;
+        height: 40px;
+        font-family: Forum;
+        position: relative;
+        bottom: 46px;
+        left: 445px;
+        border-radius: 7px;
+    }
+    #commentbtn{
+        width: 5%;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        bottom: 51px;
+        left: 445px;
+        border: 0px;
+        border-radius: 5px;
+    }
+    .comments-list{
+        background-color: #999696;
+        width: 98.9%;
+        height: auto;
+        position: relative;
+        left: 10px;
+        bottom: 20px;
+        border-radius: 10px;
+        border: 0px;
+    }
+    .comments-likes p{
+        color: white;
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        font-family: Forum;
+        font-size: 20px;   
+    }
+    .comments-list p{
+        color: black;
+        position: relative;
+        top: 2px;
+    }
+    .comment{
+        padding:0px 0px 10px 0px;
+    }
+}
+@media only screen and (min-width: 1440px){
+    .logo{
+        width:100px;
+    }
+    #home{
+        background-color: black;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        position: fixed;
+        height: 1000px;
+        background-color: #181818;
+        color: #999696;
+    }
+    #navbar p{
+        font-size: 15px;
+        padding: 10px 0px 20px 20px;
+    }
+    #navbar a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
+    }
+    
+    a.section1{
+        padding: 20px 20px 10px 10px;
+        position: relative;
+        left: 15px;
+    }
+    a.section2,
+    a.section3,
+    a.section4,
+    a.section5,
+    a.section6,
+    a.section7,
+    a.section8{
+        padding-bottom: 10px;
+        position: relative;
+        left: 15px;
+    }
+    h1,
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+    #para1,
+    #para2,
+    #para3,
+    #para4,
+    #para5,
+    #para6,
+    #para7,
+    #para8{
+        padding: 0px 20px 20px 20px;
+    }
+    .blog-container{
+        background-color: #999696;
+        width: 88%;
+        position: relative;
+        left: 160px;
+        top: 30px;
+        font-family: Forum;
+    }
+    .blog-pic{
+        width: 400px;
+        height: 200px;
+        position: relative;
+        left: 430px;
+    }
+    .comments-likes{
+        width: 89%;
+        background-color: #1D1D1D;
+        position: relative;
+        left: 150px;
+        top: 50px;
+        padding: 10px 0px 10px 0px;
+    }
+    a.back{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        left: 10px;
+        bottom: 30px;
+        font-size: 20px;
+        font-family: Forum;
+    }
+    a.back:hover{
+        color: #21EFEF;
+    }
+    .blog-container h3,
+    .blog-container p{
+        padding: 10px 20px 0px 20px;
+    }
+    .blog-container h3{
+       display: flex;
+       justify-content: center;
+    }
+    .like{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 480px;
+    }
+    #name{
+        width: 20%;
+        height: 30px;
+        padding-left: 5px;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        left: 629px;
+        bottom: 55px;
+        border: 0px;
+        border-radius: 10px;
+    
+    }
+    #comment{
+        width: 25%;
+        border: 0px;
+        font-size: 20px;
+        padding: 5px 0px 5px 10px;
+        height: 40px;
+        font-family: Forum;
+        position: relative;
+        bottom: 46px;
+        left: 629px;
+        border-radius: 7px;
+    }
+    #commentbtn{
+        width: 5%;
+        font-family: Forum;
+        font-size: 18px;
+        position: relative;
+        bottom: 51px;
+        left: 629px;
+        border: 0px;
+        border-radius: 5px;
+    }
+    .comments-list{
+        background-color: #999696;
+        width: 98.9%;
+        height: auto;
+        position: relative;
+        left: 10px;
+        bottom: 20px;
+        border-radius: 10px;
+        border: 0px;
+    }
+    .comments-likes p{
+        color: white;
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        font-family: Forum;
+        font-size: 20px;   
+    }
+    .comments-list p{
+        color: black;
+        position: relative;
+        top: 2px;
+    }
+    .comment{
+        padding:0px 0px 10px 0px;
+    }
+}
