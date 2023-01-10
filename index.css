@@ -11,29 +11,42 @@ body{
 }
 
 @media only screen and (max-width: 425px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
     .logo{
-        width:100px;
+        width:200px;
+        position: relative;
+        left: 650px;
     }
     #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
+        font-size: 40px;
+        padding: 10px 0px 20px 0px;
+        position: relative;
+        left: 630px;
     }
     #navbar{
         display: flex;
         flex-direction: column;
-        width: 10%;
-        position: fixed;
-        height: 700px;
+        width: 405%;
+        height: 770px;
         background-color: #181818;
         color: #999696;
-    }
-    #navbar{
         display: none;
+    }
+    .dropdown{
+        display: none;
+    }
+    .dropdown:checked ~ #navbar{
+        display: block;
     }
     a{
         text-decoration: none;
         color: #999696;
         padding-left: 20px;
+        font-size: 30px;
     }
     a.work,
     a.blogs,
@@ -51,17 +64,16 @@ body{
     a:hover{
         color: #21EFEF;
     }
-    /* above is the navbar */
     #home{
         background-color: black;        
     }
     .dropdown-nav{
         width: 80px;
         position: fixed;
-        left: 950px;
+        left: 1450px;
     }
     .inner-logo{
-        width: 60px;
+        width: 15%;
         position: relative;
         top: 20px;
     }
@@ -76,58 +88,48 @@ body{
         color: #807e7e;
     }
     #p{
-        font-size: 23px;
+        font-size: 19px;
         position: relative;
-        left: 45px;
-        top: 50px;
+        left: 30px;
         color: #999696;
     }
     .tag1lp{
         position: relative;
-        top: 5px;
         left: 10px;
     }
     .tag2lp{
         position: relative;
-        left: 40px;
+        left: 20px;
     }
     .tag3lp{
         position: relative;
-        left: 45px;
-        top: 90px;
-    }
-    .tag4lp{
-        position: relative;
-        left: 320px;
-        bottom: 40px;
+        left: 25px;
     }
     .tag5lp{
         position: relative;
-        left: 40px;
-        top: 50px;
+        left: 25px;
     }
     .tag6lp{
         position: relative;
-        left: 40px;
-        top: 45px;
+        left: 25px;
     }
     .welcome,
     #h1{
-        font-size: 70px;
+        font-size: 58px;
         font-weight: bolder;
         position: relative;
-        top: 70px;
-        left: 50px;
+        left: 20px;
+    }
+    .welcome{
+        padding-top: 10px;
     }
     #h1{
         position: relative;
-        top: 90px;
+        top: 30px;
     }
     #about-me{
-        font-size: 30px;
         position: relative;
-        top: 50px;
-        left: 50px;
+        left: 25px;
     }
     .tag1ap,
     .tag2ap,
@@ -138,39 +140,44 @@ body{
         color: #807e7e;
     }
     .description{
-        font-size: 25px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
     }
     #skills{
         font-size: 25px;
         display: flex;
-        justify-content: space-between;
-        position: relative;
-        left: 20px;
+        justify-content: space-around;
     }
     .picture{
-        width: 65%;
-        height: 300px;
+        width: 80%;
         position: relative;
-        left: 50px;
+        left: 40px;
     }
     #skills p{
         padding: 5px;
     }
     #about-me h2{
         color: #21EFEF;
-        font-size: 50px;
+        font-size: 60px;
     }
     #work{
         position: relative;
-        top: 50px;
-        left: 50px;
+        left: 25px;
     }
     #work h2{
-        font-size: 50px;
+        font-size: 60px;
         color: #21EFEF;
     }
     .work-description{
-        font-size: 25px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 35px;
+    }
+    .work-description br{
+        display: none;
     }
     .triangle1w{
         width: 0;
@@ -179,9 +186,10 @@ body{
         border-width: 25px 50px 25px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        right: 20px;
-        top: 480px;
+        /* right: 20px; */
+        /* top: 755px; */
         border-radius: 5px;
+        display: none;
     }
     .triangle2w{
         width: 0;
@@ -190,37 +198,36 @@ body{
         border-width: 25px 0px 25px 50px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        left: 935px;
-        top: 430px;
+        /* left: 1405px; */
+        /* top: 705px; */
         border-radius: 5px;
         padding-right: 30px;
+        display: none;
     }
     .project-pic1,
     .project-pic2,
     .project-pic3,
     .project-pic4{
-        width: 400px;
-        height: 400px;
+        width: 100%;
     }
-    .project-pic4{
+    .projects{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         position: relative;
-        bottom: 810px;
-        left: 500px;
+        left: 70px;
     }
     .project-pic3{
         position: relative;
-        bottom: 410px;
-        left: 65px;
+        padding-bottom: 10px;
     }
     .project-pic2{
         position: relative;
-        bottom: 445px;
-        left: 500px;
+        padding-bottom: 10px;
     }
     .project-pic1{
         position: relative;
-        bottom: 40px;
-        left: 65px;
+        padding-bottom: 10px;
     }
     .tag1w,
     .tag2w,
@@ -234,20 +241,22 @@ body{
     }
     .tag5w{
         position: relative;
-        bottom: 60px;
+        padding-bottom: 10px;
     }
     .tag6w{
         position: relative;
-        bottom: 800px;
+        padding-top: 10px;
     }
-    #blogs{
+    /* #blogs{
         position: relative;
         left: 50px;
         bottom: 700px;
     }
     .b-title{
-        font-size: 50px;
+        font-size: 100px;
         color: #21EFEF; 
+        position: relative;
+        bottom: 300px;
     }
     .triangle1{
         width: 0;
@@ -256,13 +265,15 @@ body{
         border-width: 25px 50px 25px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        top: 170px;
+        bottom: 150px;
         border-radius: 5px;
     }
     .blog1 h1,
     .blog1 h2,
     .blog2 h1,
-    .blog2 h2{
+    .blog2 h2,
+    .blog3 h1,
+    .blog3 h2{
         color: black;
         font-size: 30px;
         display: flex;
@@ -270,7 +281,7 @@ body{
     }
     .teaser{
         color: black;
-        font-size: 25px;
+        font-size: 30px;
     }
     #likes-logo1{
         width: 50px;
@@ -291,7 +302,8 @@ body{
         font-size: 15px;
     }
     .blog1,
-    .blog2{
+    .blog2,
+    .blog3{
         background-color: #999696;
         width: 100%;
     }
@@ -304,15 +316,42 @@ body{
         position: relative;
         left: 5px;
     }
-    .blog3,
-    #likes-logo3,
-    #likes-num3,
-    #comments-logo3,
-    #comments-num3,
-    #blog-view3{
-       display: none;
+    .blog3{
+        position: relative;
+        bottom: 780px;
+        left: 950px;
     }
-
+    #likes-logo3{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        bottom: 775px;
+        left: 970px;
+    }
+    #likes-num3{
+        position: relative;
+        bottom: 815px;
+        left: 985px;
+    }
+    #comments-logo3{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        bottom: 845px;
+        left: 1060px;
+    }
+    #comments-num3{
+        position: relative;
+        bottom: 890px;
+        left: 1070px;
+    }
+    #blog-view3{
+        position: relative;
+        bottom: 920px;
+        left: 1170px;
+        color: #D9D9D9;
+        font-size: 30px;
+    }
     #likes-num1{
         position: relative;
         bottom: 38px;
@@ -362,15 +401,18 @@ body{
     }
     .summary1{
         position: relative;
-        top: 30px;
+        bottom: 300px;
         left: 70px;
     }
     .summary2{
         position: relative;
         left: 435.5px;
-        bottom: 410px;
+        bottom: 762px;
     }
-   
+   .summary3{
+    position: relative;
+    bottom: 375px;
+   }
     .triangle2{
         width: 0;
         height: 0;
@@ -378,30 +420,38 @@ body{
         border-width: 25px 0px 25px 50px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        left: 935px;
-        bottom: 700px;
+        left: 1370px;
+        bottom: 1480px;
         border-radius: 5px;
     }
     .tag1bp,
     .tag2bp,
     .tag3bp,
     .tag4bp{
-        font-size: 25px;
+        font-size: 40px;
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
+    .tag1bp{
+        position: relative;
+        bottom: 300px;
+    }
+    .tag2bp{
+        position: relative;
+        bottom: 300px;
+    }
     .tag3bp{
         position: relative;
-        top: 30px;
+        bottom: 300px;
     }
     .tag4bp{
         position: relative;
-        bottom: 550px;
+        bottom: 1300px;
     }
     #contacts{
        position: relative;
        left: 50px;
-       bottom: 1200px;
+       bottom: 1950px;
     }
     #sendbtn{
         background-color: #1D1D1D;
@@ -413,7 +463,627 @@ body{
         border: 1px solid #21EFEF;
     }
     #message{
-        width: 90%;
+        width: 130%;
+        border: 0;
+        background-color: #2b2b2b;
+        font-size: 30px;
+        color: #8d8d8d;
+        margin: 5px 0px 5px 0px;
+        height: 300px;
+        padding: 20px;
+    }
+    #other-contacts{
+        font-size: 50px;
+        position: relative;
+        bottom: 450px;
+        left: 850px;
+    }
+    #name,
+    #email{
+        width: 130%;
+        border-bottom: 2px solid #1D1D1D;
+        color: #8d8d8d;
+        padding: 20px;
+        background-color: #2b2b2b;
+        font-size: 30px;
+    }
+    .ig-logo,
+    .in-logo,
+    .gt-logo,
+    .email-logo{
+        width: 40px;
+        height: 40px;
+    }
+    .email{
+        display: flex;
+    }
+    .email p{
+        margin: 0 0 0 10px;
+        font-size: 35px;
+        color: #8d8d8d;
+    }
+    #sendbtn:hover{
+        background-color: #21EFEF;
+        color: black;
+    }
+    #short-message{
+        position: relative;
+        top: 10px;
+        font-size: 40px;
+        width: 260%;
+    }
+    #contact-form{
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
+    #ig-profile,
+    #in-profile,
+    #gt-profile{
+        font-size: 35px;
+        position: relative;
+        right: 25px;
+        bottom: 5px;
+    }
+    #contacts h2{
+        font-size: 100px;
+        color:#21EFEF;
+        width: 260%;
+    }
+    .tag1cp,
+    .tag2cp,
+    .tag3cp,
+    .tag4cp,
+    .tag5cp,
+    .tag6cp{
+        font-size: 40px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    .tag5cp,
+    .tag6cp{
+        position: relative;
+        right: 20px;
+    }
+    #login{
+       position: relative;
+       left: 50px;
+       bottom: 2100px;
+    }
+    #login h2{
+        font-size: 100px;
+        color: #21EFEF; 
+    }
+    .tag1logp,
+    .tag2logp,
+    .tag3logp,
+    .tag4logp,
+    .tag5logp,
+    .tag6logp{
+        font-size: 40px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    .tag4logp,
+    .tag3logp{
+        position: relative;
+        right: 350px;
+    }
+    .tag6logp{
+        position: relative;
+        right: 30px;
+    }
+    .tag5logp{
+        position: relative;
+        right: 10px;
+    }
+    .login-container{
+        background-color: #2B2B2B;
+        width: 120%;
+        position: relative;
+        right: 300px;
+        padding: 20px 0px 130px 0px;
+        border-radius: 15px;    
+    }
+    #login-email,
+    #login-password{
+        font-size: 30px;
+        height: 50px;
+        width: 80%;
+        padding: 25px;
+        border-bottom: 2px solid black;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        background-color: #2B2B2B;
+        position: relative;
+        left: 40px;
+    }
+    #loginbtn{
+        background-color: #2B2B2B;
+        color: #21EFEF;
+        width: 60%;
+        height: 50px;
+        font-size: 30px;   
+        position: relative;
+        left: 70px;
+        top: 40px;
+        border: 1px solid #21EFEF;
+        border-radius: 10px;
+    }
+    #login-form{
+        position: relative;
+        left: 400px;
+    }
+    .login-container h3{
+        position: relative;
+        left: 180px;
+        padding-bottom: 30px;
+        font-size: 35px;
+    }
+    .loginmsg{
+        font-size: 30px;
+        position: relative;
+        top: 70px;
+        left: 120px  
+    }
+    #loginbtn:hover{
+        background-color: #21EFEF;
+        color: black; 
+    } */
+}
+@media only screen and (min-width: 426px) and (max-width: 540px){
+    .logo{
+        width:100px;
+        position: relative;
+        left: 25px;
+    }
+    #navbar p{
+        font-size: 20px;
+        padding: 10px 0px 20px 30px;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        position: fixed;
+        height: 2800px;
+        background-color: #181818;
+        color: #999696;
+    }
+    .dropdown{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
+        font-size: 25px;
+    }
+    a.work,
+    a.blogs,
+    a.contacts,
+    a.login{
+        padding: 20px 0px 20px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    a.about-me{
+        padding: 60px 0px 20px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .dropdown-nav{
+        display: none;
+    }
+    #home{
+        background-color: black;
+    }
+    a:hover{
+        color: #21EFEF;
+    }
+    .inner-logo{
+        width: 7%;
+        position: relative;
+        top: 28px;
+    }
+    #h1{
+        position: relative;
+        top: 50px;
+        font-size: 25px;
+    }
+    .tag1lp,
+    .tag2lp,
+    .tag3lp,
+    .tag4lp,
+    .tag5lp,
+    .tag6lp{
+        font-size: 30px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    #p{
+        font-size: 35px;
+        padding-left: 220px;
+        position: relative;
+        bottom: 40px;
+        color: #999696;
+    }
+    .tag1lp{
+        position: relative;
+        top: 20px;
+        left: 170px;
+    }
+    .tag2lp{
+        position: relative;
+        top: 20px;
+        left: 190px;
+    }
+    .tag3lp{
+        position: relative;
+        top: 70px;
+        left: 200px;
+    }
+    .tag4lp{
+        position: relative;
+        left: 800px;
+        bottom: 50px;
+    }
+    .tag5lp{
+        position: relative;
+        left: 200px;
+        bottom: 35px;
+    }
+    .tag6lp{
+        position: relative;
+        left: 200px;
+        bottom: 35px;
+    }
+    .welcome,
+    #h1{
+        font-size: 120px;
+        font-weight: bolder;
+        padding-left: 200px;
+    }
+    #landing-page{
+        padding-left: 70px;
+        width: 260%;
+    }
+    #about-me{
+        padding-left: 250px;
+        width: 260%;
+    }
+    #about-me h2{
+        color:#21EFEF;
+        font-size: 150px;
+    }
+    .tag1ap,
+    .tag2ap,
+    .tag3ap,
+    .tag4ap{
+        font-size: 30px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    .tag3ap{
+        position: relative;
+        bottom: 800px;
+    }
+    .tag4ap{
+        position : relative;
+        bottom: 795px;
+    }
+    .description{
+        font-size: 50px;
+        position: relative;
+        bottom: 800px;
+    }
+    #skills{
+        font-size: 40px;
+        position: relative;
+        bottom: 770px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+    #skills p{
+        padding: 15px;
+    }
+    .picture{
+        width: 60%;
+        position: relative;
+        left: 1000px;
+        top: 150px;
+    }
+    #work{
+        padding-left: 250px;
+        position: relative;
+        bottom: 700px;
+        width: 260%;
+        
+    }
+    #work h2{
+        color: #21EFEF;
+        font-size: 150px;
+    }
+    .work-description{
+        font-size: 40px;
+    }
+    .triangle1w{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 50px 25px 0px;
+        border-color: transparent #D9D9D9 transparent transparent ;
+        position: relative;
+        right: 20px;
+        top: 610px;
+        border-radius: 5px;
+    }
+    .triangle2w{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 0px 25px 50px;
+        border-color: transparent  transparent transparent #D9D9D9;
+        position: relative;
+        left: 1720px;
+        top: 550px;
+        border-radius: 5px;
+    }
+    .project-pic1,
+    .project-pic2,
+    .project-pic3,
+    .project-pic4{
+        width: 65%;
+    }
+    .project-pic4{
+        position: relative;
+        bottom: 760px;
+        left: 900px;
+    }
+    .project-pic3{
+        position: relative;
+        bottom: 335px;
+        left: 100px;
+    }
+    .project-pic2{
+        position: relative;
+        bottom: 385px;
+        left: 900px;
+    }
+    .project-pic1{
+        position: relative;
+        top: 40px;
+        left: 100px;
+    }
+    .tag1w,
+    .tag2w,
+    .tag3w,
+    .tag4w,
+    .tag5w,
+    .tag6w{
+        font-size: 30px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    .tag5w{
+        position: relative;
+        bottom: 50px;
+    }
+    .tag6w{
+        position: relative;
+        bottom: 650px;
+    }
+    #blogs{
+        padding-left: 250px;
+        position: relative;
+        bottom: 1300px;
+    }
+    .b-title{
+        color: #21EFEF;
+        font-size: 150px;
+    }
+    .triangle1{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 50px 25px 0px;
+        border-color: transparent #D9D9D9 transparent transparent ;
+        position: relative;
+        top: 215px;
+        border-radius: 5px;
+    }
+    .blog1 h1,
+    .blog1 h2,
+    .blog2 h1,
+    .blog2 h2,
+    .blog3 h1,
+    .blog3 h2{
+        color: black;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .teaser{
+        color: black;
+        font-size: 30px;
+    }
+    #likes-logo1{
+        width: 55px;
+        height: 55px;
+        position: relative;
+        top: 5px;
+    }
+    #comments-logo1{
+        width: 55px;
+        height: 55px;
+        position: relative;
+        left: 100px;
+        bottom: 80px;
+    }
+    .likes-num,
+    .comments-num{
+        font-size: 20px;
+    }
+    .blog1,
+    .blog2,
+    .blog3{
+        background-color: #999696;
+        width: 150%;
+    }
+    .blog2{
+        position: relative;
+        left: 50px;
+        bottom: 103px;
+    }
+    .blog3{
+        position: relative;
+        left: 100px;
+        bottom: 200px;
+    }
+    #likes-num1{
+        position: relative;
+        bottom: 47px;
+        left: 15px;
+    }
+    #comments-num1{
+        position: relative;
+        left: 110px;
+        bottom: 133px;
+    }
+    #blog-view1{
+        position: relative;
+        left: 240px;
+        bottom: 160px;
+        color: #D9D9D9;
+        font-size: 30px;
+    }
+    #likes-logo2{
+        width: 55px;
+        height: 55px;
+        position: relative;
+        bottom: 100px;
+        left: 50px;
+    }
+    #comments-logo2{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        left: 150px;
+        bottom: 190px;
+    }
+    #likes-num2{
+        position: relative;
+        bottom: 155px;
+        left: 65px;
+    }
+    #comments-num2{
+        position: relative;
+        left: 160px;
+        bottom: 245px;
+    }
+    #blog-view2{
+        position: relative;
+        left: 290px;
+        bottom: 260px;
+        color: #D9D9D9;
+        font-size: 30px;
+    }
+    #likes-logo3{
+        width: 55px;
+        height: 55px;
+        position: relative;
+        bottom: 195px;
+        left: 110px;
+    }
+    #comments-logo3{
+        width: 55px;
+        height: 55px;
+        position: relative;
+        left: 200px;
+        bottom: 285px;
+    }
+    #likes-num3{
+        position: relative;
+        bottom: 243px;
+        left: 125px;
+    }
+    #comments-num3{
+        position: relative;
+        left: 210px;
+        bottom: 337px;
+    }
+    #blog-view3{
+        position: relative;
+        left: 340px;
+        bottom: 360px;
+        color: #D9D9D9;
+        font-size: 30px;
+    }
+    .summary1{
+        position: relative;
+        top: 30px;
+        left: 70px;
+    }
+    .summary2{
+        position: relative;
+        left: 620px;
+        bottom: 340px;
+    }
+    .summary3{
+        position: relative;
+        left: 1150px;
+        bottom: 710px;
+    }
+    .triangle2{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 0px 25px 50px;
+        border-color: transparent  transparent transparent #D9D9D9;
+        position: relative;
+        left: 1720px;
+        bottom: 1270px;
+        border-radius: 5px;
+    }
+    .tag1bp,
+    .tag2bp,
+    .tag3bp,
+    .tag4bp{
+        font-size: 30px;
+        font-family: "La Belle Aurore";
+        color: #807e7e;
+    }
+    .tag3bp{
+        position: relative;
+        top: 30px;
+    }
+    .tag4bp{
+        position: relative;
+        bottom: 1250px;
+    }
+    #contacts{
+        font-size: 50px;
+        padding-left: 250px;
+        position: relative;
+        bottom: 1930px;
+    }
+    #contacts h2{
+        color: #21EFEF;
+    }
+    #sendbtn{
+        background-color: #1D1D1D;
+        color: #21EFEF;
+        width: 100%;
+        height: 50px;
+        font-size: 25px;   
+        position: relative;
+        bottom: 20px;
+        border: 1px solid #21EFEF;
+    }
+    #message{
+        width: 100%;
         border: 0;
         background-color: #2b2b2b;
         font-size: 20px;
@@ -426,17 +1096,25 @@ body{
         font-size: 50px;
         position: relative;
         bottom: 300px;
-        left: 550px;
+        left: 800px;
     }
     #name,
     #email{
         height: 40px;
-        width: 90%;
-        border-bottom: 2px solid #1D1D1D;
+        width: 100%;
+        border: 0px;
         color: #8d8d8d;
         padding: 20px;
         background-color: #2b2b2b;
         font-size: 20px;
+    }
+    #email{
+        position: relative;
+        bottom: 5px;
+    }
+    #name{
+        position: relative;
+        top: 4px;
     }
     .ig-logo,
     .in-logo,
@@ -460,12 +1138,11 @@ body{
     #short-message{
         position: relative;
         top: 10px;
-        font-size: 25px;
+        font-size: 30px;
     }
     #contact-form{
         position: relative;
         top: 10px;
-        left: 50px;
     }
     #ig-profile,
     #in-profile,
@@ -475,8 +1152,8 @@ body{
         right: 25px;
         bottom: 5px;
     }
-    #contacts h2{
-        font-size: 50px;
+    h2{
+        font-size: 90px;
         color:#21EFEF;
     }
     .tag1cp,
@@ -485,23 +1162,15 @@ body{
     .tag4cp,
     .tag5cp,
     .tag6cp{
-        font-size: 25px;
+        font-size: 15px;
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
-    .tag5cp,
-    .tag6cp{
-        position: relative;
-        right: 20px;
-    }
     #login{
-       position: relative;
-       left: 50px;
-       bottom: 1350px;
-    }
-    #login h2{
         font-size: 50px;
-        color: #21EFEF; 
+        padding-left: 250px; 
+        position: relative;
+        bottom: 2050px;
     }
     .tag1logp,
     .tag2logp,
@@ -513,11 +1182,6 @@ body{
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
-    .tag4logp,
-    .tag3logp{
-        position: relative;
-        right: 350px;
-    }
     .tag6logp{
         position: relative;
         right: 30px;
@@ -526,19 +1190,24 @@ body{
         position: relative;
         right: 10px;
     }
+    .tag4logp,
+    .tag3logp{
+        position: relative;
+        right: 350px;
+    }
     .login-container{
         background-color: #2B2B2B;
         width: 100%;
-        position: relative;
-        right: 300px;
         padding: 20px 0px 130px 0px;
-        border-radius: 15px;    
+        border-radius: 15px; 
+        position: relative;  
+        right: 300px; 
     }
     #login-email,
     #login-password{
-        font-size: 20px;
+        font-size: 25px;
         height: 40px;
-        width: 80%;
+        width: 85%;
         padding: 25px;
         border-bottom: 2px solid black;
         border-top: 0px;
@@ -551,11 +1220,11 @@ body{
     #loginbtn{
         background-color: #2B2B2B;
         color: #21EFEF;
-        width: 60%;
+        width: 85%;
         height: 40px;
         font-size: 20px;   
         position: relative;
-        left: 70px;
+        left: 40px;
         top: 40px;
         border: 1px solid #21EFEF;
         border-radius: 10px;
@@ -566,22 +1235,24 @@ body{
     }
     .login-container h3{
         position: relative;
-        left: 150px;
+        display: flex;
+        justify-content: center;
         padding-bottom: 30px;
-        font-size: 25px;
+        font-size: 30px;
     }
     .loginmsg{
-        font-size: 20px;
+        font-size: 25px;
         position: relative;
         top: 70px;
-        left: 100px  
+        display: flex; 
+        justify-content: center;
     }
     #loginbtn:hover{
         background-color: #21EFEF;
         color: black; 
     }
 }
-@media only screen and (min-width: 426px) and (max-width: 960px){
+@media only screen and (min-width: 541px) and (max-width: 961px){
     .logo{
         width:100px;
     }
@@ -597,6 +1268,9 @@ body{
         height: 2800px;
         background-color: #181818;
         color: #999696;
+    }
+    .dropdown{
+        display: none;
     }
     a{
         text-decoration: none;
@@ -1207,6 +1881,9 @@ body{
         height: 700px;
         background-color: #181818;
         color: #999696;
+    }
+    .dropdown{
+        display: none;
     }
     a{
         text-decoration: none;

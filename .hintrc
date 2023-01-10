@@ -22,6 +22,12 @@
           "width: fit-content"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
