@@ -19,19 +19,23 @@ body{
     .logo{
         width:200px;
         position: relative;
-        left: 650px;
+        left: 210px;
+        display: flex;
+        justify-content: center;
     }
     #navbar p{
         font-size: 40px;
         padding: 10px 0px 20px 0px;
         position: relative;
-        left: 630px;
+        /* left: 630px; */
+        display: flex;
+        justify-content: center;
     }
     #navbar{
         display: flex;
         flex-direction: column;
-        width: 405%;
-        height: 770px;
+        width:236%;
+        /* height: 770px; */
         background-color: #181818;
         color: #999696;
         display: none;
@@ -68,9 +72,12 @@ body{
         background-color: black;        
     }
     .dropdown-nav{
-        width: 80px;
+        width: 50px;
         position: fixed;
-        left: 1450px;
+        left: 550px;
+        top: 10px;
+        color: #21EFEF;
+        background-color: #21EFEF;
     }
     .inner-logo{
         width: 15%;
@@ -140,7 +147,7 @@ body{
         color: #807e7e;
     }
     .description{
-        font-size: 30px;
+        font-size: 35px;
         display: flex;
         justify-content: center;
     }
@@ -170,11 +177,9 @@ body{
         color: #21EFEF;
     }
     .work-description{
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
+        font-size: 35px;
         position: relative;
-        left: 35px;
+        left: 30px;
     }
     .work-description br{
         display: none;
@@ -247,16 +252,13 @@ body{
         position: relative;
         padding-top: 10px;
     }
-    /* #blogs{
+    #blogs{
         position: relative;
-        left: 50px;
-        bottom: 700px;
+        left: 25px;
     }
     .b-title{
-        font-size: 100px;
+        font-size: 60px;
         color: #21EFEF; 
-        position: relative;
-        bottom: 300px;
     }
     .triangle1{
         width: 0;
@@ -265,8 +267,9 @@ body{
         border-width: 25px 50px 25px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        bottom: 150px;
+        /* bottom: 150px; */
         border-radius: 5px;
+        display: none;
     }
     .blog1 h1,
     .blog1 h2,
@@ -275,143 +278,124 @@ body{
     .blog3 h1,
     .blog3 h2{
         color: black;
-        font-size: 30px;
+        font-size: 35px;
         display: flex;
         justify-content: center;
     }
     .teaser{
         color: black;
-        font-size: 30px;
+        font-size: 35px;
     }
     #likes-logo1{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: relative;
-        top: 5px;
-        left: 40px;
+        left: 70px;
     }
     #comments-logo1{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: relative;
         left: 150px;
-        bottom: 65px;
+        bottom: 80px;
     }
     .likes-num,
     .comments-num{
-        font-size: 15px;
+        font-size: 20px;
     }
     .blog1,
     .blog2,
     .blog3{
         background-color: #999696;
-        width: 100%;
-    }
-    .blog2{
+        width: 120%;
         position: relative;
-        left: 75px;
-        top: 34px;
-    }
-    .blog1{
-        position: relative;
-        left: 5px;
-    }
-    .blog3{
-        position: relative;
-        bottom: 780px;
-        left: 950px;
+        left: 50px;
     }
     #likes-logo3{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: relative;
-        bottom: 775px;
-        left: 970px;
+        left: 70px;
     }
     #likes-num3{
         position: relative;
-        bottom: 815px;
-        left: 985px;
+        bottom: 50px;
+        left: 90px;
     }
     #comments-logo3{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: relative;
-        bottom: 845px;
-        left: 1060px;
+        bottom: 80px;
+        left: 150px;
     }
     #comments-num3{
         position: relative;
-        bottom: 890px;
-        left: 1070px;
+        bottom: 135px;
+        left: 160px;
     }
     #blog-view3{
         position: relative;
-        bottom: 920px;
-        left: 1170px;
+        bottom: 170px;
+        left: 350px;
         color: #D9D9D9;
         font-size: 30px;
     }
     #likes-num1{
         position: relative;
-        bottom: 38px;
-        left: 55px;
+        bottom: 50px;
+        left: 90px;
     }
     #comments-num1{
         position: relative;
         left: 160px;
-        bottom: 110px;
+        bottom: 135px;
     }
     #blog-view1{
         position: relative;
-        left: 230px;
-        bottom: 140px;
+        left: 350px;
+        bottom: 170px;
         color: #D9D9D9;
         font-size: 30px;
     }
     #likes-logo2{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         position: relative;
-        top: 40px;
-        left: 100px;
+        left: 70px;
     }
     #comments-logo2{
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         position: relative;
-        left: 200px;
-        bottom: 35px;
+        left: 150px;
+        bottom: 80px;
     }
     #likes-num2{
         position: relative;
-        left: 115px;
+        left: 90px;
+        bottom: 50px;
     }
     #comments-num2{
         position: relative;
-        left: 210px;
-        bottom: 80px;
+        left: 160px;
+        bottom: 130px;
     }
     #blog-view2{
         position: relative;
-        left: 300px;
-        bottom: 110px;
+        left: 350px;
+        bottom: 170px;
         color: #D9D9D9;
         font-size: 30px;
     }
     .summary1{
         position: relative;
-        bottom: 300px;
-        left: 70px;
+        top: 50px;
     }
-    .summary2{
-        position: relative;
-        left: 435.5px;
-        bottom: 762px;
-    }
+    
    .summary3{
-    position: relative;
-    bottom: 375px;
+        position: relative;
+        bottom: 50px;
    }
     .triangle2{
         width: 0;
@@ -420,50 +404,40 @@ body{
         border-width: 25px 0px 25px 50px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        left: 1370px;
-        bottom: 1480px;
+        /* left: 1370px; */
+        /* bottom: 1480px; */
         border-radius: 5px;
+        display: none;
     }
     .tag1bp,
     .tag2bp,
     .tag3bp,
     .tag4bp{
-        font-size: 40px;
+        font-size: 25px;
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
-    .tag1bp{
-        position: relative;
-        bottom: 300px;
-    }
-    .tag2bp{
-        position: relative;
-        bottom: 300px;
-    }
-    .tag3bp{
-        position: relative;
-        bottom: 300px;
-    }
     .tag4bp{
         position: relative;
-        bottom: 1300px;
+        bottom: 150px;
     }
     #contacts{
        position: relative;
-       left: 50px;
-       bottom: 1950px;
+       left: 25px;
+       bottom: 150px;
     }
     #sendbtn{
         background-color: #1D1D1D;
         color: #21EFEF;
-        width: 90%;
+        width: 50%;
         height: 50px;
         font-size: 25px;   
         position: relative;
+        left: 260px;
         border: 1px solid #21EFEF;
     }
     #message{
-        width: 130%;
+        width: 100%;
         border: 0;
         background-color: #2b2b2b;
         font-size: 30px;
@@ -475,12 +449,12 @@ body{
     #other-contacts{
         font-size: 50px;
         position: relative;
-        bottom: 450px;
-        left: 850px;
+        top: 50px;
+        left: 50px;
     }
     #name,
     #email{
-        width: 130%;
+        width: 100%;
         border-bottom: 2px solid #1D1D1D;
         color: #8d8d8d;
         padding: 20px;
@@ -491,15 +465,15 @@ body{
     .in-logo,
     .gt-logo,
     .email-logo{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
     .email{
         display: flex;
     }
     .email p{
         margin: 0 0 0 10px;
-        font-size: 35px;
+        font-size: 40px;
         color: #8d8d8d;
     }
     #sendbtn:hover{
@@ -508,27 +482,27 @@ body{
     }
     #short-message{
         position: relative;
-        top: 10px;
-        font-size: 40px;
-        width: 260%;
+        left: 50px;
+        font-size: 35px;
+    }
+    #short-message br{
+        display: none;
     }
     #contact-form{
         position: relative;
-        top: 10px;
-        left: 50px;
+        left: 30px;
     }
     #ig-profile,
     #in-profile,
     #gt-profile{
-        font-size: 35px;
+        font-size: 40px;
         position: relative;
         right: 25px;
-        bottom: 5px;
+        bottom: 15px;
     }
     #contacts h2{
-        font-size: 100px;
+        font-size: 60px;
         color:#21EFEF;
-        width: 260%;
     }
     .tag1cp,
     .tag2cp,
@@ -536,22 +510,27 @@ body{
     .tag4cp,
     .tag5cp,
     .tag6cp{
-        font-size: 40px;
+        font-size: 25px;
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
     .tag5cp,
     .tag6cp{
         position: relative;
-        right: 20px;
+        right: 30px;
+    }
+    .tag3cp,
+    .tag4cp{
+        position: relative;
+        right: 40px;
     }
     #login{
        position: relative;
-       left: 50px;
-       bottom: 2100px;
+       left: 25px;
+       bottom: 30px;
     }
     #login h2{
-        font-size: 100px;
+        font-size: 60px;
         color: #21EFEF; 
     }
     .tag1logp,
@@ -560,36 +539,38 @@ body{
     .tag4logp,
     .tag5logp,
     .tag6logp{
-        font-size: 40px;
+        font-size: 25px;
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
     .tag4logp,
     .tag3logp{
         position: relative;
-        right: 350px;
+        left: 30px;
+        /* padding: 5px; */
     }
     .tag6logp{
         position: relative;
-        right: 30px;
+        /* right: 150px; */
     }
     .tag5logp{
         position: relative;
-        right: 10px;
+        left: 15px;
     }
     .login-container{
         background-color: #2B2B2B;
         width: 120%;
+        height: 400px;
         position: relative;
-        right: 300px;
-        padding: 20px 0px 130px 0px;
+        left: 70px;
+        /* padding: 20px 0px 20px 0px; */
         border-radius: 15px;    
     }
     #login-email,
     #login-password{
         font-size: 30px;
         height: 50px;
-        width: 80%;
+        width: 90%;
         padding: 25px;
         border-bottom: 2px solid black;
         border-top: 0px;
@@ -597,7 +578,7 @@ body{
         border-right: 0px;
         background-color: #2B2B2B;
         position: relative;
-        left: 40px;
+        left: 25px;
     }
     #loginbtn{
         background-color: #2B2B2B;
@@ -606,31 +587,40 @@ body{
         height: 50px;
         font-size: 30px;   
         position: relative;
-        left: 70px;
-        top: 40px;
+        left: 80px;
+        padding: 5px;
+        /* top: 40px; */
         border: 1px solid #21EFEF;
         border-radius: 10px;
+        display: flex;
+        justify-content: center;
     }
     #login-form{
         position: relative;
-        left: 400px;
+        /* width: 100%; */
+        /* height: 100px; */
+        /* left: 400px; */
     }
     .login-container h3{
         position: relative;
-        left: 180px;
-        padding-bottom: 30px;
+        /* left: 130px; */
+        padding: 30px 0px 30px 0px;
         font-size: 35px;
+        display: flex;
+        justify-content: center;
     }
     .loginmsg{
         font-size: 30px;
         position: relative;
-        top: 70px;
-        left: 120px  
+        top: 50px;
+        /* left: 20px   */
+        display: flex;
+        justify-content: center;
     }
     #loginbtn:hover{
         background-color: #21EFEF;
         color: black; 
-    } */
+    }
 }
 @media only screen and (min-width: 426px) and (max-width: 540px){
     .logo{
