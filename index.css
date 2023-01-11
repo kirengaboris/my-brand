@@ -15,7 +15,6 @@ body{
         display: flex;
         flex-wrap: wrap;
     }
-    
     .logo{
         width:200px;
         position: relative;
@@ -76,6 +75,7 @@ body{
         top: 10px;
         color: #21EFEF;
         background-color: #21EFEF;
+        z-index: 10;
     }
     .inner-logo{
         width: 15%;
@@ -642,7 +642,7 @@ body{
     #navbar{
         display: flex;
         flex-direction: column;
-        width:332%;
+        width: 332%;
         background-color: #181818;
         color: #999696;
         display: none;
@@ -685,6 +685,7 @@ body{
         top: 10px;
         color: #21EFEF;
         background-color: #21EFEF;
+        z-index: 10;
     }
     .inner-logo{
         width: 70px;
@@ -1264,6 +1265,7 @@ body{
         top: 10px;
         color: #21EFEF;
         background-color: #21EFEF;
+        z-index: 10;
     }
     .inner-logo{
         width: 80px;
