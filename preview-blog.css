@@ -25,6 +25,7 @@ body{
     justify-content: center;
     position: relative;
     left: 45px;
+    font-size: 40px;
   }
   .blog-pic{
     width: 75%;
@@ -35,6 +36,7 @@ body{
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+    font-size: 30px;
   }
   #para1,
   #para2,
@@ -47,6 +49,7 @@ body{
         padding: 10px 20px 10px 20px;
         position: relative;
         left: 30px;
+        font-size: 25px;
     }
     a{
         text-decoration: none;
@@ -60,7 +63,7 @@ body{
     #postbtn{
         width: 25%;
         font-family: Forum;
-        font-size: 18px;
+        font-size: 25px;
         position: relative;
         left: 150px;
         border: 0px;
@@ -71,58 +74,26 @@ body{
         text-decoration: none;
         position: relative;
         left: 50px;
-        font-size: 20px;
+        font-size: 25px;
     }
     .back:hover{
         color:#21EFEF;
     }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px){
-    .logo{
-        width:70px;
-    }
-    #home{
-        background-color: black;
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     #navbar{
-        display: flex;
-        flex-direction: column;
-        width: 15%;
-        position: fixed;
-        height: 1500px;
-        background-color: #181818;
-        color: #999696;
-    }
-    #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 10px;
-    }
-    #navbar a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    
-    a.section1{
-        padding: 20px 20px 10px 10px;
-        position: relative;
-        left: 15px;
-    }
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
-        padding-bottom: 10px;
-        position: relative;
-        left: 15px;
+        display: none;
     }
     h1,
     h2{
         display: flex;
         justify-content: center;
+        font-size: 50px;
     }
     #para1,
     #para2,
@@ -133,20 +104,18 @@ body{
     #para7,
     #para8{
         padding: 0px 20px 20px 20px;
+        font-size: 40px;
     }
     .blog-container{
         background-color: #999696;
-        width: 88%;
+        width: 100vw;
         position: relative;
-        left: 150px;
-        top: 30px;
         font-family: Forum;
     }
     .blog-pic{
-        width: 400px;
-        height: 200px;
+        width: 90%;
         position: relative;
-        left: 140px;
+        left: 40px;
     }
     .blog-container h3,
     .blog-container p{
@@ -155,73 +124,44 @@ body{
     .blog-container h3{
        display: flex;
        justify-content: center;
+       font-size: 45px;
     }
     #postbtn{
         width: 25%;
         font-family: Forum;
-        font-size: 18px;
+        font-size: 45px;
         position: relative;
-        left: 300px;
+        left: 290px;
+        border-radius: 10px;
         border: 0px;
-        border-radius: 5px;
     }
     .back{
         color: black;
         text-decoration: none;
         position: relative;
-        left: 40px;
-        font-size: 20px;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
     }
     .back:hover{
         color:#21EFEF;
-    }
+    } 
 }
 @media only screen and (min-width: 769px) and (max-width: 1280px){
-    .logo{
-        width:100px;
-    }
-    #home{
-        background-color: black;
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     #navbar{
-        display: flex;
-        flex-direction: column;
-        width: 15%;
-        position: fixed;
-        height: 1500px;
-        background-color: #181818;
-        color: #999696;
-    }
-    #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
-    }
-    #navbar a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    
-    a.section1{
-        padding: 20px 20px 10px 10px;
-        position: relative;
-        left: 15px;
-    }
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
-        padding-bottom: 10px;
-        position: relative;
-        left: 15px;
+        display: none;
     }
     h1,
     h2{
         display: flex;
         justify-content: center;
+        font-size: 50px;
     }
     #para1,
     #para2,
@@ -232,20 +172,18 @@ body{
     #para7,
     #para8{
         padding: 0px 20px 20px 20px;
+        font-size: 40px;
     }
     .blog-container{
         background-color: #999696;
-        width: 80%;
+        width: 100vw;
         position: relative;
-        left: 170px;
-        top: 30px;
         font-family: Forum;
     }
     .blog-pic{
-        width: 400px;
-        height: 200px;
+        width: 90%;
         position: relative;
-        left: 200px;
+        left: 40px;
     }
     .blog-container h3,
     .blog-container p{
@@ -254,22 +192,25 @@ body{
     .blog-container h3{
        display: flex;
        justify-content: center;
+       font-size: 45px;
     }
     #postbtn{
         width: 25%;
         font-family: Forum;
-        font-size: 18px;
+        font-size: 45px;
         position: relative;
         left: 300px;
+        border-radius: 10px;
         border: 0px;
-        border-radius: 5px;
     }
     .back{
         color: black;
         text-decoration: none;
         position: relative;
-        left: 40px;
-        font-size: 20px;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
     }
     .back:hover{
         color:#21EFEF;
@@ -292,8 +233,9 @@ body{
         color: #999696;
     }
     #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
+        font-size: 20px;
+        position: relative;
+        left: 10px;
     }
     #navbar a{
         text-decoration: none;
@@ -305,6 +247,7 @@ body{
         padding: 20px 20px 10px 10px;
         position: relative;
         left: 15px;
+        font-size: 20px;
     }
     a.section2,
     a.section3,
@@ -316,11 +259,13 @@ body{
         padding-bottom: 10px;
         position: relative;
         left: 15px;
+        font-size: 20px;
     }
     h1,
     h2{
         display: flex;
         justify-content: center;
+        font-size: 45px;
     }
     #para1,
     #para2,
@@ -331,6 +276,7 @@ body{
     #para7,
     #para8{
         padding: 0px 20px 20px 20px;
+        font-size: 30px;
     }
     .blog-container{
         background-color: #999696;
@@ -353,11 +299,12 @@ body{
     .blog-container h3{
        display: flex;
        justify-content: center;
+       font-size: 40px;
     }
     #postbtn{
         width: 20%;
         font-family: Forum;
-        font-size: 18px;
+        font-size: 25px;
         position: relative;
         left: 500px;
         border: 0px;
@@ -368,7 +315,7 @@ body{
         text-decoration: none;
         position: relative;
         left: 40px;
-        font-size: 20px;
+        font-size: 35px;
     }
     .back:hover{
         color:#21EFEF;

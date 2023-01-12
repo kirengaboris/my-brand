@@ -559,410 +559,366 @@ body{
     }
 }
 @media only screen and (min-width: 426px) and (max-width: 960px){
-    .logoutbtn{
+    #navbar{
         display: none;
     }
-    .logo{
-        width:100px;
-    }
-    #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
-    }
-    #navbar{
+    body{
         display: flex;
-        flex-direction: column;
-        width: 10%;
-        position: fixed;
-        height: 4000px;
-        background-color: #181818;
-        color: #999696;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    a.add-post,
-    a.blogs-articles,
-    a.queries{
-        padding: 20px 0px 20px 0px;
-        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-    }
-    a.add-post{
-        padding: 30px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    #home{
-        background-color: black;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #logoutbtn{
-        background-color: #21EFEF;
-        color: #000000;
-        width: 70%;
-        height: 40px;
-        font-size: 20px;   
-        position: relative;
-        top: 50px;
-        left: 10px;
-        border: 1px solid #21EFEF;
-        border-radius: 5px;
     }
     .admin-title{
-        font-size: 90px;
+        font-size: 100px;
         color:#21EFEF;
-        padding: 10px 0px 0px 250px;
-        position: fixed;
+        display: flex;
+        justify-content: center;
     }
     #add-post h2{
         color: white;
-        font-size: 60px;
+        font-size: 70px;
         position: relative;
-        top: 120px;
-        left: 500px;
+        display: flex;
+        justify-content: center;
     }
     .add-post-form{
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        width: 90%;
+        margin: 10px;
+    }
+    #add-post{
+        margin: 20px;
         position: relative;
-        left: 300px;
-        top: 130px;
     }
     #labels{
-        padding: 12px 0px 12px 0px;
-        font-size: 23px;
+        font-size: 40px;
+        margin: 10px;
     }
     #topic,
     #title{
         height: 50px;
         background-color: #D9D9D9;
         border: 0px;
+        position: relative;
+        width: 90vw;
     }
     #post{
         height: 250px;
         background-color: #D9D9D9;
         border: 0px;
+        position: relative;
+        width: 90vw;
     }
     #blog-image-btn{
-        width: 120px;
-        height: 35px;
-        font-size: 23px;
+        width: 50vw;
+        height: 60px;
+        font-size: 45px;
         position: relative;
-        left: 750px;
-        bottom: 33px;
+        margin-top: 10px;
         border-radius: 5px;
         border: 0px;
     }
     #postbtn{
-        height: 35px;
-        font-size: 23px;
+        width: 50vw;
+        height: 60px;
+        font-size: 45px;
         position: relative;
-        left: 885px;
-        bottom: 68px;
+        margin-top: 10px;
         border-radius: 5px;
         border: 0px;
     }
     .blog-title{
         color: white;
-        font-size: 60px;
-        position: relative;
-        top: 150px;
-        left: 400px;
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+       
     }
     .articles-title{
         color: white;
-        font-size: 60px;
-        position: relative;
-        bottom: 310px;
-        left: 950px;
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
     }
     .blogs-part{
         position: relative;
-        top: 190px;
-        left: 270px;
         background-color: #999696;
-        width: 50%;
-        height: 330px;
+        width: 100vw;
+        height: 500px;
     }
     .articles-part{
         position: relative;
-        bottom: 270px;
-        left: 800px;
         background-color: #999696;
-        width: 55%;
-        height: 330px;
+        width: 100vw;
+        height: 500px;
     }
     #editbtn-b1{
         position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 40px;
-        font-size: 18px;
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 60px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     #deletebtn-b1{
         position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 39px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 60px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .blog1{
-        font-size: 30px;
-        padding: 20px 5px 10px 30px;
+        font-size: 50px;
+        padding: 20px 5px 10px 45px;
         color: #000000;
     }
     #editbtn-b2{
         position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 70px;
-        font-size: 18px;
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 90px;
+        font-size: 45px;
         border-radius: 5px; 
         border: 0px;
     }
     #deletebtn-b2{
         position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 70px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 90px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .blog2{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 45px;
         color: #000000; 
         position: relative;
         bottom: 20px;
     }
     .blog3{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 45px;
         color: #000000; 
         position: relative;
-        bottom: 40px;
+        bottom: 50px;
     }
     #editbtn-b3{
         position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 90px;
-        font-size: 18px; 
-        border-radius: 5px;
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 120px;
+        font-size: 45px;
+        border-radius: 5px; 
         border: 0px;
     }
     #deletebtn-b3{
         position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 90px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 120px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .blog4{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
-        color: #000000; 
-        position: relative;
-        bottom: 60px;
-    }
-    #editbtn-b4{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 110px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b4{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 110px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog5{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 45px;
         color: #000000; 
         position: relative;
         bottom: 80px;
     }
+    #editbtn-b4{
+        position: relative;
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 150px;
+        font-size: 45px;
+        border-radius: 5px; 
+        border: 0px;
+    }
+    #deletebtn-b4{
+        position: relative;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 150px;
+        font-size: 45px;
+        border-radius: 5px;
+        border: 0px;
+    }
+    .blog5{
+        font-size: 50px;
+        padding: 0px 5px 20px 45px;
+        color: #000000; 
+        position: relative;
+        bottom: 110px;
+    }
     #editbtn-b5{
         position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 130px;
-        font-size: 18px; 
-        border-radius: 5px;
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 180px;
+        font-size: 45px;
+        border-radius: 5px; 
         border: 0px;
     }
     #deletebtn-b5{
         position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 130px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 180px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .article1{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 40px;
         color: #000000; 
         position: relative;
         top: 20px;
     }
     #editbtn-a1{
         position: relative;
-        left: 280px;
-        height: 27px;
-        width: 55px;
-        bottom: 30px;
-        font-size: 18px; 
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 60px;
+        font-size: 45px; 
         border-radius: 5px;
         border: 0px;
     }
     #deletebtn-a1{
         position: relative;
-        left:290px;
-        height: 27px;
-        width: 65px;
-        bottom: 30px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 60px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .article2{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 40px;
         color: #000000; 
         position: relative;
-        bottom: 10px;
+        bottom: 20px;
     }
     #editbtn-a2{
         position: relative;
-        left: 280px;
-        height: 27px;
-        width: 55px;
-        bottom: 60px;
-        font-size: 18px;
-        border-radius: 5px; 
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 90px;
+        font-size: 45px; 
+        border-radius: 5px;
         border: 0px;
     }
     #deletebtn-a2{
         position: relative;
-        left:290px;
-        height: 27px;
-        width: 65px;
-        bottom: 60px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 90px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .article3{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 40px;
         color: #000000; 
         position: relative;
-        bottom: 40px;
+        bottom: 50px;
     }
     #editbtn-a3{
         position: relative;
-        left: 280px;
-        height: 27px;
-        width: 55px;
-        bottom: 90px;
-        font-size: 18px; 
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 120px;
+        font-size: 45px; 
         border-radius: 5px;
         border: 0px;
     }
     #deletebtn-a3{
         position: relative;
-        left:290px;
-        height: 27px;
-        width: 65px;
-        bottom: 90px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 120px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .article4{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 40px;
         color: #000000; 
         position: relative;
-        bottom: 60px;
+        bottom: 70px;
     }
     #editbtn-a4{
         position: relative;
-        left: 280px;
-        height: 27px;
-        width: 55px;
-        bottom: 110px;
-        font-size: 18px;
-        border-radius: 5px; 
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 150px;
+        font-size: 45px; 
+        border-radius: 5px;
         border: 0px;
     }
     #deletebtn-a4{
         position: relative;
-        left:290px;
-        height: 27px;
-        width: 65px;
-        bottom: 110px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 150px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
     .article5{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
+        font-size: 50px;
+        padding: 0px 5px 20px 40px;
         color: #000000; 
         position: relative;
-        bottom: 80px;
+        bottom: 100px;
     }
     #editbtn-a5{
         position: relative;
-        left: 280px;
-        height: 27px;
-        width: 55px;
-        bottom: 130px;
-        font-size: 18px; 
+        left: 480px;
+        height: 50px;
+        width: 15%;
+        bottom: 180px;
+        font-size: 45px; 
         border-radius: 5px;
         border: 0px;
     }
     #deletebtn-a5{
         position: relative;
-        left:290px;
-        height: 27px;
-        width: 65px;
-        bottom: 130px;
-        font-size: 18px;
+        left:500px;
+        height: 50px;
+        width: 20%;
+        bottom: 180px;
+        font-size: 45px;
         border-radius: 5px;
         border: 0px;
     }
@@ -974,8 +930,9 @@ body{
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
         top: 220px;
-        left: 400px;
+        left: 250px;
         border-radius: 5px;
+        display: none;
     }
     .triangle2{
         width: 0;
@@ -984,9 +941,10 @@ body{
         border-width: 15px 0px 15px 30px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        left: 500px;
+        left: 400px;
         top: 190px;
         border-radius: 5px;
+        display: none;
     }
     .triangle3{
         width: 0;
@@ -995,9 +953,10 @@ body{
         border-width: 15px 30px 15px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        bottom: 240px;
-        left: 930px;
+        top: 330px;
+        left: 250px;
         border-radius: 5px;
+        display: none;
     }
     .triangle4{
         width: 0;
@@ -1006,75 +965,75 @@ body{
         border-width: 15px 0px 15px 30px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        left: 1030px;
-        bottom: 270px;
+        left: 400px;
+        top: 300px;
         border-radius: 5px;
+        display: none;
     }
-    #blog-articles{
-        height: 700px;
+    #queries-socials{
+        position: relative;
     }
     .socials{
         color: white;
-        font-size: 50px;
+        font-size: 70px;
         position: relative;
-        left: 600px;
-        top: 100px;
+        margin: 20px 0px 20px 0px;
     }
     .media-visits{
         position: relative;
-        left: 300px;
-        top: 230px;
-        font-size: 25px;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
     }
     .ig-logo,
     .in-logo,
     .gt-logo{
-        width: 45px;
-        height: 45px;
-        margin: 10px 20px 10px 20px;
+        width: 50px;
+        height: 50px;
+        margin: 20px 50px 0px 40px;
     }
     .media-container{
         position: relative;
-        left: 280px;
-        top: 250px;
+        left: 70px;
         background-color: #999696;
-        width: fit-content;
-        height: 90px;
+        width: 60vw;
+        height: 120px;
         display: flex;
         flex-direction: row;
+        margin: 10px;
     }
     .media-container p{
         position: relative;
-        top: 60px;
-        right: 50px;
+        top: 80px;
+        right: 85px;
         color: #000000;
+        font-size: 35px;
     }
     .new-queries{
         position: relative;
-        left: 880px;
-        top: 10px;
-        font-size: 25px;
+        font-size: 50px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
     }
     .new-queries-container{
-        height: 150px;
+        height: 200px;
         background-color: #999696;
-        width: fit-content;
+        width: 80vw;
         position: relative;
-        left: 750px;
-        top: 50px;
         color: #000000;
     }
     .q-name{
         padding: 20px 20px 5px 20px;
-        font-size: 22px;
+        font-size: 35px;
     }
     .q-email{
         padding: 0px 20px 5px 20px;
-        font-size: 22px;
+        font-size: 35px;
     }
     .q-message{
         padding: 0px 20px 20px 20px;
-        font-size: 22px;
+        font-size: 35px;
     }
     .triangle5{
         width: 0;
@@ -1084,8 +1043,9 @@ body{
         border-color: transparent #999696 transparent transparent ;
         position: relative;
         top: 170px;
-        left: 700px;
+        left: 100px;
         border-radius: 5px;
+        display: none;
     }
     .triangle6{
         width: 0;
@@ -1094,48 +1054,60 @@ body{
         border-width: 15px 0px 15px 30px;
         border-color: transparent  transparent transparent #999696;
         position: relative;
-        left: 1150px;
-        bottom: 35px;
+        left: 550px;
+        bottom: 40px;
         border-radius: 5px;
+        display: none;
     }
     #msg-deletebtn{
         position: relative;
-        left: 1060px;
-        height: 27px;
-        width: 65px;
-        top: 30px;
-        font-size: 18px;
+        left: 10px;
+        height: 50px;
+        width: 25%;
+        font-size: 45px;
         background-color: #999696;
         border: 0px;
         border-radius: 5px;
+        margin: 10px;
     }
     .all-queries{
         position: relative;
-        left: 600px;
-        top: 150px;
-        font-size: 25px;
+        font-size: 50px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
     }
     .all-queries-container{
         position: relative;
-        left: 500px;
-        top: 180px;
         background-color: #999696;
-        width: 50%;
+        width: 80vw;
     }
     .c-name{
         padding: 20px 0px 5px 10px;
-        font-size: 20px;
+        font-size: 35px;
         color: #000000;
     }
     .c-email{
         padding: 0px 0px 5px 10px;
-        font-size: 20px;
+        font-size: 35px;
         color: #000000;
     }
     .c-message{
         padding: 0px 0px 20px 10px;
-        font-size: 20px;
+        font-size: 35px;
         color: #000000;
+    }
+    #logoutbtn{
+        background-color: #21EFEF;
+        color: #000000;
+        width: 100%;
+        height: 60px;
+        font-size: 45px;   
+        position: relative;
+        border: 1px solid #21EFEF;
+        border-radius: 5px;
+        margin: 20px;
+
     }
 }
 @media only screen and (min-width: 961px){
