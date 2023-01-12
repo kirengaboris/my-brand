@@ -26,8 +26,7 @@ body{
         font-size: 40px;
         padding: 10px 0px 20px 0px;
         position: relative;
-        display: flex;
-        justify-content: center;
+        left: 170px;
     }
     #navbar{
         display: flex;
@@ -36,7 +35,8 @@ body{
         background-color: #181818;
         color: #999696;
         display: none;
-
+        position: fixed;
+        z-index: 10;
     }
     .dropdown{
         display: none;
@@ -48,20 +48,26 @@ body{
         text-decoration: none;
         color: #999696;
         padding-left: 20px;
-        font-size: 30px;
     }
     a.work,
     a.blogs,
     a.contacts,
     a.login{
-        padding: 20px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
+        padding: 20px 0px 20px 0px;   
     }
     a.about-me{
-        padding: 60px 0px 20px 0px;
+        padding: 60px 0px 20px 0px;  
+    }
+    a.work,
+    a.blogs,
+    a.contacts,
+    a.login,
+    a.about-me{
         display: flex;
         justify-content: center;
+        position: relative;
+        right: 430px;
+        font-size: 40px;
     }
     a:hover{
         color: #21EFEF;
@@ -637,8 +643,8 @@ body{
         font-size: 40px;
         padding: 10px 0px 20px 0px;
         position: relative;
+        left: 300px;
         display: flex;
-        justify-content: center;
     }
     #navbar{
         display: flex;
@@ -647,6 +653,8 @@ body{
         background-color: #181818;
         color: #999696;
         display: none;
+        position: fixed;
+        z-index: 10;
     }
     .dropdown{
         display: none;
@@ -666,12 +674,21 @@ body{
     a.login{
         padding: 20px 0px 20px 0px;
         display: flex;
-        justify-content: center;
     }
     a.about-me{
         padding: 60px 0px 20px 0px;
         display: flex;
+    }
+    a.work,
+    a.blogs,
+    a.contacts,
+    a.login,
+    a.about-me{
+        display: flex;
         justify-content: center;
+        position: relative;
+        right: 1030px;
+        font-size: 40px;
     }
     a:hover{
         color: #21EFEF;
@@ -1217,8 +1234,8 @@ body{
         font-size: 40px;
         padding: 10px 0px 20px 0px;
         position: relative;
+        left: 300px;
         display: flex;
-        justify-content: center;
     }
     #navbar{
         display: flex;
@@ -1227,6 +1244,8 @@ body{
         background-color: #181818;
         color: #999696;
         display: none;
+        position: fixed;
+        z-index: 10;
     }
     .dropdown{
         display: none;
@@ -1246,12 +1265,21 @@ body{
     a.login{
         padding: 20px 0px 20px 0px;
         display: flex;
-        justify-content: center;
     }
     a.about-me{
         padding: 60px 0px 20px 0px;
         display: flex;
+    }
+    a.work,
+    a.blogs,
+    a.contacts,
+    a.login,
+    a.about-me{
+        display: flex;
         justify-content: center;
+        position: relative;
+        right: 1030px;
+        font-size: 40px;
     }
     a:hover{
         color: #21EFEF;
