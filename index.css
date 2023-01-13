@@ -196,8 +196,6 @@ body{
         border-width: 25px 50px 25px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        /* right: 20px; */
-        /* top: 755px; */
         border-radius: 5px;
         display: none;
     }
@@ -208,36 +206,69 @@ body{
         border-width: 25px 0px 25px 50px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        /* left: 1405px; */
-        /* top: 705px; */
         border-radius: 5px;
         padding-right: 30px;
         display: none;
     }
-    .project-pic1,
-    .project-pic2,
-    .project-pic3,
-    .project-pic4{
-        width: 100%;
-    }
     .projects{
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        color: #1D1D1D;
         position: relative;
         left: 70px;
+        justify-content: center;
+        flex-direction: column;
     }
-    .project-pic3{
+    .project1,
+    .project2,
+    .project3,
+    .project4{
+        background-color: #FFFFFF;
+        margin: 10px;
         position: relative;
-        padding-bottom: 10px;
+        border-radius: 10px;
+        position: relative;
+        left: 25px;
     }
-    .project-pic2{
-        position: relative;
-        padding-bottom: 10px;
+    .project-img{
+        height: 400px;
+        margin-bottom: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 10px 10px 0px 0px ;
     }
-    .project-pic1{
+    .p1-img,
+    .p2-img,
+    .p3-img,
+    .p4-img{
+        background-image: url("images/project-image.png");
+    }
+    .projects h3{
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 30px;
+    }
+    .project-link{
+        font-size: 20px;
+        display: block;
+        text-align: center;
         position: relative;
-        padding-bottom: 10px;
+        background-color: #21EFEF;
+        border-radius: 0px 0px 10px 10px ;
+        color: #21EFEF;
+    }
+    .project1:hover,
+    .project2:hover,
+    .project3:hover,
+    .project4:hover{
+        transform: scale(1.05);
+    }   
+    .project1:hover > a,
+    .project2:hover > a,
+    .project3:hover > a,
+    .project4:hover > a{
+        color: black;
     }
     .tag1w,
     .tag2w,
@@ -272,24 +303,27 @@ body{
         border-width: 25px 50px 25px 0px;
         border-color: transparent #D9D9D9 transparent transparent ;
         position: relative;
-        /* bottom: 150px; */
         border-radius: 5px;
         display: none;
     }
     .blog1 h1,
-    .blog1 h2,
     .blog2 h1,
-    .blog2 h2,
-    .blog3 h1,
-    .blog3 h2{
+    .blog3 h1{
         color: black;
         font-size: 35px;
-        display: flex;
-        justify-content: center;
+        padding: 0px 20px 0px 20px;
+    }
+    .blog1 h2,
+    .blog2 h2,
+    .blog3 h2{
+        font-size: 30px;
+        color: black;
+        padding: 0px 20px 0px 20px;
     }
     .teaser{
         color: black;
-        font-size: 35px;
+        font-size: 25px;
+        padding: 0px 20px 0px 20px;
     }
     #likes-logo1{
         width: 60px;
@@ -312,9 +346,12 @@ body{
     .blog2,
     .blog3{
         background-color: #999696;
-        width: 120%;
+        width: 100vw;
         position: relative;
         left: 50px;
+        border-radius: 15px;
+        box-shadow: 15px 15px 10px black;
+
     }
     #likes-logo3{
         width: 60px;
@@ -341,8 +378,8 @@ body{
     }
     #blog-view3{
         position: relative;
-        bottom: 170px;
-        left: 350px;
+        bottom: 160px;
+        left: 270px;
         color: #D9D9D9;
         font-size: 30px;
     }
@@ -358,8 +395,8 @@ body{
     }
     #blog-view1{
         position: relative;
-        left: 350px;
-        bottom: 170px;
+        left: 270px;
+        bottom: 160px;
         color: #D9D9D9;
         font-size: 30px;
     }
@@ -388,10 +425,18 @@ body{
     }
     #blog-view2{
         position: relative;
-        left: 350px;
-        bottom: 170px;
+        left: 270px;
+        bottom: 150px;
         color: #D9D9D9;
         font-size: 30px;
+    }
+    .likes{
+        position: relative;
+        top: 10px;
+    }
+    .comment{
+        position: relative;
+        top: 5px;
     }
     .summary1{
         position: relative;
@@ -402,6 +447,12 @@ body{
         position: relative;
         bottom: 50px;
    }
+   .summary1,
+   .summary2,
+   .summary3{
+    position: relative;
+    left: 30px;
+   }
     .triangle2{
         width: 0;
         height: 0;
@@ -409,8 +460,6 @@ body{
         border-width: 25px 0px 25px 50px;
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
-        /* left: 1370px; */
-        /* bottom: 1480px; */
         border-radius: 5px;
         display: none;
     }
@@ -837,16 +886,65 @@ body{
         border-radius: 5px;
         display: none;
     }
-    .project-pic1,
-    .project-pic2,
-    .project-pic3,
-    .project-pic4{
-        width: 120%;
-        margin-bottom: 10px;
+    .projects{
+        display: flex;
+        color: #1D1D1D;
         position: relative;
-        left: 100px;
+        /* right: 25px; */
+        justify-content: center;
+        flex-direction: column;
     }
-    
+    .project1,
+    .project2,
+    .project3,
+    .project4{
+        background-color: #FFFFFF;
+        margin: 20px;
+        position: relative;
+        border-radius: 10px;
+        left: 150px;
+    }
+    .project-img{
+        height: 400px;
+        margin-bottom: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px 10px 0px 0px ;
+    }
+    .p1-img,
+    .p2-img,
+    .p3-img,
+    .p4-img{
+        background-image: url("images/project-image.png");
+    }
+    .projects h3{
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 40px;
+    }
+    .project-link{
+        font-size: 35px;
+        display: block;
+        text-align: center;
+        position: relative;
+        background-color: #21EFEF;
+        border-radius: 0px 0px 10px 10px ;
+        color: #21EFEF;
+    }
+    .project1:hover,
+    .project2:hover,
+    .project3:hover,
+    .project4:hover{
+        transform: scale(1.05);
+    }   
+    .project1:hover > a,
+    .project2:hover > a,
+    .project3:hover > a,
+    .project4:hover > a{
+        color: black;
+    }
     .tag1w,
     .tag2w,
     .tag3w,
@@ -882,21 +980,23 @@ body{
         display: none;
     }
     .blog1 h1,
-    .blog1 h2,
     .blog2 h1,
-    .blog2 h2,
-    .blog3 h1,
-    .blog3 h2{
+    .blog3 h1{
         color: black;
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
+        font-size: 45px;
+        padding: 0px 20px 0px 20px;
+    }
+    .blog1 h2,
+    .blog2 h2,
+    .blog3 h2{
+        font-size: 40px;
+        color: black;
+        padding: 0px 20px 0px 20px;
     }
     .teaser{
         color: black;
-        font-size: 45px;
-        display: flex;
-        justify-content: center;
+        font-size: 35px;
+        padding: 0px 20px 0px 20px;
     }
     #likes-logo1{
         width: 80px;
@@ -920,9 +1020,11 @@ body{
     .blog2,
     .blog3{
         background-color: #999696;
-        width: 130%;
+        width: 100vw;
         position: relative;
-        left: 70px;
+        left: 100px;
+        box-shadow: 15px 15px 10px black;
+        border-radius: 15px;
     }
     #likes-num1{
         position: relative;
@@ -936,7 +1038,7 @@ body{
     }
     #blog-view1{
         position: relative;
-        left: 500px;
+        left: 400px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -967,7 +1069,7 @@ body{
     }
     #blog-view2{
         position: relative;
-        left: 500px;
+        left: 400px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -998,7 +1100,7 @@ body{
     }
     #blog-view3{
         position: relative;
-        left: 500px;
+        left: 400px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -1010,6 +1112,12 @@ body{
     .summary3{
         position: relative;
         bottom: 50px;
+    }
+    .summary1,
+    .summary2,
+    .summary3{
+        position: relative;
+        left: 30px;
     }
     .triangle2{
         width: 0;
@@ -1425,16 +1533,64 @@ body{
         border-radius: 5px;
         display: none;
     }
-    .project-pic1,
-    .project-pic2,
-    .project-pic3,
-    .project-pic4{
-        width: 100%;
-        margin-bottom: 10px;
+    .projects{
+        display: flex;
+        color: #1D1D1D;
         position: relative;
-        left: 15px;
+        justify-content: center;
+        flex-direction: column;
     }
-    
+    .project1,
+    .project2,
+    .project3,
+    .project4{
+        background-color: #FFFFFF;
+        margin: 20px;
+        position: relative;
+        border-radius: 10px;
+        left: 50px;
+    }
+    .project-img{
+        height: 600px;
+        margin-bottom: 5px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 10px 10px 0px 0px ;
+    }
+    .p1-img,
+    .p2-img,
+    .p3-img,
+    .p4-img{
+        background-image: url("images/project-image.png");
+    }
+    .projects h3{
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 40px;
+    }
+    .project-link{
+        font-size: 35px;
+        display: block;
+        text-align: center;
+        position: relative;
+        background-color: #21EFEF;
+        border-radius: 0px 0px 10px 10px ;
+        color: #21EFEF;
+    }
+    .project1:hover,
+    .project2:hover,
+    .project3:hover,
+    .project4:hover{
+        transform: scale(1.05);
+    }   
+    .project1:hover > a,
+    .project2:hover > a,
+    .project3:hover > a,
+    .project4:hover > a{
+        color: black;
+    }
     .tag1w,
     .tag2w,
     .tag3w,
@@ -1465,21 +1621,24 @@ body{
         display: none;
     }
     .blog1 h1,
-    .blog1 h2,
     .blog2 h1,
-    .blog2 h2,
-    .blog3 h1,
-    .blog3 h2{
+    .blog3 h1{
         color: black;
         font-size: 50px;
+        padding: 0px 20px 0px 20px;
+    }
+    .blog1 h2,
+    .blog2 h2,
+    .blog3 h2{
+        font-size: 40px;
+        color: black;
         display: flex;
-        justify-content: center;
+        padding: 0px 20px 0px 20px;
     }
     .teaser{
         color: black;
         font-size: 45px;
-        display: flex;
-        justify-content: center;
+        padding: 20px;
     }
     #likes-logo1{
         width: 80px;
@@ -1503,9 +1662,11 @@ body{
     .blog2,
     .blog3{
         background-color: #999696;
-        width: 130%;
+        width: 100%;
         position: relative;
-        left: 70px;
+        left: 100px;
+        box-shadow: 15px 15px 10px black;
+        border-radius: 15px;
     }
     #likes-num1{
         position: relative;
@@ -1519,7 +1680,7 @@ body{
     }
     #blog-view1{
         position: relative;
-        left: 500px;
+        left: 420px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -1550,7 +1711,7 @@ body{
     }
     #blog-view2{
         position: relative;
-        left: 500px;
+        left: 420px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -1581,7 +1742,7 @@ body{
     }
     #blog-view3{
         position: relative;
-        left: 500px;
+        left: 420px;
         bottom: 220px;
         color: #D9D9D9;
         font-size: 45px;
@@ -1593,6 +1754,12 @@ body{
     .summary3{
         position: relative;
         bottom: 50px;
+    }
+    .summary1,
+    .summary2,
+    .summary3{
+        position: relative;
+        left: 30px;
     }
     .triangle2{
         width: 0;
@@ -2139,13 +2306,13 @@ body{
     .blog3 h1,
     .blog3 h2{
         color: black;
-        font-size: 30px;
-        display: flex;
-        justify-content: center;
+        font-size: 20px;
+        padding: 0px 20px 0px 20px;
     }
     .teaser{
         color: black;
-        font-size: 25px;
+        font-size: 20px;
+        padding: 0px 20px 0px 20px;
     }
     .likes-logo{
         width: 50px;
@@ -2169,6 +2336,8 @@ body{
     .blog3{
         background-color: #999696;
         width: 25%;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px black;
     }
     .likes-num{
         position: relative;
@@ -2186,6 +2355,7 @@ body{
         bottom: 140px;
         color: #D9D9D9;
         font-size: 30px;
+        display: block;
     }
     .summary1{
         position: relative;
@@ -2195,12 +2365,12 @@ body{
     .summary2{
         position: relative;
         left: 435.5px;
-        bottom: 410px;
+        bottom: 370px;
     }
     .summary3{
         position: relative;
         left: 800px;
-        bottom: 850px;
+        bottom: 770px;
     }
     .triangle2{
         width: 0;
@@ -2210,7 +2380,7 @@ body{
         border-color: transparent  transparent transparent #D9D9D9;
         position: relative;
         left: 1140px;
-        bottom: 1190px;
+        bottom: 1080px;
         border-radius: 5px;
     }
     .tag1bp,
@@ -2227,7 +2397,7 @@ body{
     }
     .tag4bp{
         position: relative;
-        bottom: 985px;
+        bottom: 900px;
     }
     #work{
         font-size: 30px;
@@ -2259,33 +2429,6 @@ body{
         top: 130px;
         border-radius: 5px;
     }
-    .project-pic1,
-    .project-pic2,
-    .project-pic3,
-    .project-pic4{
-        width: 250px;
-        height: 250px;
-    }
-    .project-pic4{
-        position: relative;
-        bottom: 40px;
-        left: 130px;
-    }
-    .project-pic3{
-        position: relative;
-        bottom: 40px;
-        left: 100px;
-    }
-    .project-pic2{
-        position: relative;
-        bottom: 40px;
-        left: 70px;
-    }
-    .project-pic1{
-        position: relative;
-        bottom: 40px;
-        left: 40px;
-    }
     .tag1w,
     .tag2w,
     .tag3w,
@@ -2298,12 +2441,71 @@ body{
     }
     .tag5w{
         position: relative;
-        bottom: 50px;
+        bottom: 60px;
     }
     .tag6w{
         position: relative;
-        bottom: 40px;
+        bottom: 60px;
     }
+    .projects{
+        display: flex;
+        color: #1D1D1D;
+        position: relative;
+        right: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .project1,
+    .project2,
+    .project3,
+    .project4{
+        background-color: #FFFFFF;
+        width: 20%;
+        margin: 10px;
+        position: relative;
+        bottom: 60px;
+        border-radius: 10px;
+    }
+    .project-img{
+        height: 250px;
+        margin-bottom: 5px;
+        background-size: cover;
+        border-radius: 10px 10px 0px 0px ;
+    }
+    .p1-img,
+    .p2-img,
+    .p3-img,
+    .p4-img{
+        background-image: url("images/project-image.png");
+    }
+    .projects h3{
+        display: block;
+        text-align: center;
+        color: black;
+        font-size: 30px;
+    }
+    .project-link{
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        position: relative;
+        background-color: #21EFEF;
+        border-radius: 0px 0px 10px 10px ;
+        color: #21EFEF;
+    }
+    .project1:hover,
+    .project2:hover,
+    .project3:hover,
+    .project4:hover{
+        transform: scale(1.05);
+    }   
+    .project1:hover > a,
+    .project2:hover > a,
+    .project3:hover > a,
+    .project4:hover > a{
+        color: black;
+    }
+
 }
 
 
