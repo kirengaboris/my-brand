@@ -228,6 +228,7 @@ body{
         border-radius: 10px;
         position: relative;
         left: 25px;
+        box-shadow: 10px 10px 5px black;
     }
     .project-img{
         height: 400px;
@@ -903,6 +904,7 @@ body{
         position: relative;
         border-radius: 10px;
         left: 150px;
+        box-shadow: 10px 10px 5px black;
     }
     .project-img{
         height: 400px;
@@ -1549,6 +1551,7 @@ body{
         position: relative;
         border-radius: 10px;
         left: 50px;
+        box-shadow: 10px 10px 5px black;
     }
     .project-img{
         height: 600px;
@@ -2465,6 +2468,7 @@ body{
         position: relative;
         bottom: 60px;
         border-radius: 10px;
+        box-shadow: 10px 10px 5px black;
     }
     .project-img{
         height: 250px;

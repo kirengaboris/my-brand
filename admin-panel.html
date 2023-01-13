@@ -17,7 +17,7 @@
                      <p>Web Developer</p>
                 </div>
                 <a class="add-post" href="#add-post">Add a post</a><hr>
-                <a class="blogs-articles" href="#blog-articles">Blogs/Articles</a><hr>
+                <a class="blogs-articles" href="#blog">Blogs</a><hr>
                 <a class="queries" href="#queries-socials">Queries & Socials</a><hr>
 
                 <a href="index.html"><button id="logoutbtn" type="button">Logout</button></a>
@@ -30,18 +30,18 @@
             <h2>Add a Post</h2>
 
             <form class="add-post-form">
-                <label id="labels" for="topic">Topic of the Blog/Article</label>
+                <label id="labels" for="topic">Topic of the Blog</label>
                 <input id="topic" type="text">
-                <label id="labels" for="title">Title of the Blog/Article</label>
+                <label id="labels" for="title">Title of the Blog</label>
                 <input id="title" type="text">
-                <label id="labels" for="post">Blog/Article Description</label>
+                <label id="labels" for="post">Blog Description</label>
                 <textarea id="post"></textarea>
                 <button id="blog-image-btn" type="button">Add image</button>
                 <a href="preview-blog.html"><button id="postbtn" type="button">Preview</button></a>
             </form>
         </section>
 
-        <section id="blog-articles">
+        <section id="blog">
             <h2 class="blog-title">Blogs</h2>
             <div class="blogs-part">
                 <p class="blog1">Title of the blog</p>
@@ -64,11 +64,13 @@
                 <button id="editbtn-b5" type="button">Edit</button>
                 <button id="deletebtn-b5" type="button">Delete</button>
             </div>
+            <div class="nav-btns">
+                <div class="triangle1"></div>
+                <div class="triangle2"></div>
+            </div>
+                 
 
-            <div class="triangle1"></div>
-            <div class="triangle2"></div>
-
-            <h2 class="articles-title">Articles</h2>
+            <!-- <h2 class="articles-title">Articles</h2>
             <div class="articles-part">
                 <p class="article1">Title of the article</p>
                 <button id="editbtn-a1" type="button">Edit</button>
@@ -92,7 +94,7 @@
             </div>
 
             <div class="triangle3"></div>
-            <div class="triangle4"></div>
+            <div class="triangle4"></div> -->
 
         </section>
            
@@ -135,5 +137,10 @@
         <a class="logoutbtn"href="index.html"><button id="logoutbtn" type="button">Logout</button></a>
 
         <script src="admin-panel.js"></script>
+        <script src="file:///Users/Boris/Downloads/ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'post' );
+        </script>
+
     </body>
 </html>
