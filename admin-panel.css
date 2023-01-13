@@ -1049,22 +1049,12 @@ body{
         height: 200px;
         background-color: #D9D9D9;
     }
-    #blog-image-btn{
-        width: 115px;
-        height: 30px;
-        font-size: 20px;
-        position: relative;
-        left: 460px;
-        bottom: 30px;
-        border-radius: 5px;
-        border: 0px;
-    }
     #postbtn{
         height: 30px;
         font-size: 20px;
         position: relative;
-        left: 570px;
-        bottom: 60px;
+        left: 430px;
+        bottom: 30px;
         border-radius: 5px;
         border: 0px;
     }
