@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width =device-width, initial-scale=1.0">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="/assets/styles/index.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
     </head>
@@ -14,7 +14,7 @@
             <nav id="navbar">
                 <div id="home">
                     <a class="landing-page" href="#landing-page"> 
-                        <img class="logo" src="images/logo.png">
+                        <img class="logo" src="/assets/images/logo.png">
                      </a>
                      <p>Web Developer</p>
                 </div>
@@ -25,7 +25,7 @@
                 <a class="login" href="#login">Login</a><hr>
             </nav>
             <label for="dropdown-nav" class="dropdown-nav">
-                <img class="dropdown-nav" src="images/menu.png">
+                <img class="dropdown-nav" src="/assets/images/menu.png">
             </label>
             
         </header>
@@ -35,7 +35,7 @@
              <p class="tag2lp">&ltbody&gt</p>
              <p class="tag3lp">&lth1&gt</p>
             <h1 id="h1"><strong>Hi,</strong></h1>
-            <h1 class="welcome"><strong>I'm <img class="inner-logo" src="images/B.png">oris</strong></h1>
+            <h1 class="welcome"><strong>I'm <img class="inner-logo" src="/assets/images/B.png">oris</strong></h1>
             <h1 class="welcome"><strong>Web Developer</strong><p class="tag4lp">&lth1/&gt</p></h1>
             <p class="tag5lp">&ltp&gt</p>
             <p id="p">Front &nbsp End &nbsp Developer &nbsp / &nbsp WordPress &nbsp Expert</p>
@@ -48,7 +48,7 @@
             <h2>About Me</h2>
             <p class="tag2ap">&lt/h2&gt</p>
             <div id="profile-picture">
-                <img class="picture" src="images/Profile.JPG">
+                <img class="picture" src="/assets/images/Profile.JPG">
             </div>
             <p class="tag3ap">&ltp&gt</p>
             <p class="description">My name is Kirenga Boris.<br>
@@ -135,11 +135,11 @@
                      </p>
                 </div>
                 <div class="likes">
-                    <img class="likes-logo" id="likes-logo1"src="images/like.png">
+                    <img class="likes-logo" id="likes-logo1"src="/assets/images/like.png">
                     <p class="likes-num" id="likes-num1">20</p>
                 </div>
                 <div class="comment">
-                    <img class="comments-logo" id="comments-logo1"src="images/comments.png">
+                    <img class="comments-logo" id="comments-logo1"src="/assets/images/comments.png">
                      <p class="comments-num" id="comments-num1">10</p>
                 </div>
                      
@@ -159,11 +159,11 @@
                      </p>
                 </div>
                 <div class="likes">
-                    <img class="likes-logo" id="likes-logo2"src="images/like.png">
+                    <img class="likes-logo" id="likes-logo2"src="/assets/images/like.png">
                     <p class="likes-num" id="likes-num2">20</p>
                 </div>
                 <div class="comment">
-                    <img class="comments-logo" id="comments-logo2"src="images/comments.png">
+                    <img class="comments-logo" id="comments-logo2"src="/assets/images/comments.png">
                     <p class="comments-num" id="comments-num2">10</p>
                 </div>    
                     
@@ -183,11 +183,11 @@
                      </p>
                 </div>
                 <div class="likes">
-                    <img class="likes-logo" id="likes-logo3"src="images/like.png">
+                    <img class="likes-logo" id="likes-logo3"src="/assets/images/like.png">
                      <p class="likes-num" id="likes-num3">20</p>
                 </div>
                 <div class="comment">
-                    <img class="comments-logo" id="comments-logo3"src="images/comments.png">
+                    <img class="comments-logo" id="comments-logo3"src="/assets/images/comments.png">
                     <p class="comments-num" id="comments-num3">10</p>
                 </div>
                          
@@ -225,19 +225,19 @@
             
             <div id="other-contacts">
                 <div class="instagram">
-                    <img class="ig-logo" src="images/instagram.png">
+                    <img class="ig-logo" src="/assets/images/instagram.png">
                     <a id="ig-profile" href="https://www.instagram.com/k.boris5/?hl=en" target="blank">Instagram</a>
                 </div>
                 <div class="linkedin">
-                    <img class="in-logo" src="images/linkedin.png">
+                    <img class="in-logo" src="/assets/images/linkedin.png">
                     <a id="in-profile" href="https://www.linkedin.com/in/boris-kirenga-b069341b1/" target="blank">Linkedin</a>
                 </div>
                 <div class="github">
-                    <img class="gt-logo" src="images/github.png">
+                    <img class="gt-logo" src="/assets/images/github.png">
                     <a id="gt-profile" href="https://github.com/kirengaboris" target="blank">Github</a>
                 </div>
                 <div class="email">
-                    <img class="email-logo" src="images/gmail.png">
+                    <img class="email-logo" src="/assets/images/gmail.png">
                     <p id="email-link">kirengaboris5@gmail.com</p>
                 </div>
             </div>
@@ -251,9 +251,17 @@
                 <p class="tag3logp">&ltform&gt</p>
                 <div class="login-container">
                     <h3>Login</h3>
-                    <input id="login-email" type="email" placeholder="Email"><br>
-                    <input id="login-password" type="text" placeholder="Password"><br>
-                    <a href="admin-panel.html"><button id="loginbtn" type="button">Login</button></a>
+                    <div id="email-label">
+                        <input id="login-email" name="email" placeholder="Email" /><br>
+                        <div id="error-msg"></div>
+                    </div>
+
+                   <div id="password-label">
+                    <input id="login-password" name="password" type="password" placeholder="Password"><br>
+                    <div id="error-msg"></div>
+                   </div>
+                    
+                    <button id="loginbtn" type="submit">Login</button>
                     <p class="loginmsg">Forgot Password?</p>
                 </div>
                 <p class="tag4logp">&lt/form&gt</p> 
@@ -262,6 +270,7 @@
             <p class="tag6logp">&lt/html&gt</p>
         </section>
 
-        <script src="portfolio.js"></script>
+        <!-- <script src="portfolio.js"></script> -->
+        <script src="login.js"></script>
     </body>
 </html>
