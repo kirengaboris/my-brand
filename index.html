@@ -143,7 +143,7 @@
                      <p class="comments-num" id="comments-num1">10</p>
                 </div>
                      
-                 <a class="blog-view" id="blog-view1"href="single-blog-view.html">Read more</a>
+                 <a class="blog-view" id="blog-view1"href="/ui/client/single-blog-view.html">Read more</a>
                
                
             </div>
@@ -167,7 +167,7 @@
                     <p class="comments-num" id="comments-num2">10</p>
                 </div>    
                     
-                 <a class="blog-view" id="blog-view2"href="single-blog-view.html">Read more</a>
+                 <a class="blog-view" id="blog-view2"href="/ui/client/single-blog-view.html">Read more</a>
                 
                
             </div>
@@ -191,7 +191,7 @@
                     <p class="comments-num" id="comments-num3">10</p>
                 </div>
                          
-                 <a class="blog-view" id="blog-view3"href="single-blog-view.html">Read more</a>
+                 <a class="blog-view" id="blog-view3"href="/ui/client/single-blog-view.html">Read more</a>
                 
                
             </div>
@@ -216,9 +216,19 @@
             
             <form id="contact-form">
                 <p class="tag5cp">&ltform&gt</p>
-                <input id="name" type="text" placeholder="Name">
-                <input id="email" type="email" placeholder="Email" required><br>
-                <textarea id="message" placeholder="Message"></textarea><br>
+                <div id="names-label">
+                    <input id="name" name="names"type="text" placeholder="Name">
+                    <div></div>
+                </div>
+                <div id="emails-label">
+                    <input id="email" name="email" type="email" placeholder="Email"><br>
+                    <div id="error-msg"></div>
+                </div>
+                <div id="message-label">
+                    <textarea id="message" name="message" placeholder="Message"></textarea><br>
+                    <div id="error-msg"></div>
+                </div>
+               
                 <button id="sendbtn" type="submit">Send Message</button>
                 <p class="tag6cp">&ltform/&gt</p>
             </form>
@@ -272,5 +282,6 @@
 
         <!-- <script src="portfolio.js"></script> -->
         <script src="/ui/auth/login.js"></script>
+        <script src="/ui/auth/contact.js"></script>
     </body>
 </html>
