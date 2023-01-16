@@ -11,10 +11,10 @@ form.addEventListener("submit", e => {
     const passwordValue = password.value;
     if(inputCheck(form)){
        if(isAdmin(emailValue,passwordValue)){
-        location.href="admin-panel.html";
+        location.href="/ui/admin/admin-panel.html";
        } 
        else{
-        location.href="index.html"
+        location.href="/index.html"
        }
     }
 

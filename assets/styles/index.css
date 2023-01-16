@@ -242,7 +242,7 @@ body{
     .p2-img,
     .p3-img,
     .p4-img{
-        background-image: url("images/project-image.png");
+        background-image: url("/assets/images/project-image.png");
     }
     .projects h3{
         display: block;
@@ -602,12 +602,8 @@ body{
     .tag3logp{
         position: relative;
         left: 30px;
-        /* padding: 5px; */
     }
-    .tag6logp{
-        position: relative;
-        /* right: 150px; */
-    }
+    
     .tag5logp{
         position: relative;
         left: 15px;
@@ -618,7 +614,6 @@ body{
         height: 400px;
         position: relative;
         left: 70px;
-        /* padding: 20px 0px 20px 0px; */
         border-radius: 15px;    
     }
     #login-email,
@@ -642,9 +637,9 @@ body{
         height: 50px;
         font-size: 30px;   
         position: relative;
+        top: 20px;
         left: 80px;
         padding: 5px;
-        /* top: 40px; */
         border: 1px solid #21EFEF;
         border-radius: 10px;
         display: flex;
@@ -652,13 +647,10 @@ body{
     }
     #login-form{
         position: relative;
-        /* width: 100%; */
-        /* height: 100px; */
-        /* left: 400px; */
+       
     }
     .login-container h3{
         position: relative;
-        /* left: 130px; */
         padding: 30px 0px 30px 0px;
         font-size: 35px;
         display: flex;
@@ -668,13 +660,25 @@ body{
         font-size: 30px;
         position: relative;
         top: 50px;
-        /* left: 20px   */
         display: flex;
         justify-content: center;
     }
     #loginbtn:hover{
         background-color: #21EFEF;
         color: black; 
+    }
+    .invalid input{
+        border: 1px solid red !important;
+    }
+    #error-msg{
+        font-size: 30px;
+        color: red;
+        display: block;
+        text-align: center;
+
+    }
+    .success input{
+        border: 1px solid greenyellow !important;
     }
 }
 @media only screen and (min-width: 426px) and (max-width: 540px){
@@ -891,7 +895,6 @@ body{
         display: flex;
         color: #1D1D1D;
         position: relative;
-        /* right: 25px; */
         justify-content: center;
         flex-direction: column;
     }
@@ -918,7 +921,7 @@ body{
     .p2-img,
     .p3-img,
     .p4-img{
-        background-image: url("images/project-image.png");
+        background-image: url("/assets/images/project-image.png");
     }
     .projects h3{
         display: block;
@@ -1298,6 +1301,7 @@ body{
         height: 50px;
         font-size: 35px;   
         position: relative;
+        top: 10px;
         left: 40px;
         border: 1px solid #21EFEF;
         border-radius: 10px;
@@ -1326,6 +1330,19 @@ body{
     #loginbtn:hover{
         background-color: #21EFEF;
         color: black; 
+    }
+    .invalid input{
+        border: 1px solid red !important;
+    }
+    #error-msg{
+        font-size: 30px;
+        color: red;
+        display: block;
+        text-align: center;
+
+    }
+    .success input{
+        border: 1px solid greenyellow !important;
     }
 }
 @media only screen and (min-width: 541px) and (max-width: 961px){
@@ -1565,7 +1582,7 @@ body{
     .p2-img,
     .p3-img,
     .p4-img{
-        background-image: url("images/project-image.png");
+        background-image: url("/assets/images/project-image.png");
     }
     .projects h3{
         display: block;
@@ -1941,6 +1958,7 @@ body{
         height: 50px;
         font-size: 35px;   
         position: relative;
+        top: 10px;
         left: 40px;
         border: 1px solid #21EFEF;
         border-radius: 10px;
@@ -1969,6 +1987,19 @@ body{
     #loginbtn:hover{
         background-color: #21EFEF;
         color: black; 
+    }
+    .invalid input{
+        border: 1px solid red !important;
+    }
+    #error-msg{
+        font-size: 35px;
+        color: red;
+        display: block;
+        text-align: center;
+
+    }
+    .success input{
+        border: 1px solid greenyellow !important;
     }
 }
 @media only screen and (min-width: 961px){
