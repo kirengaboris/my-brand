@@ -680,6 +680,15 @@ body{
     .success input{
         border: 1px solid greenyellow !important;
     }
+    #error-msg1,
+    #error-msg2,
+    #error-msg3{
+        font-size: 15px;
+        color: red;
+    }
+    .invalid-contacts {
+        border: 1px solid red !important;
+    }
 }
 @media only screen and (min-width: 426px) and (max-width: 540px){
     body{
@@ -1344,6 +1353,15 @@ body{
     .success input{
         border: 1px solid greenyellow !important;
     }
+    #error-msg1,
+    #error-msg2,
+    #error-msg3{
+        font-size: 15px;
+        color: red;
+    }
+    .invalid-contacts {
+        border: 1px solid red !important;
+    }
 }
 @media only screen and (min-width: 541px) and (max-width: 961px){
     body{
@@ -2000,6 +2018,15 @@ body{
     }
     .success input{
         border: 1px solid greenyellow !important;
+    }
+    #error-msg1,
+    #error-msg2,
+    #error-msg3{
+        font-size: 15px;
+        color: red;
+    }
+    .invalid-contacts {
+        border: 1px solid red !important;
     }
 }
 @media only screen and (min-width: 961px){
