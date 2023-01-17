@@ -1,5 +1,3 @@
-// const email = document.getElementById("login-email");
-// const password = document.getElementById("login-password");
 const form = document.getElementById("login-form");
 
 const { email, password} = form
@@ -53,7 +51,7 @@ function inputCheck (form){
 function setInvalid (input , message){
     const inputLabel = input.parentElement;
     const inputError = inputLabel.querySelector("#error-msg");
-    inputLabel.className = "invalid";
+    inputLabel.className = "invalid-logins";
     inputError.innerHTML = message;
 }
 

@@ -29,14 +29,26 @@
         <section id="add-post">
             <h2>Add a Post</h2>
 
-            <form class="add-post-form">
+            <form class="add-post-form" id="add-post-form">
                 <label id="labels" for="topic">Topic of the Blog</label>
-                <input id="topic" type="text">
+                <div id="topic-label">
+                    <input id="topic" type="text">
+                    <div id="admin-error1"></div>
+                </div>
+               
                 <label id="labels" for="title">Title of the Blog</label>
-                <input id="title" type="text">
+                <div id="title-label">
+                    <input id="title" type="text">
+                    <div id="admin-error2"></div>
+                </div>
+               
                 <label id="labels" for="post">Blog Description</label>
-                <textarea id="post"></textarea>
-                <a href="/ui/admin/preview-blog.html"><button id="postbtn" type="button">Preview</button></a>
+                <div id="article-label">
+                    <textarea id="post"></textarea>
+                    <div id="admin-error3"></div>
+                </div>
+                
+                <button id="postbtn" type="submit">Preview</button>
             </form>
         </section>
 
@@ -108,7 +120,7 @@
         </section>
         <a class="logoutbtn"href="/index.html"><button id="logoutbtn" type="button">Logout</button></a>
 
-        <!-- <script src="/ui/admin/js/"></script> -->
+        <script src="/ui/admin/js/admin-panel.js"></script>
         <script src="/assets/ckeditor/ckeditor.js"></script>
         <script>
             CKEDITOR.replace( 'post' );

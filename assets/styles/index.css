@@ -2148,7 +2148,7 @@ body{
     #name,
     #email{
         height: 40px;
-        width: 24.7%;
+        width: 50%;
         border: 0px;
         color: #8d8d8d;
         padding: 20px;
@@ -2540,7 +2540,7 @@ body{
     .project4:hover > a{
         color: black;
     }
-    .invalid input{
+    .invalid-logins input{
         border: 1px solid red !important;
     }
     #error-msg{
@@ -2552,6 +2552,16 @@ body{
     }
     .success input{
         border: 1px solid greenyellow !important;
+    }
+
+    #error-msg1,
+    #error-msg2,
+    #error-msg3{
+        font-size: 15px;
+        color: red;
+    }
+    .invalid-contacts {
+        border: 1px solid red !important;
     }
 }
 

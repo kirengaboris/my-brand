@@ -11,7 +11,7 @@
         <input type="checkbox" id="dropdown-nav" class="dropdown">
         <nav id="navbar">
             <div id="home">
-                <a class="blog-page" href="index.html#landing-page"> 
+                <a class="blog-page" href="/index.html"> 
                     <img class="logo" src="/assets/images/logo.png">
                 </a>
                  <p>Web Developer</p>
@@ -149,9 +149,16 @@
             <a class="back" href="/index.html#blogs">Back To Blogs</a>
             <img class="like" src="/assets/images/like.png">
 
-            <form class="comments-form">
-                <input id="name" type="text" placeholder="Names">
-                <textarea id="comment" placeholder="Add a comment"></textarea>
+            <form class="comments-form" id="comment-form">
+                <div id="name-label">
+                    <input id="name" type="text" placeholder="Names">
+                    <div id="error1"></div>
+                </div>
+                <div id="comment-label">
+                    <textarea id="comment" placeholder="Add a comment"></textarea>
+                    <div id="error2"></div>
+                </div>
+                
                 <button id="commentbtn" type="submit">Post</button>
             </form>
 
@@ -166,6 +173,6 @@
             </div>
        </div>
        
-        <script src="single-blog-view.js"></script>
+        <script src="/ui/auth/single-blog-view.js"></script>
     </body>
 </html>
