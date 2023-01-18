@@ -15,11 +15,16 @@ articlesForm.addEventListener("submit", e =>{
     var topicName = topic.value;
     var tittleName = title.value;
    
-    
     if(checkBlog(myContent,topicName,tittleName)){
-        location.href = "/ui/admin/preview-blog.html"
-    }
-    
+        blog = {
+            topic : topicName,
+            title : tittleName,
+            article : myContent
+        }
+
+        localStorage.setItem(tittleName,JSON.stringify(blog));
+        location.href = "/ui/admin/preview-blog.html"  
+    } 
 })
 
 function checkBlog (myContent,topicName,tittleName){
@@ -30,7 +35,6 @@ function checkBlog (myContent,topicName,tittleName){
         topic.classList.add("invalid-article");
         valid = false;
     }
-
     if(tittleName == null || title.value === ""){
         adminError2.innerHTML = "Title is required";
         title.classList.add("invalid-article");
@@ -44,5 +48,6 @@ function checkBlog (myContent,topicName,tittleName){
         adminError3.innerHTML = "Blog too short"
         valid = false
     }
+    
     return valid;
 }

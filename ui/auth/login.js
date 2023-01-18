@@ -1,12 +1,12 @@
 const form = document.getElementById("login-form");
-
 const { email, password} = form
-
 
 form.addEventListener("submit", e => {
     e.preventDefault();
+
     const emailValue = email.value;
     const passwordValue = password.value;
+
     if(inputCheck(form)){
        if(isAdmin(emailValue,passwordValue)){
         location.href="/ui/admin/admin-panel.html";
@@ -14,11 +14,7 @@ form.addEventListener("submit", e => {
        else{
         location.href="/index.html"
        }
-    }
-
-
-
-    
+    }   
 })
 
 function inputCheck (form){
@@ -35,7 +31,6 @@ function inputCheck (form){
     else{
         setSuccess(form.email)
     }
-
     if(form.password.value.trim() === ""){
         setInvalid(form.password, "Password is required");
         required = false;
@@ -43,9 +38,8 @@ function inputCheck (form){
     else{
         setSuccess(form.password)
     }
+
     return required;
-
-
 }
 
 function setInvalid (input , message){
@@ -75,6 +69,7 @@ function isAdmin(email,password){
     else{
         admin = false;
     }
-     return admin;
+
+    return admin;
 }
 
