@@ -5,6 +5,13 @@ const adminError2 = document.getElementById("admin-error2");
 const adminError3 = document.getElementById("admin-error3");
 const previewBtn = document.getElementById("postbtn");
 const articlesForm = document.getElementById("add-post-form");
+const images = document.getElementById("file");
+const reader = new FileReader();
+
+images.addEventListener("change", function(){
+
+    reader.readAsDataURL(this.files[0])
+})
 
 articlesForm.addEventListener("submit", e =>{
     e.preventDefault();
@@ -16,7 +23,8 @@ articlesForm.addEventListener("submit", e =>{
         blog = {
             topic : topicName,
             title : tittleName,
-            article : myContent
+            article : myContent,
+            image : reader.result
         }
 
         if(localStorage.getItem("Blogs") == null){
