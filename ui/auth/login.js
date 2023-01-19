@@ -4,16 +4,10 @@ const { email, password} = form
 form.addEventListener("submit", e => {
     e.preventDefault();
 
-    const emailValue = email.value;
-    const passwordValue = password.value;
-
     if(inputCheck(form)){
-       if(isAdmin(emailValue,passwordValue)){
+       if(isEmail(email.value) && isPassword(password.value)){
         location.href="/ui/admin/admin-panel.html";
        } 
-       else{
-        location.href="/index.html"
-       }
     }   
 })
 
@@ -29,16 +23,25 @@ function inputCheck (form){
         required = false;
     }
     else{
-        setSuccess(form.email)
+        if(isEmail(form.email.value)){
+            setSuccess(form.email)
+        }
+        else{
+            setInvalid(form.email, "Email Incorrect")
+        }   
     }
     if(form.password.value.trim() === ""){
         setInvalid(form.password, "Password is required");
         required = false;
     }
     else{
-        setSuccess(form.password)
+        if(isPassword(form.password.value)){
+            setSuccess(form.password)
+        }
+        else{
+            setInvalid(form.password, "Password Incorrect");
+        } 
     }
-
     return required;
 }
 
@@ -62,14 +65,23 @@ function validEmail  (email) {
     return re.test(email.toLowerCase())
   }
 
-function isAdmin(email,password){
-    let admin = true;
+function isEmail(email){
+    let correctE = true;
 
-    if(email === "boris@gmail.com" && password === "123456"){}
+    if(email === "boris@gmail.com"){}
     else{
-        admin = false;
+        correctE = false
     }
+     return correctE
+}
 
-    return admin;
+function isPassword(password){
+    let correctP = true;
+
+    if(password === "123456"){}
+     else{
+        correctP = false;
+    }
+    return correctP;
 }
 

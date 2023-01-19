@@ -14,13 +14,20 @@ contactForm.addEventListener("submit", e =>{
     let messages = message.value;
 
    if(checkMessage(fullNames,email,messages)){
+
     person = {
         names : fullNames,
         theEmail : email,
         theMessage : messages
     }
 
-    localStorage.setItem(email,JSON.stringify(person));
+    if(localStorage.getItem("Queries") == null){
+        localStorage.setItem("Queries","[]");
+    }
+
+    let oldQueries = JSON.parse(localStorage.getItem("Queries"));
+    oldQueries.push(person);
+    localStorage.setItem("Queries",JSON.stringify(oldQueries));
     location.reload();   
    }  
 })
@@ -39,6 +46,13 @@ function checkMessage (fullNames,email,messages){
         fullName.classList.add("invalid-contacts");
         validMessage = false;
     }
+    else{
+        if(fullName.value.length < 3){
+            errorMessage1.innerHTML = "Too short for a name";
+            fullName.classList.add("invalid-contacts");
+            validMessage = false;
+        }
+    }
     if(gmail.value === "" || gmail.value == null){
         errorMessage2.innerHTML = "Email is required";
         gmail.classList.add("invalid-contacts");
@@ -56,8 +70,13 @@ function checkMessage (fullNames,email,messages){
         message.classList.add("invalid-contacts");
         validMessage = false;
     }
+    else{
+        if(message.value.length < 4){
+            errorMessage3.innerHTML = "Too short for a message";
+            message.classList.add("invalid-contacts");
+            validMessage = false; 
+        }
+    }
 
     return validMessage;
 }
-
-

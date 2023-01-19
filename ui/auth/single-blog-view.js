@@ -16,9 +16,15 @@ commentsForm.addEventListener("submit", e =>{
             name: commentorName,
             comment: theComment
         }
+        
+        if(localStorage.getItem("Comments") == null){
+            localStorage.setItem("Comments","[]");
+        }
 
-        localStorage.setItem(commentorName, JSON.stringify(commentsObject));
-        location.reload();
+        let oldComments = JSON.parse(localStorage.getItem("Comments"));
+        oldComments.push(commentsObject);
+        localStorage.setItem("Comments",JSON.stringify(oldComments));
+        location.reload();  
     }   
 })
 
@@ -30,11 +36,25 @@ function checkComment (commentorName,theComment){
         commentor.classList.add("invalid-comments");
         validComment = false;
     }
+    else{
+        if(commentorName.length < 3){
+            error1.innerHTML = "Too short for a name";
+            commentor.classList.add("invalid-comments");
+            validComment = false;
+        }
+    }
 
     if(theComment == null || theComment === ""){
         error2.innerHTML = "Comment is required";
         comment.classList.add("invalid-comments");
         validComment = false;
+    }
+    else{
+        if(theComment.length < 4){
+            error2.innerHTML = "Too short for a comment";
+            comment.classList.add("invalid-comments");
+            validComment = false;
+        }
     }
     
     return validComment; 
