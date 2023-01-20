@@ -7,6 +7,10 @@ const previewBtn = document.getElementById("postbtn");
 const articlesForm = document.getElementById("add-post-form");
 const images = document.getElementById("file");
 const reader = new FileReader();
+const queriesOutput = document.getElementById("all-queries-container");
+const noMessageDiv = document.getElementById("no-msg");
+const newQueries = document.getElementById("new-queries");
+const noNewMessagegDiv = document.getElementById("no-new-msg");
 
 images.addEventListener("change", function(){
 
@@ -37,6 +41,53 @@ articlesForm.addEventListener("submit", e =>{
         location.href = "/ui/admin/preview-blog.html"  
     } 
 })
+
+let queriesArray = JSON.parse(localStorage.getItem("Queries"))??[];
+console.log(queriesArray);
+
+queriesArray.forEach(element => {
+    noMessageDiv.style.display = "none"
+
+    if(element?.seen == false){
+        noNewMessagegDiv.style.display = "none"
+
+        newQueries.insertAdjacentHTML("afterbegin", `
+        <p class="q-name">Name: ${element.names}</p>
+        <p class="q-email">Email: ${element.theEmail}</p>
+        <p class="q-message">Message: ${element.theMessage}</p>
+        <button class="mark-seen" type="button" data-id=${element?.id}>Mark as read</button>
+        `);
+    }
+    
+    else{
+
+        queriesOutput.insertAdjacentHTML("afterbegin", `
+        <p class="q-name">Name: ${element.names}</p>
+        <p class="q-email">Email: ${element.theEmail}</p>
+        <p class="q-message">Message: ${element.theMessage}</p>
+        `);
+    }
+});
+
+const deleteBtns = [...document.getElementsByClassName("mark-seen")];
+
+deleteBtns.forEach(button => {
+    button.addEventListener("click", e =>{
+        const targetBtn = e.currentTarget.dataset.id;
+        markSeen(targetBtn);
+    })
+})
+
+function markSeen (messageId){
+    queriesArray.forEach((element) => {
+        if(element.id == messageId){
+            element.seen = true;
+        }
+    }
+    );
+    localStorage.setItem("Queries",JSON.stringify(queriesArray));
+    location.reload();
+}
 
 function checkBlog (myContent,topicName,tittleName){
     let valid = true

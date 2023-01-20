@@ -4,6 +4,8 @@ const commentBtn = document.getElementById("commentbtn");
 const error1 = document.getElementById("error1");
 const error2 = document.getElementById("error2");
 const commentsForm = document.getElementById("comment-form");
+const commentsOutput = document.getElementById("comments-list");
+const noComment = document.getElementById("no-comment");
 
 commentsForm.addEventListener("submit", e =>{
     e.preventDefault();
@@ -24,9 +26,20 @@ commentsForm.addEventListener("submit", e =>{
         let oldComments = JSON.parse(localStorage.getItem("Comments"));
         oldComments.push(commentsObject);
         localStorage.setItem("Comments",JSON.stringify(oldComments));
-        location.reload();  
+        location.reload(); 
     }   
 })
+let commentsArray = JSON.parse(localStorage.getItem("Comments"))
+
+if(commentsArray.length > 0){
+    for(let i = 0; i < commentsArray.length; i++){
+        let pTag = document.createElement("p");
+    
+        pTag.innerHTML = "Name: "+ commentsArray[i].name +"<br>Comment: "+ commentsArray[i].comment;
+        commentsOutput.appendChild(pTag);
+    }
+    noComment.style.display = "none"
+}
 
 function checkComment (commentorName,theComment){
     let validComment = true;

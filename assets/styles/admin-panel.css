@@ -27,14 +27,12 @@ body{
     #add-post h2{
         color: white;
         font-size: 50px;
-        position: relative;
         display: flex;
         justify-content: center;
     }
     .add-post-form{
         display: flex;
         flex-direction: column;
-        position: relative;
     }
     #labels{
         padding: 15px 0px 15px 10px;
@@ -45,8 +43,8 @@ body{
         height: 40px;
         background-color: #D9D9D9;
         border: 0px;
-        position: relative;
         width: 100%;
+        border-radius: 10px;
     }
     #post{
         height: 200px;
@@ -65,9 +63,8 @@ body{
         width: 100%;
         height: 40px;
         font-size: 25px;
-        position: relative;
         margin-top: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
         border: 0px;
         display: flex;
         justify-content: center;
@@ -79,10 +76,10 @@ body{
         width: 100%;
         height: 40px;
         font-size: 25px;
-        position: relative;
         margin-top: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
         border: 0px;
+        background-color: #dfdcdc;
     }
     .blog-title{
         color: white;
@@ -93,10 +90,10 @@ body{
        
     }
     .blogs-part{
-        position: relative;
         background-color: #999696;
         width: 100vw;
         height: 330px;
+        border-radius: 10px;
     }
     #editbtn-b1{
         position: relative;
@@ -285,17 +282,12 @@ body{
         border-radius: 5px;
         display: none;
     }
-    #queries-socials{
-        position: relative;
-    }
     .socials{
         color: white;
         font-size: 50px;
-        position: relative;
         margin: 20px 0px 20px 0px;
     }
     .media-visits{
-        position: relative;
         font-size: 35px;
         display: flex;
         justify-content: center;
@@ -315,6 +307,7 @@ body{
         height: 90px;
         display: flex;
         flex-direction: row;
+        border-radius: 10px;
     }
     .media-container p{
         position: relative;
@@ -324,92 +317,55 @@ body{
         font-size: 25px;
     }
     .new-queries{
-        position: relative;
-        font-size: 25px;
+        font-size: 35px;
         margin: 20px;
         display: flex;
         justify-content: center;
     }
     .new-queries-container{
-        height: 150px;
+        width: 100%;
         background-color: #999696;
-        width: fit-content;
-        position: relative;
         color: #000000;
+        border-radius: 10px;
+    }
+    #no-new-msg{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        padding: 10px;
+    }
+    .mark-seen{
+        width: fit-content;
+        padding: 5px;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        bottom: 10px;
+        border-radius: 10px;
+        border: 0px;
     }
     .q-name{
         padding: 20px 20px 5px 20px;
-        font-size: 22px;
+        font-size: 25px;
     }
     .q-email{
         padding: 0px 20px 5px 20px;
-        font-size: 22px;
+        font-size: 25px;
     }
     .q-message{
         padding: 0px 20px 20px 20px;
-        font-size: 22px;
-    }
-    .triangle5{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #999696 transparent transparent ;
-        position: relative;
-        top: 170px;
-        left: 100px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle6{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #999696;
-        position: relative;
-        left: 550px;
-        bottom: 40px;
-        border-radius: 5px;
-        display: none;
-    }
-    #msg-deletebtn{
-        position: relative;
-        left: 10px;
-        height: 27px;
-        width: 65px;
-        font-size: 18px;
-        background-color: #999696;
-        border: 0px;
-        border-radius: 5px;
-        margin: 10px;
+        font-size: 25px;
     }
     .all-queries{
-        position: relative;
-        font-size: 25px;
+        font-size: 35px;
         margin: 20px;
         display: flex;
         justify-content: center;
     }
     .all-queries-container{
-        position: relative;
         background-color: #999696;
         width: 100%;
-    }
-    .c-name{
-        padding: 20px 0px 5px 10px;
-        font-size: 20px;
-        color: #000000;
-    }
-    .c-email{
-        padding: 0px 0px 5px 10px;
-        font-size: 20px;
-        color: #000000;
-    }
-    .c-message{
-        padding: 0px 0px 20px 10px;
-        font-size: 20px;
-        color: #000000;
+        border-radius: 10px;
     }
     #logoutbtn{
         background-color: #21EFEF;
@@ -417,13 +373,27 @@ body{
         width: 100%;
         height: 40px;
         font-size: 25px;   
-        position: relative;
         border: 1px solid #21EFEF;
-        border-radius: 5px;
+        border-radius: 10px;
         margin: 20px;
+        position: relative;
+        right: 20px;
     }
     #file{
         display: none;
+    }
+    .all-queries-container p{
+        padding-bottom: 10px;
+        position: relative;
+        left: 10px;
+        color: #000000;
+        font-size: 25px;  
+    }
+    #no-msg{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        padding: 10px;
     }
 }
 @media only screen and (min-width: 426px) and (max-width: 960px){
@@ -444,7 +414,6 @@ body{
     #add-post h2{
         color: white;
         font-size: 70px;
-        position: relative;
         display: flex;
         justify-content: center;
     }
@@ -456,7 +425,6 @@ body{
     }
     #add-post{
         margin: 20px;
-        position: relative;
     }
     #labels{
         font-size: 40px;
@@ -467,14 +435,13 @@ body{
         height: 50px;
         background-color: #D9D9D9;
         border: 0px;
-        position: relative;
         width: 90vw;
+        border-radius: 5px;
     }
     #post{
         height: 250px;
         background-color: #D9D9D9;
         border: 0px;
-        position: relative;
         width: 90vw;
     }
     #admin-error1,
@@ -490,7 +457,6 @@ body{
         width: 50vw;
         height: 60px;
         font-size: 45px;
-        position: relative;
         margin-top: 10px;
         border-radius: 5px;
         border: 0px;
@@ -504,10 +470,10 @@ body{
         width: 50vw;
         height: 60px;
         font-size: 45px;
-        position: relative;
         margin-top: 10px;
         border-radius: 5px;
         border: 0px;
+        background-color: #dfdcdc;
     }
     .blog-title{
         color: white;
@@ -517,25 +483,13 @@ body{
         margin: 10px;
        
     }
-    .articles-title{
-        color: white;
-        font-size: 70px;
-        display: flex;
-        justify-content: center;
-        margin: 10px;
-    }
     .blogs-part{
-        position: relative;
         background-color: #999696;
-        width: 100vw;
+        width: 96vw;
         height: 500px;
+        border-radius: 10px;
     }
-    .articles-part{
-        position: relative;
-        background-color: #999696;
-        width: 100vw;
-        height: 500px;
-    }
+    
     #editbtn-b1{
         position: relative;
         left: 480px;
@@ -669,141 +623,7 @@ body{
         border-radius: 5px;
         border: 0px;
     }
-    .article1{
-        font-size: 50px;
-        padding: 0px 5px 20px 40px;
-        color: #000000; 
-        position: relative;
-        top: 20px;
-    }
-    #editbtn-a1{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 60px;
-        font-size: 45px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-a1{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 60px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .article2{
-        font-size: 50px;
-        padding: 0px 5px 20px 40px;
-        color: #000000; 
-        position: relative;
-        bottom: 20px;
-    }
-    #editbtn-a2{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 90px;
-        font-size: 45px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-a2{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 90px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .article3{
-        font-size: 50px;
-        padding: 0px 5px 20px 40px;
-        color: #000000; 
-        position: relative;
-        bottom: 50px;
-    }
-    #editbtn-a3{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 120px;
-        font-size: 45px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-a3{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 120px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .article4{
-        font-size: 50px;
-        padding: 0px 5px 20px 40px;
-        color: #000000; 
-        position: relative;
-        bottom: 70px;
-    }
-    #editbtn-a4{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 150px;
-        font-size: 45px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-a4{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 150px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .article5{
-        font-size: 50px;
-        padding: 0px 5px 20px 40px;
-        color: #000000; 
-        position: relative;
-        bottom: 100px;
-    }
-    #editbtn-a5{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 180px;
-        font-size: 45px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-a5{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 180px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
+   
     .triangle1{
         width: 0;
         height: 0;
@@ -852,17 +672,12 @@ body{
         border-radius: 5px;
         display: none;
     }
-    #queries-socials{
-        position: relative;
-    }
     .socials{
         color: white;
         font-size: 70px;
-        position: relative;
         margin: 20px 0px 20px 0px;
     }
     .media-visits{
-        position: relative;
         font-size: 50px;
         display: flex;
         justify-content: center;
@@ -876,13 +691,14 @@ body{
     }
     .media-container{
         position: relative;
-        left: 70px;
+        left: 110px;
         background-color: #999696;
         width: 60vw;
         height: 120px;
         display: flex;
         flex-direction: row;
         margin: 10px;
+        border-radius: 10px;
     }
     .media-container p{
         position: relative;
@@ -892,18 +708,32 @@ body{
         font-size: 35px;
     }
     .new-queries{
-        position: relative;
         font-size: 50px;
         margin: 20px;
         display: flex;
         justify-content: center;
     }
     .new-queries-container{
-        height: 200px;
         background-color: #999696;
-        width: 80vw;
-        position: relative;
+        width: 90vw;
         color: #000000;
+        border-radius: 10px;
+    }
+    #no-new-msg{
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        padding: 10px;
+    }
+    .mark-seen{
+        width: fit-content;
+        padding: 5px;
+        font-size: 25px;
+        position: relative;
+        left: 20px;
+        bottom: 10px;
+        border-radius: 10px;
+        border: 0px;
     }
     .q-name{
         padding: 20px 20px 5px 20px;
@@ -917,52 +747,16 @@ body{
         padding: 0px 20px 20px 20px;
         font-size: 35px;
     }
-    .triangle5{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #999696 transparent transparent ;
-        position: relative;
-        top: 170px;
-        left: 100px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle6{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #999696;
-        position: relative;
-        left: 550px;
-        bottom: 40px;
-        border-radius: 5px;
-        display: none;
-    }
-    #msg-deletebtn{
-        position: relative;
-        left: 10px;
-        height: 50px;
-        width: 25%;
-        font-size: 45px;
-        background-color: #999696;
-        border: 0px;
-        border-radius: 5px;
-        margin: 10px;
-    }
     .all-queries{
-        position: relative;
         font-size: 50px;
         margin: 20px;
         display: flex;
         justify-content: center;
     }
     .all-queries-container{
-        position: relative;
         background-color: #999696;
-        width: 80vw;
+        width: 90vw;
+        border-radius: 10px;
     }
     .c-name{
         padding: 20px 0px 5px 10px;
@@ -985,13 +779,27 @@ body{
         width: 100%;
         height: 60px;
         font-size: 45px;   
-        position: relative;
         border: 1px solid #21EFEF;
-        border-radius: 5px;
+        border-radius: 10px;
         margin: 20px;
+        position: relative;
+        right: 10px;
     }
     #file{
         display: none;
+    }
+    .all-queries-container p{
+        padding-bottom: 10px;
+        position: relative;
+        left: 10px;
+        color: #000000;
+        font-size: 35px;  
+    }
+    #no-msg{
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        padding: 10px;
     }
 }
 @media only screen and (min-width: 961px){
@@ -1047,7 +855,7 @@ body{
         top: 250px;
         left: 5px;
         border: 1px solid #21EFEF;
-        border-radius: 5px;
+        border-radius: 10px;
     }
     .admin-title{
         font-size: 90px;
@@ -1058,7 +866,6 @@ body{
     #add-post h2{
         color: white;
         font-size: 60px;
-        position: relative;
         display: block;
         text-align: center;
     }
@@ -1079,6 +886,7 @@ body{
         background-color: #D9D9D9;
         border: 0px;
         width: 100%;
+        border-radius: 10px;
     }
     #post{
         height: 200px;
@@ -1090,7 +898,7 @@ body{
         font-size: 20px;
         position: relative;
         left: 100px;
-        border-radius: 5px;
+        border-radius: 10px;
         border: 0px;
         margin-top: 10px;
         display: flex;
@@ -1105,7 +913,7 @@ body{
         font-size: 20px;
         position: relative;
         left: 100px;
-        border-radius: 5px;
+        border-radius: 10px;
         border: 0px;
         margin-top: 10px;
         background-color: #dfdcdc;
@@ -1123,7 +931,6 @@ body{
     .blog-title{
         color: white;
         font-size: 60px;
-        position: relative;
         display: block;
         text-align: center;
         padding: 0px 0px 20px 0px;
@@ -1134,6 +941,7 @@ body{
         background-color: #999696;
         width: 33%;
         height: 330px;
+        border-radius: 10px;
     }
     #editbtn-b1{
         position: relative;
@@ -1297,7 +1105,6 @@ body{
     .socials{
         color: white;
         font-size: 50px;
-        position: relative;
         display: block;
         text-align: center;
     }
@@ -1324,6 +1131,7 @@ body{
         height: 90px;
         display: flex;
         flex-direction: row;
+        border-radius: 10px;
     }
     .media-container p{
         position: relative;
@@ -1334,18 +1142,34 @@ body{
     .new-queries{
         position: relative;
         left: 980px;
-        bottom: 180px;
+        bottom: 100px;
         font-size: 25px;
         padding: 20px;
     }
     .new-queries-container{
-        height: 150px;
         background-color: #999696;
-        width: fit-content;
+        width: 500px;
         position: relative;
         left: 880px;
-        bottom: 180px;
+        bottom: 100px;
         color: #000000;
+        border-radius: 10px;
+    }
+    #no-new-msg{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+    }
+    .mark-seen{
+        width: fit-content;
+        padding: 5px;
+        font-size: 20px;
+        position: relative;
+        left: 20px;
+        bottom: 10px;
+        border-radius: 10px;
+        border: 0px;
     }
     .q-name{
         padding: 20px 20px 5px 20px;
@@ -1359,69 +1183,35 @@ body{
         padding: 0px 20px 20px 20px;
         font-size: 22px;
     }
-    .triangle5{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #999696 transparent transparent ;
-        position: relative;
-        bottom: 15px;
-        left: 830px;
-        border-radius: 5px;
-    }
-    .triangle6{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #999696;
-        position: relative;
-        left: 1275px;
-        bottom: 270px;
-        border-radius: 5px;
-    }
-    #msg-deletebtn{
-        position: relative;
-        left:1190px;
-        height: 27px;
-        width: 65px;
-        bottom: 200px;
-        font-size: 18px;
-        background-color: #999696;
-        border: 0px;
-        border-radius: 5px;
-    }
+    
     .all-queries{
         position: relative;
         left: 650px;
-        bottom: 150px;
         font-size: 25px;
+        padding-bottom: 20px;
     }
     .all-queries-container{
         position: relative;
         left: 400px;
-        bottom: 120px;
         background-color: #999696;
-        width: 50%;
-       
+        width: 50%;  
+        border-radius: 10px;
     }
-    .c-name{
-        padding: 20px 0px 5px 10px;
-        font-size: 20px;
+    .all-queries-container p{
+        padding-bottom: 10px;
+        position: relative;
+        left: 10px;
         color: #000000;
+        font-size: 20px;  
     }
-    .c-email{
-        padding: 0px 0px 5px 10px;
-        font-size: 20px;
-        color: #000000;
-    }
-    .c-message{
-        padding: 0px 0px 20px 10px;
-        font-size: 20px;
-        color: #000000;
+    #no-msg{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
     }
     #file{
         display: none;
     }
+    
 }

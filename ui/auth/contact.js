@@ -18,7 +18,9 @@ contactForm.addEventListener("submit", e =>{
     person = {
         names : fullNames,
         theEmail : email,
-        theMessage : messages
+        theMessage : messages,
+        seen : false,
+        id : crypto.randomUUID()
     }
 
     if(localStorage.getItem("Queries") == null){

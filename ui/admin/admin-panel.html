@@ -33,6 +33,7 @@
         <h2 class="admin-title">Admin Panel</h2>
 
         <section id="add-post">
+            
             <h2>Add a Post</h2>
 
             <form class="add-post-form" id="add-post-form">
@@ -58,9 +59,11 @@
                 <label for="file" id="image-btn">Add an image</label>
                 <button id="postbtn" type="submit">Preview</button>
             </form>
+
         </section>
 
         <section id="blog">
+
             <h2 class="blog-title">Blogs</h2>
             <div class="blogs-part">
                 <p class="blog1">Title of the blog</p>
@@ -83,6 +86,7 @@
                 <button id="editbtn-b5" type="button">Edit</button>
                 <button id="deletebtn-b5" type="button">Delete</button>
             </div>
+
             <div class="nav-btns">
                 <div class="triangle1"></div>
                 <div class="triangle2"></div>
@@ -90,9 +94,10 @@
 
         </section>
            
-
         <section id="queries-socials">
+
             <h2 class="socials">Queries & Socials</h2>
+
             <h4 class="media-visits">Social Media Visits</h4>
             <div class="media-container">
                 <img class="ig-logo" src="/assets/images/instagram.png">
@@ -103,32 +108,21 @@
                 <p>5</p>
             </div>
 
-            <div class="triangle5"></div>
-
             <h4 class="new-queries">New Queries</h4>
-            <div class="new-queries-container">
-                <p class="q-name">Name: Boris</p>
-                <p class="q-email">Email: kirengaboris5@gmail.com</p>
-                <p class="q-message">Message: Sed ut perspiciatis unde <br>
-                    omnis iste natus error sitSed</p>
+            <div class="new-queries-container" id="new-queries">
+                <p id="no-new-msg">No New Messages</p>
             </div>
-
-            <div class="triangle6"></div>
-
-            <button id="msg-deletebtn" type="button">Delete</button>
 
             <h4 class="all-queries">List Of All Queries</h4>
-
-            <div class="all-queries-container">
-                <p class="c-name">Name: Boris</p>
-                <p class="c-email">Email: kirengaboris5@gmail.com</p>
-                <p class="c-message">Message: Sed ut perspiciatis unde <br>
-                    omnis iste natus error sitSed</p>
+            <div class="all-queries-container" id="all-queries-container">
+                <p id="no-msg">No Messages Yet</p>
             </div>
+
         </section>
+
         <a class="logoutbtn"href="/index.html"><button id="logoutbtn" type="button">Logout</button></a>
 
         <script src="/ui/admin/js/admin-panel.js"></script>
-
+  
     </body>
 </html>
