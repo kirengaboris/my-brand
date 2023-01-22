@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/assets/styles/index.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+        <link href="/assets/styles/swiper-bundle.min.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -118,37 +119,15 @@
             <p class="tag6w">&lt/section&gt</p>
         </section>
 
-        <section id="blogs">
+        <section id="blogs" class="slide-container swiper">
             <p class="tag1bp">&lth2&gt</p>
             <h2 class="b-title">Blogs</h2>
             <p class="tag2bp">&lt/h2&gt</p>
             <p class="tag3bp">&ltsection&gt</p>
-            <div class="triangle1"></div>
-            <div class="summary1" id="summary">
-                <div class="blog1">
-                    <!-- <h1>Web Development</h1><br> -->
-                    <!-- <h2>Lorem Ipsum</h2><br> -->
-                    <!-- <p class="teaser">Lorem Ipsum is simply<br>
-                        dummy text of the printing<br>
-                        and typesetting industry.<br>
-                        Lorem Ipsum has been...
-                     </p> -->
-                </div>
-                <div class="likes">
-                    <img class="likes-logo" id="likes-logo1"src="/assets/images/like.png">
-                    <p class="likes-num" id="likes-num1">20</p>
-                </div>
-                <div class="comment">
-                    <img class="comments-logo" id="comments-logo1"src="/assets/images/comments.png">
-                     <p class="comments-num" id="comments-num1">10</p>
-                </div>
-                     
-                 <a class="blog-view" id="blog-view1"href="/ui/client/single-blog-view.html">Read more</a>
-                
-            </div>
-
-           
-            <div class="triangle2"></div>
+            <div id="blogList" class="slide-content"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
             <p class="tag4bp">&lt/section&gt</p>
 
         </section>
@@ -236,5 +215,26 @@
         <script src="index.js"></script>
         <script src="/ui/auth/login.js"></script>
         <script src="/ui/auth/contact.js"></script>
+        <script src="/swiper-bundle.min.js"></script>
+        <script src="/ui/admin/js/swiper.js"></script>
     </body>
 </html>
+
+<!-- <div class="likes"> -->
+                    <!-- <img class="likes-logo" id="likes-logo1"src="/assets/images/like.png"> -->
+                    <!-- <p class="likes-num" id="likes-num1">20</p> -->
+                <!-- </div> -->
+                <!-- <div class="comment"> -->
+                    <!-- <img class="comments-logo" id="comments-logo1"src="/assets/images/comments.png"> -->
+                     <!-- <p class="comments-num" id="comments-num1">10</p> -->
+                <!-- </div> -->
+                     
+                 <!-- <a class="blog-view" id="blog-view1"href="/ui/client/single-blog-view.html">Read more</a> -->
+
+                 <!-- <div class="summary1" id="summary">
+                <div class="blog1">
+                   
+                </div>
+                
+            </div> -->
+                

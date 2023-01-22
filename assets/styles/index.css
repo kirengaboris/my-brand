@@ -2030,6 +2030,7 @@ body{
     }
 }
 @media only screen and (min-width: 961px){
+   
     .logo{
         width:100px;
     }
@@ -2347,113 +2348,72 @@ body{
     }
     #blogs{
         font-size: 30px;
-        padding-left: 200px;
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-    }
-    .triangle1{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 40px 20px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
+        padding-left: 80px;
+        min-height: 100vh;
+        width: 80%;
+        /* background-color: rgb(245, 12, 12); */
         position: relative;
-        top: 170px;
-        border-radius: 5px;
+        left: 50px;
+        
     }
-    .blog1 h1,
-    .blog1 h2,
-    .blog2 h1,
-    .blog2 h2,
-    .blog3 h1,
-    .blog3 h2{
+    .blog-container{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* flex-wrap: wrap; */
+        /* flex-direction: column; */
+        /* position: relative; */
+        /* bottom: 50px; */
+        /* background-color: #21EFEF; */
+        /* max-width: 1120px; */
+        /* width: 95%; */
+        /* padding: 20px; */
+        /* position: relative; */
+        /* left: 1300px */
+    }
+    .slide-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* background-color: whitesmoke; */
+        /* min-height: 70vh; */
+        width: 92%;
+    }
+    
+    .blog h1,
+    .blog h2{
         color: black;
-        font-size: 25px;
+        font-size: 20px;
         padding: 5px 20px 0px 20px;
         display: block;
         text-align: center;
     }
-    .blog1 p,
-    .blog1 h3{
+    .blog p,
+    .blog h3{
         color: black;
         font-size: 20px;
         padding: 10px 20px 0px 20px;
     }
-    .blog1{
-        position: relative;
-        /* bottom: 100px; */
-        left: 70px;
-    }
-    .likes-logo{
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: 5px;
-    }
-    .comments-logo{
-        width: 50px;
-        height: 50px;
-        position: relative;
-        left: 70px;
-        bottom: 65px;
-    }
-    .likes-num,
-    .comments-num{
-        font-size: 15px;
-    }
-    .blog1,
-    .blog2,
-    .blog3{
+    .blog{
         background-color: #999696;
-        width: 25%;
+        /* width: 25%; */
         border-radius: 10px;
         box-shadow: 10px 10px 5px black;
-    }
-    .likes-num{
-        position: relative;
-        bottom: 38px;
-        left: 15px;
-    }
-    .comments-num{
-        position: relative;
-        left: 80px;
-        bottom: 113px;
+        /* position: relative; */
+        /* bottom: 50px; */
+        /* left: 100px; */
+        margin: 10px;
     }
     .blog-view{
-        position: relative;
-        left: 145px;
-        /* bottom: 140px; */
+        /* position: relative; */
+        /* left: 245px; */
+        /* bottom: 50px; */
         color: #D9D9D9;
         font-size: 30px;
-        display: block;
+        /* display: block; */
     }
-    .summary1{
-        position: relative;
-        /* top: 30px; */
-        /* left: 70px; */
-    }
-    .summary2{
-        position: relative;
-        left: 435.5px;
-        bottom: 370px;
-    }
-    .summary3{
-        position: relative;
-        left: 800px;
-        bottom: 770px;
-    }
-    .triangle2{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 0px 20px 40px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 1140px;
-        bottom: 1080px;
-        border-radius: 5px;
-    }
+    
     .tag1bp,
     .tag2bp,
     .tag3bp,
@@ -2462,14 +2422,14 @@ body{
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
-    .tag3bp{
-        position: relative;
-        top: 30px;
-    }
-    .tag4bp{
-        position: relative;
-        bottom: 900px;
-    }
+    /* .tag3bp{ */
+        /* position: relative; */
+        /* top: 30px; */
+    /* } */
+    /* .tag4bp{ */
+        /* position: relative; */
+        /* top: 500px */
+    /* } */
     #work{
         font-size: 30px;
         padding-left: 200px;
@@ -2602,4 +2562,40 @@ body{
     }
 }
 
+/* #blogs{
+    font-size: 30px;
+    padding-left: 200px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
 
+/* .likes-logo{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 5px;
+}
+.comments-logo{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 70px;
+    bottom: 65px;
+}
+.likes-num,
+.comments-num{
+    font-size: 15px;
+} */
+
+/* .likes-num{
+    position: relative;
+    bottom: 38px;
+    left: 15px;
+}
+.comments-num{
+    position: relative;
+    left: 80px;
+    bottom: 113px;
+} */
