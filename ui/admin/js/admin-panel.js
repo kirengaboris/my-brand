@@ -28,7 +28,12 @@ articlesForm.addEventListener("submit", e =>{
             topic : topicName,
             title : tittleName,
             article : myContent,
-            image : reader.result
+            image : reader.result,
+            blogId : crypto.randomUUID(),
+            summary : myContent.substring(0, 200)+ "...",
+            comments : [],
+            likes : []
+        
         }
 
         if(localStorage.getItem("Blogs") == null){
@@ -43,7 +48,6 @@ articlesForm.addEventListener("submit", e =>{
 })
 
 let queriesArray = JSON.parse(localStorage.getItem("Queries"))??[];
-console.log(queriesArray);
 
 queriesArray.forEach(element => {
     noMessageDiv.style.display = "none"

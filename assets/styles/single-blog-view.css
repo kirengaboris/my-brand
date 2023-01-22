@@ -1007,8 +1007,8 @@ body{
     }
     h1,
     h2{
-        display: flex;
-        justify-content: center;
+        /* display: flex; */
+        /* justify-content: center; */
     }
     #para1,
     #para2,
@@ -1021,6 +1021,13 @@ body{
         padding: 0px 20px 20px 20px;
         font-size: 25px;
     }
+    .blog-container p{
+        font-size: 25px;
+        padding: 0px 20px 20px 20px;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* flex-direction: column; */
+    }
     .blog-container{
         background-color: #999696;
         width: 88%;
@@ -1029,11 +1036,24 @@ body{
         top: 30px;
         font-family: Forum;
     }
+    .blog-container > article{
+        /* background-color: #21EFEF; */
+        display: grid;
+        place-items: center;
+    }
+
+    #featured{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-top: 10px;
+        align-items: center;
+
+    }
     .blog-pic{
-        width: 400px;
-        height: 200px;
-        position: relative;
-        left: 430px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
     }
     .comments-likes{
         width: 89%;
@@ -1162,4 +1182,5 @@ body{
     #comment-label{
         margin-right: 5px;
     }
+   
 }
