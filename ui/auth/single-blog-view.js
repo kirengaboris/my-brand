@@ -1,7 +1,7 @@
 const href = new URL(location.href)
-console.log(href);
+// console.log(href);
 const postId = href.hash.replace("#","")
-console.log(postId);
+// console.log(postId);
 const commentor = document.getElementById("name");
 const comment = document.getElementById("comment");
 const commentBtn = document.getElementById("commentbtn");
@@ -13,6 +13,9 @@ const noComment = document.getElementById("no-comment");
 const blogContainer = document.getElementById("blog-container");
 const noBlog = document.getElementById("no-blog");
 const featured = document.getElementById("featured");
+const likeCheckBox = document.getElementById("likes");
+let likesCount = 0;
+
 
 let blogsArray = JSON.parse(localStorage.getItem("Blogs"))??[];
 
@@ -28,7 +31,6 @@ featuredPosts(postId)
 
 function fetchBlog(postId){
    const fetchedBlog = blogsArray.filter(({blogId}) => blogId == postId)
-//    console.log(fetchedBlog);
 
    if(fetchedBlog){
 
@@ -54,51 +56,11 @@ function fetchBlog(postId){
            <p>Posted on: ${createdAt}</p><br/>
             `)
            } 
-        })
-        
+        }) 
     })
-
-    // for(let j = 0; j < fetchedBlog.length; j++){
-    //     let h1 = document.createElement("h1");
-    //     let h2 = document.createElement("h2");
-    //     let img = document.createElement("img");
-    //     img.classList.add("blog-pic");
-    //     let paragraph = document.createElement("div");
-    //     paragraph.classList.add("para");
-
-    //     h1.innerHTML =fetchedBlog[j].topic;
-    //     blogContainer.appendChild(h1);
-
-    //     h2.innerHTML =fetchedBlog[j].title;
-    //     blogContainer.appendChild(h2);
-
-    //     img.innerHTML =fetchedBlog[j].image;
-    //     img.setAttribute("src",fetchedBlog[j].image);
-    //     blogContainer.appendChild(img);
-
-    //     paragraph.innerHTML =fetchedBlog[j].article;
-    //     blogContainer.appendChild(paragraph);
-
-    //     if(fetchedBlog[j].comments.length > 0){
-    //         for(let k = 0; k < fetchedBlog[j].comments.length; k++){
-    //             let pTag = document.createElement("p");
-            
-    //             pTag.innerHTML = "Name: "+ fetchedBlog[j].comments[k].name +"<br>Comment: "+ fetchedBlog[j].comments[k].comment +" Posted at: "+ fetchedBlog[j].comments[k]?.createdAt?.toLocaleString("en-GB")+"<br/>"
-    //             commentsOutput.appendChild(pTag);
-    //         }
-    //         noComment.style.display = "none"
-    //     }
-        
-        
-    // }
-
 }
 }
-
-
-
 fetchBlog(postId)
-
 
 commentsForm.addEventListener("submit", e =>{
     e.preventDefault();
@@ -128,50 +90,9 @@ commentsForm.addEventListener("submit", e =>{
         
         localStorage.setItem("Blogs", JSON.stringify(blogsArray));
         location.reload();
-        // if(localStorage.getItem("Comments") == null){
-        //     localStorage.setItem("Comments","[]");
-        // }
-
-        // let oldComments = JSON.parse(localStorage.getItem("Comments"));
-        // oldComments.push(commentsObject);
-        // localStorage.setItem("Comments",JSON.stringify(oldComments));
-        // location.reload(); 
+       
     }   
 })
-// let commentsArray = JSON.parse(localStorage.getItem("Comments"))??[];
-
-
-
-
-// console.log(blogsArray)
-
-// if(blogsArray.length > 0){
-//     for(let j = 0; j < blogsArray.length; j++){
-//         let h1 = document.createElement("h1");
-//         let h2 = document.createElement("h2");
-//         let img = document.createElement("img");
-//         img.classList.add("blog-pic");
-//         let paragraph = document.createElement("div");
-//         paragraph.classList.add("para");
-
-//         h1.innerHTML = blogsArray[j].topic;
-//         blogContainer.appendChild(h1);
-
-//         h2.innerHTML = blogsArray[j].title;
-//         blogContainer.appendChild(h2);
-
-//         img.innerHTML = blogsArray[j].image;
-//         img.setAttribute("src", blogsArray[j].image);
-//         blogContainer.appendChild(img);
-
-//         paragraph.innerHTML = blogsArray[j].article;
-//         blogContainer.appendChild(paragraph);
-//     }
-
-// }
-// else{
-
-// }
 
 function checkComment (commentorName,theComment){
     let validComment = true;

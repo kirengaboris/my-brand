@@ -1005,11 +1005,6 @@ body{
         position: relative;
         left: 15px;
     }
-    h1,
-    h2{
-        /* display: flex; */
-        /* justify-content: center; */
-    }
     #para1,
     #para2,
     #para3,
@@ -1024,9 +1019,6 @@ body{
     .blog-container p{
         font-size: 25px;
         padding: 0px 20px 20px 20px;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* flex-direction: column; */
     }
     .blog-container{
         background-color: #999696;
@@ -1037,7 +1029,6 @@ body{
         font-family: Forum;
     }
     .blog-container > article{
-        /* background-color: #21EFEF; */
         display: grid;
         place-items: center;
     }
@@ -1088,6 +1079,13 @@ body{
         height: 30px;
         position: relative;
         left: 480px;
+    }
+    .likes{
+        position: relative;
+        right:10px;
+    }
+    #likes{
+        display: none;
     }
     #name{
         width: 100%;
