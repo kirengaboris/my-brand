@@ -1,7 +1,5 @@
-const href = new URL(location.href)
-// console.log(href);
-const postId = href.hash.replace("#","")
-// console.log(postId);
+const href = new URL(location.href);
+const postId = href.hash.replace("#","");
 const commentor = document.getElementById("name");
 const comment = document.getElementById("comment");
 const commentBtn = document.getElementById("commentbtn");
@@ -14,8 +12,6 @@ const blogContainer = document.getElementById("blog-container");
 const noBlog = document.getElementById("no-blog");
 const featured = document.getElementById("featured");
 const likeCheckBox = document.getElementById("likes");
-let likesCount = 0;
-
 
 let blogsArray = JSON.parse(localStorage.getItem("Blogs"))??[];
 
@@ -74,11 +70,9 @@ commentsForm.addEventListener("submit", e =>{
             comment: theComment,
             commentsId : crypto.randomUUID(),
             postId : postId,
-            createdAt : new Date(Date.now())
+            createdAt : new Date(Date.now()).toLocaleString()
         }
        const response = postComment(postId,commentsObject);
-       console.log(response);
-        console.log('This is the state of the blogs array in l.stogage after posting a comment: ', blogsArray);
 
         blogsArray.map( (blog) =>{
             if(blog.blogId == postId){
@@ -86,7 +80,6 @@ commentsForm.addEventListener("submit", e =>{
                 blog.comments = response;
             }
         })
-        console.log("i am the final state of blogs array", blogsArray);
         
         localStorage.setItem("Blogs", JSON.stringify(blogsArray));
         location.reload();
@@ -127,11 +120,8 @@ function checkComment (commentorName,theComment){
 }
 
 function postComment(postId, commentsObject){
-    console.log('This is the comments object passed as a param: ', commentsObject);
     const fetchedBlog = blogsArray.filter(({blogId}) => blogId == `${postId}`)
-    console.log('This is the fetched blog when trying to comment: ', fetchedBlog);
     fetchedBlog[0].comments.push(commentsObject);
-    console.log('This is the state of the fetched blog after being comment on: ', fetchedBlog);
 
     return fetchedBlog[0].comments;
 }

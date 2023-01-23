@@ -35,11 +35,16 @@ body{
         position: relative;
         background-color: black;
     }
-    #navbar p{
-        font-size: 30px;
+    #home p{
+        font-size: 25px;
+        padding: 10px 0px 20px 20px;
         position: relative;
-        left: 100px;
-        padding-bottom: 10px;
+        left: 120px;
+    }
+    #home a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
     }
     #navbar{
         background-color: #181818;
@@ -49,26 +54,24 @@ body{
         position: fixed;
         z-index: 10;
     }
+    #likes{
+        display: none;
+    }
+    #featured a{
+        text-decoration: none;
+        color: #999696;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0px 5px 0px;
+    }
+    #featured a:hover{
+        color: #21EFEF;
+    }
     .dropdown{
         display: none;
     }
     .dropdown:checked ~ #navbar{
         display: block;
-    }
-    a.section1,
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        position: relative;
-        text-decoration: none;
-        color:#999696;
     }
     h1,
     h2{
@@ -87,14 +90,7 @@ body{
         padding-bottom: 10px;
         font-size: 35px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    p{
         padding: 10px 20px 10px 20px;
         display: flex;
         justify-content: center;
@@ -205,11 +201,16 @@ body{
         width: 106%;
         background-color: black;
     }
-    #navbar p{
+    #home p{
         font-size: 30px;
+        padding: 10px 0px 20px 20px;
         position: relative;
         left: 200px;
-        padding-bottom: 10px;
+    }
+    #home a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
     }
     #navbar{
         background-color: #1D1D1D;
@@ -225,20 +226,16 @@ body{
     .dropdown:checked ~ #navbar{
         display: block;
     }
-    a.section1,
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
+    #featured a{
+        text-decoration: none;
+        color: #999696;
         display: flex;
         justify-content: center;
+        padding: 5px 0px 5px 0px;
         font-size: 30px;
-        position: relative;
-        text-decoration: none;
-        color:#999696;
+    }
+    #featured a:hover{
+        color: #21EFEF;
     }
     h1,
     h2{
@@ -246,15 +243,14 @@ body{
         justify-content: center;
         font-size: 40px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    h3{
+        font-size: 35px;
+    }
+    p{
         font-size: 30px;
+    }
+    #likes{
+        display: none;
     }
     .blog-container{
         background-color: #999696;
@@ -405,11 +401,16 @@ body{
         width: 100%;
         background-color: black;
     }
-    #navbar p{
+    #home p{
         font-size: 30px;
+        padding: 10px 0px 20px 20px;
         position: relative;
         left: 320px;
-        padding-bottom: 10px;
+    }
+    #home a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
     }
     #navbar{
         background-color: #1D1D1D;
@@ -422,23 +423,22 @@ body{
     .dropdown{
         display: none;
     }
-    .dropdown:checked ~ #navbar{
-        display: block;
-    }
-    a.section1,
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
+    #featured a{
+        text-decoration: none;
+        color: #999696;
         display: flex;
         justify-content: center;
+        padding: 5px 0px 5px 0px;
         font-size: 30px;
-        position: relative;
-        text-decoration: none;
-        color:#999696;
+    }
+    #featured a:hover{
+        color: #21EFEF;
+    }
+    #likes{
+        display: none;
+    }
+    .dropdown:checked ~ #navbar{
+        display: block;
     }
     h1,
     h2{
@@ -446,14 +446,10 @@ body{
         justify-content: center;
         font-size: 40px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    h3{
+        font-size: 35px;
+    }
+    p{
         font-size: 30px;
     }
     .blog-container{
@@ -603,11 +599,16 @@ body{
         width: 100%;
         background-color: black;
     }
-    #navbar p{
+    #home p{
         font-size: 30px;
+        padding: 10px 0px 20px 20px;
         position: relative;
-        left: 320px;
-        padding-bottom: 10px;
+        left: 330px;
+    }
+    #home a{
+        text-decoration: none;
+        color: #999696;
+        padding-left: 20px;
     }
     #navbar{
         background-color: #1D1D1D;
@@ -623,20 +624,19 @@ body{
     .dropdown:checked ~ #navbar{
         display: block;
     }
-    a.section1,
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
+    #featured a{
+        text-decoration: none;
+        color: #999696;
         display: flex;
         justify-content: center;
+        padding: 5px 0px 5px 0px;
         font-size: 30px;
-        position: relative;
-        text-decoration: none;
-        color:#999696;
+    }
+    #featured a:hover{
+        color: #21EFEF;
+    }
+    #likes{
+        display: none;
     }
     h1,
     h2{
@@ -644,15 +644,11 @@ body{
         justify-content: center;
         font-size: 40px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    p{
         font-size: 30px;
+    }
+    h3{
+        font-size: 35px;
     }
     .blog-container{
         background-color: #999696;
@@ -794,11 +790,11 @@ body{
         background-color: #181818;
         color: #999696;
     }
-    #navbar p{
+    #home p{
         font-size: 15px;
         padding: 10px 0px 20px 20px;
     }
-    #navbar a{
+    #home a{
         text-decoration: none;
         color: #999696;
         padding-left: 20px;
@@ -974,11 +970,11 @@ body{
         background-color: #181818;
         color: #999696;
     }
-    #navbar p{
+    #home p{
         font-size: 15px;
         padding: 10px 0px 20px 20px;
     }
-    #navbar a{
+    #home a{
         text-decoration: none;
         color: #999696;
         padding-left: 20px;
@@ -988,33 +984,6 @@ body{
     }
     .dropdown-nav{
         display: none;
-    }
-    a.section1{
-        padding: 20px 20px 10px 10px;
-        position: relative;
-        left: 15px;
-    }
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
-        padding-bottom: 10px;
-        position: relative;
-        left: 15px;
-    }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
-        padding: 0px 20px 20px 20px;
-        font-size: 25px;
     }
     .blog-container p{
         font-size: 25px;
@@ -1032,14 +1001,22 @@ body{
         display: grid;
         place-items: center;
     }
-
-    #featured{
+    .blog-container h3{
+        font-size: 30px;
+    }
+    .blog-container h1,
+    .blog-container h2{
+        font-size: 35px;
+    }
+    #featured a{
+        text-decoration: none;
+        color: #999696;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-top: 10px;
-        align-items: center;
-
+        justify-content: center;
+        padding: 5px 0px 5px 0px;
+    }
+    #featured a:hover{
+        color: #21EFEF;
     }
     .blog-pic{
         width: 300px;

@@ -24,7 +24,6 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    left: 45px;
     font-size: 40px;
   }
   .blog-pic{
@@ -36,21 +35,14 @@ body{
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 35px;
   }
-  #para1,
-  #para2,
-  #para3,
-  #para4,
-  #para5,
-  #para6,
-  #para7,
-  #para8{
-        padding: 10px 20px 10px 20px;
-        position: relative;
-        left: 30px;
-        font-size: 25px;
-    }
+  p{
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  }
     a{
         text-decoration: none;
         color: black;
@@ -95,16 +87,9 @@ body{
         justify-content: center;
         font-size: 50px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
-        padding: 0px 20px 20px 20px;
+    p{
         font-size: 40px;
+        padding: 0px 20px 20px 20px;
     }
     .blog-container{
         background-color: #999696;
@@ -163,14 +148,7 @@ body{
         justify-content: center;
         font-size: 50px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    p{
         padding: 0px 20px 20px 20px;
         font-size: 40px;
     }
@@ -242,39 +220,13 @@ body{
         color: #999696;
         padding-left: 20px;
     }
-    
-    a.section1{
-        padding: 20px 20px 10px 10px;
-        position: relative;
-        left: 15px;
-        font-size: 20px;
-    }
-    a.section2,
-    a.section3,
-    a.section4,
-    a.section5,
-    a.section6,
-    a.section7,
-    a.section8{
-        padding-bottom: 10px;
-        position: relative;
-        left: 15px;
-        font-size: 20px;
-    }
     h1,
     h2{
         display: flex;
         justify-content: center;
         font-size: 45px;
     }
-    #para1,
-    #para2,
-    #para3,
-    #para4,
-    #para5,
-    #para6,
-    #para7,
-    #para8{
+    p{
         padding: 0px 20px 20px 20px;
         font-size: 30px;
     }

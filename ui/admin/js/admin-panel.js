@@ -11,9 +11,10 @@ const queriesOutput = document.getElementById("all-queries-container");
 const noMessageDiv = document.getElementById("no-msg");
 const newQueries = document.getElementById("new-queries");
 const noNewMessagegDiv = document.getElementById("no-new-msg");
+const blogsContainer = document.getElementById("blogsContainer");
+const noBlogsMessageDiv = document.getElementById("no-blogs");
 
 images.addEventListener("change", function(){
-
     reader.readAsDataURL(this.files[0])
 })
 
@@ -33,8 +34,10 @@ articlesForm.addEventListener("submit", e =>{
             summary : myContent.substring(0, 200)+ "...",
             comments : [],
             likes : []
-        
         }
+        let review = [];
+        review.push(blog)
+        localStorage.setItem("Review",JSON.stringify(review));
 
         if(localStorage.getItem("Blogs") == null){
             localStorage.setItem("Blogs","[]");
@@ -46,6 +49,32 @@ articlesForm.addEventListener("submit", e =>{
         location.href = "/ui/admin/preview-blog.html"  
     } 
 })
+
+let blogsArray = JSON.parse(localStorage.getItem("Blogs"))??[]
+
+blogsArray.forEach(element =>{
+    noBlogsMessageDiv.style.display = "none"
+    if(blogsArray.length > 0){
+        noBlogsMessageDiv.style.display = "none"
+
+        blogsContainer.insertAdjacentHTML("afterbegin",`
+        <p class="blog1"> ${element.title}</p>
+        <button id="editbtn-b1" type="button" data-id="${element?.blogId}">Edit</button>
+        <button id="deletebtn-b1" class="delete" type="button" data-id=${element?.blogId}>Delete</button>
+    `)
+    }
+});
+
+const deleteBlogBtn = [...document.getElementsByClassName("delete")];
+
+deleteBlogBtn.forEach(button =>{
+    button.addEventListener("click", e =>{
+        let targetedId = button.dataset.id;
+        let updatedBlogs = blogsArray.filter(object => object.blogId !== targetedId);
+        localStorage.setItem("Blogs",JSON.stringify(updatedBlogs));
+        location.reload();
+    })
+});
 
 let queriesArray = JSON.parse(localStorage.getItem("Queries"))??[];
 

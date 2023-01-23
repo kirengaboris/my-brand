@@ -92,25 +92,29 @@ body{
     .blogs-part{
         background-color: #999696;
         width: 100vw;
-        height: 330px;
         border-radius: 10px;
+        text-align: center;
+    }
+    #no-blogs{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        color: black;
     }
     #editbtn-b1{
         position: relative;
-        left: 250px;
         height: 27px;
         width: 55px;
-        bottom: 40px;
         font-size: 18px;
         border-radius: 5px;
         border: 0px;
+        margin-right: 10px;
     }
     #deletebtn-b1{
         position: relative;
-        left:260px;
         height: 27px;
         width: 65px;
-        bottom: 39px;
         font-size: 18px;
         border-radius: 5px;
         border: 0px;
@@ -121,166 +125,6 @@ body{
         color: #000000;
         position: relative;
         right: 20px;
-    }
-    #editbtn-b2{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 70px;
-        font-size: 18px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b2{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 70px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog2{
-        font-size: 30px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 20px;
-        right: 20px;
-    }
-    .blog3{
-        font-size: 30px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 40px;
-        right: 20px;
-    }
-    #editbtn-b3{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 90px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b3{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 90px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog4{
-        font-size: 30px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 60px;
-        right: 20px;
-    }
-    #editbtn-b4{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 110px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b4{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 110px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog5{
-        font-size: 30px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 80px;
-        right: 20px;
-    }
-    #editbtn-b5{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 130px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b5{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 130px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .triangle1{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        top: 220px;
-        left: 250px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle2{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 400px;
-        top: 190px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle3{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        top: 330px;
-        left: 250px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle4{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 400px;
-        top: 300px;
-        border-radius: 5px;
-        display: none;
     }
     .socials{
         color: white;
@@ -486,26 +330,29 @@ body{
     .blogs-part{
         background-color: #999696;
         width: 96vw;
-        height: 500px;
         border-radius: 10px;
+        text-align: center;
     }
-    
+    #no-blogs{
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        padding: 5px;
+        color: black;
+    }
     #editbtn-b1{
         position: relative;
-        left: 480px;
         height: 50px;
         width: 15%;
-        bottom: 60px;
         font-size: 45px;
         border-radius: 5px;
         border: 0px;
+        margin: 10px;
     }
     #deletebtn-b1{
         position: relative;
-        left:500px;
         height: 50px;
         width: 20%;
-        bottom: 60px;
         font-size: 45px;
         border-radius: 5px;
         border: 0px;
@@ -514,163 +361,6 @@ body{
         font-size: 50px;
         padding: 20px 5px 10px 45px;
         color: #000000;
-    }
-    #editbtn-b2{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 90px;
-        font-size: 45px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b2{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 90px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog2{
-        font-size: 50px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 20px;
-    }
-    .blog3{
-        font-size: 50px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 50px;
-    }
-    #editbtn-b3{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 120px;
-        font-size: 45px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b3{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 120px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog4{
-        font-size: 50px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 80px;
-    }
-    #editbtn-b4{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 150px;
-        font-size: 45px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b4{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 150px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog5{
-        font-size: 50px;
-        padding: 0px 5px 20px 45px;
-        color: #000000; 
-        position: relative;
-        bottom: 110px;
-    }
-    #editbtn-b5{
-        position: relative;
-        left: 480px;
-        height: 50px;
-        width: 15%;
-        bottom: 180px;
-        font-size: 45px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b5{
-        position: relative;
-        left:500px;
-        height: 50px;
-        width: 20%;
-        bottom: 180px;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-   
-    .triangle1{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        top: 220px;
-        left: 250px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle2{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 400px;
-        top: 190px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle3{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        top: 330px;
-        left: 250px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle4{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 400px;
-        top: 300px;
-        border-radius: 5px;
-        display: none;
     }
     .socials{
         color: white;
@@ -937,170 +627,42 @@ body{
     }
     .blogs-part{
         position: relative;
-        left: 500px;
+        left: 520px;
         background-color: #999696;
-        width: 33%;
-        height: 330px;
+        width: 400px;
         border-radius: 10px;
+    }
+    #no-blogs{
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        color: black;
     }
     #editbtn-b1{
         position: relative;
-        left: 250px;
+        left: 150px;
         height: 27px;
         width: 55px;
-        bottom: 40px;
         font-size: 18px;
         border-radius: 5px;
         border: 0px;
+        margin-bottom: 5px;
     }
     #deletebtn-b1{
         position: relative;
-        left:260px;
+        left:150px;
         height: 27px;
         width: 65px;
-        bottom: 39px;
         font-size: 18px;
         border-radius: 5px;
         border: 0px;
+        margin-bottom: 5px;
     }
     .blog1{
         font-size: 30px;
-        padding: 20px 5px 10px 30px;
+        padding: 10px 5px 5px 30px;
         color: #000000;
-    }
-    #editbtn-b2{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 70px;
-        font-size: 18px;
-        border-radius: 5px; 
-        border: 0px;
-    }
-    #deletebtn-b2{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 70px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog2{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
-        color: #000000; 
-        position: relative;
-        bottom: 20px;
-    }
-    .blog3{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
-        color: #000000; 
-        position: relative;
-        bottom: 40px;
-    }
-    #editbtn-b3{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 90px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b3{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 90px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog4{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
-        color: #000000; 
-        position: relative;
-        bottom: 60px;
-    }
-    #editbtn-b4{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 110px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b4{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 110px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog5{
-        font-size: 30px;
-        padding: 0px 5px 20px 30px;
-        color: #000000; 
-        position: relative;
-        bottom: 80px;
-    }
-    #editbtn-b5{
-        position: relative;
-        left: 250px;
-        height: 27px;
-        width: 55px;
-        bottom: 130px;
-        font-size: 18px; 
-        border-radius: 5px;
-        border: 0px;
-    }
-    #deletebtn-b5{
-        position: relative;
-        left:260px;
-        height: 27px;
-        width: 65px;
-        bottom: 130px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .triangle1{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 30px 15px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        top: 30px;
-        left: 450px;
-        border-radius: 5px;
-    }
-    .triangle2{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 0px 15px 30px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 550px;
-        border-radius: 5px;
-    }
-    .nav-btns{
-        position: relative;
-        left: 220px;
-        padding-bottom: 20px;
     }
     .socials{
         color: white;
@@ -1212,6 +774,5 @@ body{
     }
     #file{
         display: none;
-    }
-    
+    } 
 }

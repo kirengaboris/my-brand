@@ -189,27 +189,6 @@ body{
     .work-description br{
         display: none;
     }
-    .triangle1w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 50px 25px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle2w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 0px 25px 50px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        border-radius: 5px;
-        padding-right: 30px;
-        display: none;
-    }
     .projects{
         display: flex;
         color: #1D1D1D;
@@ -303,6 +282,15 @@ body{
         justify-content: center;
         position: relative;
         left: 100px;
+    }
+    #no-blog-list{
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        padding: 5px;
+        width: fit-content;
+        position: relative;
+        left: 150px;
     }
     .blog h1,
     .blog h2{
@@ -750,30 +738,6 @@ body{
         position: relative;
         left: 80px;
     }
-    .triangle1w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 50px 25px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        right: 20px;
-        top: 520px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle2w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 0px 25px 50px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 1300px;
-        top: 465px;
-        border-radius: 5px;
-        display: none;
-    }
     .projects{
         display: flex;
         color: #1D1D1D;
@@ -858,6 +822,15 @@ body{
     .blog-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    #no-blog-list{
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        padding: 5px;
+        width: fit-content;
+        position: relative;
+        left: 200px;
     }
     .blog h1,
     .blog h2{
@@ -1284,30 +1257,7 @@ body{
         position: relative;
         left: 45px;
     }
-    .triangle1w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 50px 25px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        right: 20px;
-        top: 520px;
-        border-radius: 5px;
-        display: none;
-    }
-    .triangle2w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 0px 25px 50px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 1300px;
-        top: 465px;
-        border-radius: 5px;
-        display: none;
-    }
+    
     .projects{
         display: flex;
         color: #1D1D1D;
@@ -1411,6 +1361,15 @@ body{
         box-shadow: 10px 10px 5px black;
         margin: 10px;
         
+    }
+    #no-blog-list{
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        padding: 5px;
+        position: relative;
+        width: fit-content;
+        left: 250px;
     }
     .blog-view{
         color: #D9D9D9;
@@ -1991,6 +1950,12 @@ body{
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
+    #no-blog-list{
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        padding: 5px;
+    }
     #work{
         font-size: 30px;
         padding-left: 200px;
@@ -1998,28 +1963,6 @@ body{
     }
     .work-description{
         font-size: 20px;
-    }
-    .triangle1w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 40px 20px 0px;
-        border-color: transparent #D9D9D9 transparent transparent ;
-        position: relative;
-        right: 20px;
-        top: 170px;
-        border-radius: 5px;
-    }
-    .triangle2w{
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 0px 20px 40px;
-        border-color: transparent  transparent transparent #D9D9D9;
-        position: relative;
-        left: 1170px;
-        top: 130px;
-        border-radius: 5px;
     }
     .tag1w,
     .tag2w,
@@ -2031,14 +1974,7 @@ body{
         font-family: "La Belle Aurore";
         color: #807e7e;
     }
-    .tag5w{
-        position: relative;
-        bottom: 60px;
-    }
-    .tag6w{
-        position: relative;
-        bottom: 60px;
-    }
+    
     .projects{
         display: flex;
         color: #1D1D1D;
@@ -2055,7 +1991,6 @@ body{
         width: 20%;
         margin: 10px;
         position: relative;
-        bottom: 60px;
         border-radius: 10px;
         box-shadow: 10px 10px 5px black;
     }
