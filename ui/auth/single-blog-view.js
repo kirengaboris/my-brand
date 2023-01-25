@@ -12,6 +12,8 @@ const blogContainer = document.getElementById("blog-container");
 const noBlog = document.getElementById("no-blog");
 const featured = document.getElementById("featured");
 const likeCheckBox = document.getElementById("likes");
+const likeIcon = document.getElementById("like-icon");
+var currentScale = 1;
 
 let blogsArray = JSON.parse(localStorage.getItem("Blogs"))??[];
 
@@ -28,20 +30,19 @@ featuredPosts(postId)
 function fetchBlog(postId){
    const fetchedBlog = blogsArray.filter(({blogId}) => blogId == postId)
 
-   if(fetchedBlog){
+    if(fetchedBlog){
+        fetchedBlog.map((blog) => {
+            blogContainer.insertAdjacentHTML("afterbegin",
+         `
+            <article>
+            <h1>${blog.topic}</h1>
+            <h2>${blog.title}</h2>
+            <img class="blog-pic" src=${blog.image}>
+            <p class="para">${blog.article}</p>
+            </article>
+            `)
 
-    fetchedBlog.map((blog) => {
-        blogContainer.insertAdjacentHTML("afterbegin",
-        `
-        <article>
-        <h1>${blog.topic}</h1>
-        <h2>${blog.title}</h2>
-        <img class="blog-pic" src=${blog.image}>
-        <p class="para">${blog.article}</p>
-        </article>
-        `)
-
-        blog.comments.map(({name,createdAt,comment}) =>{
+            blog.comments.map(({name,createdAt,comment}) =>{
 
            if(name || createdAt || comment){
             noComment.style.display = "none"
@@ -52,7 +53,7 @@ function fetchBlog(postId){
            <p>Posted on: ${createdAt}</p><br/>
             `)
            } 
-        }) 
+        })   
     })
 }
 }
@@ -73,18 +74,35 @@ commentsForm.addEventListener("submit", e =>{
             createdAt : new Date(Date.now()).toLocaleString()
         }
        const response = postComment(postId,commentsObject);
-
+    
         blogsArray.map( (blog) =>{
             if(blog.blogId == postId){
-                console.log("i am here")
-                blog.comments = response;
+                blog.comments = response;   
             }
         })
         
         localStorage.setItem("Blogs", JSON.stringify(blogsArray));
         location.reload();
-       
     }   
+})
+
+likeCheckBox.addEventListener("change", (e)=>{
+
+    if (likeCheckBox.checked) {
+        currentScale = 1.5;
+        likeIcon.style.transform = `scale(${currentScale})`
+      }
+     else {
+        likeIcon.style.transform = `scale(${currentScale})`;
+        currentScale = 1;
+      }
+    const likesNumber = addLike(postId,likeCheckBox);
+    blogsArray.map((blog) =>{
+        if(blog.blogId == postId){
+            blog.likes = likesNumber;
+        }
+    })
+    localStorage.setItem("Blogs", JSON.stringify(blogsArray));
 })
 
 function checkComment (commentorName,theComment){
@@ -115,7 +133,6 @@ function checkComment (commentorName,theComment){
             validComment = false;
         }
     }
-    
     return validComment; 
 }
 
@@ -124,4 +141,16 @@ function postComment(postId, commentsObject){
     fetchedBlog[0].comments.push(commentsObject);
 
     return fetchedBlog[0].comments;
+}
+function addLike(postId,checkBox){
+    const fetchedBlog = blogsArray.filter(({blogId}) => blogId == `${postId}`)
+    let counter = 0; 
+    if(checkBox.checked){
+        counter++;   
+    }
+    else{
+        counter = 0;   
+    }
+    fetchedBlog[0].likes.push(counter);
+    return fetchedBlog[0].likes;
 }

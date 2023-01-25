@@ -38,14 +38,6 @@ articlesForm.addEventListener("submit", e =>{
         let review = [];
         review.push(blog)
         localStorage.setItem("Review",JSON.stringify(review));
-
-        if(localStorage.getItem("Blogs") == null){
-            localStorage.setItem("Blogs","[]");
-        }
-        
-        let oldBlogs = JSON.parse(localStorage.getItem("Blogs"));
-        oldBlogs.push(blog);
-        localStorage.setItem("Blogs",JSON.stringify(oldBlogs));
         location.href = "/ui/admin/preview-blog.html"  
     } 
 })
@@ -59,7 +51,7 @@ blogsArray.forEach(element =>{
 
         blogsContainer.insertAdjacentHTML("afterbegin",`
         <p class="blog1"> ${element.title}</p>
-        <button id="editbtn-b1" type="button" data-id="${element?.blogId}">Edit</button>
+        <a href="/ui/admin/edit-blog.html#${element?.blogId}"><button id="editbtn-b1" type="button">Edit</button></a>
         <button id="deletebtn-b1" class="delete" type="button" data-id=${element?.blogId}>Delete</button>
     `)
     }
@@ -91,9 +83,7 @@ queriesArray.forEach(element => {
         <button class="mark-seen" type="button" data-id=${element?.id}>Mark as read</button>
         `);
     }
-    
     else{
-
         queriesOutput.insertAdjacentHTML("afterbegin", `
         <p class="q-name">Name: ${element.names}</p>
         <p class="q-email">Email: ${element.theEmail}</p>

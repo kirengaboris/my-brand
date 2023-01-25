@@ -10,7 +10,6 @@ if(blogsArray.length > 0){
     noBlogListMessage.style.display = "none"
     for (let i = 0; i < blogsArray.length; i++) {
         let blog = blogsArray[i];
-        console.log(blog);
         let blogCardEl = document.createElement("div");
         blogCardEl.classList.add("blog");
         let singleBlog = document.createElement("div");

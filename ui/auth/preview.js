@@ -4,7 +4,6 @@ const postBtn = document.getElementById("postbtn");
 let reviewArray = JSON.parse(localStorage.getItem("Review"))??[];
 
 reviewArray.forEach(element => {
-
     reviewBlog.insertAdjacentHTML("afterbegin", `
         <article>
         <h1>${element.topic}</h1>
@@ -12,10 +11,13 @@ reviewArray.forEach(element => {
         <img class="blog-pic" src=${element.image}>
         <p class="para">${element.article}</p>
         </article>
-    `);
-    
+    `); 
 });
 
+let blog = reviewArray[0];
 postBtn.addEventListener("click" , ()=>{
-    location.href = "/index.html"  
+    let oldBlogs = JSON.parse(localStorage.getItem("Blogs"))??[];
+    oldBlogs.push(blog);
+    localStorage.setItem("Blogs",JSON.stringify(oldBlogs));
+    location.href = "/index.html"    
 })
