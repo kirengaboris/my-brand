@@ -152,3 +152,10 @@ function checkBlog (myContent,topicName,tittleName){
     
     return valid;
 }
+
+function displayLinkVisits() {
+    let storedVisits = JSON.parse(localStorage.getItem("linkVisits"));
+    document.getElementById("link1-visit-count").innerHTML = storedVisits.link1;
+    document.getElementById("link2-visit-count").innerHTML = storedVisits.link2;
+    document.getElementById("link3-visit-count").innerHTML = storedVisits.link3;
+  }
