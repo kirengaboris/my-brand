@@ -1,2052 +1,2088 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-body{
-    background-color: #1D1D1D;
-    color: #FFFFFF;  
-    font-family: 'Roboto'; 
-    overflow-x: hidden;
-}
-
-@media only screen and (max-width: 425px){
-    body{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .logo{
-        width:200px;
-        position: relative;
-        left: 210px;
-        display: flex;
-        justify-content: center;
-    }
-    #navbar p{
-        font-size: 40px;
-        padding: 10px 0px 20px 0px;
-        position: relative;
-        left: 170px;
-    }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        width:236%;
-        background-color: #181818;
-        color: #999696;
-        display: none;
-        position: fixed;
-        z-index: 10;
-    }
-    .dropdown{
-        display: none;
-    }
-    .dropdown:checked ~ #navbar{
-        display: block;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login{
-        padding: 20px 0px 20px 0px;   
-    }
-    a.about-me{
-        padding: 60px 0px 20px 0px;  
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login,
-    a.about-me{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        right: 430px;
-        font-size: 40px;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #home{
-        background-color: black;        
-    }
-    .dropdown-nav{
-        width: 50px;
-        position: fixed;
-        left: 550px;
-        top: 10px;
-        color: #21EFEF;
-        background-color: #21EFEF;
-        z-index: 10;
-    }
-    .inner-logo{
-        width: 15%;
-        position: relative;
-        top: 20px;
-    }
-    .tag1lp,
-    .tag2lp,
-    .tag3lp,
-    .tag4lp,
-    .tag5lp,
-    .tag6lp{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #p{
-        font-size: 19px;
-        position: relative;
-        left: 30px;
-        color: #999696;
-    }
-    .tag1lp{
-        position: relative;
-        left: 10px;
-    }
-    .tag2lp{
-        position: relative;
-        left: 20px;
-    }
-    .tag3lp{
-        position: relative;
-        left: 25px;
-    }
-    .tag5lp{
-        position: relative;
-        left: 25px;
-    }
-    .tag6lp{
-        position: relative;
-        left: 25px;
-    }
-    .welcome,
-    #h1{
-        font-size: 58px;
-        font-weight: bolder;
-        position: relative;
-        left: 20px;
-    }
-    .welcome{
-        padding-top: 10px;
-    }
-    #h1{
-        position: relative;
-        top: 30px;
-    }
-    #about-me{
-        position: relative;
-        left: 25px;
-    }
-    .tag1ap,
-    .tag2ap,
-    .tag3ap,
-    .tag4ap{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .description{
-        font-size: 35px;
-        display: flex;
-        justify-content: center;
-    }
-    #skills{
-        font-size: 25px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .picture{
-        width: 80%;
-        position: relative;
-        left: 40px;
-    }
-    #skills p{
-        padding: 5px;
-    }
-    #about-me h2{
-        color: #21EFEF;
-        font-size: 60px;
-    }
-    #work{
-        position: relative;
-        left: 25px;
-    }
-    #work h2{
-        font-size: 60px;
-        color: #21EFEF;
-    }
-    .work-description{
-        font-size: 35px;
-        position: relative;
-        left: 30px;
-    }
-    .work-description br{
-        display: none;
-    }
-    .projects{
-        display: flex;
-        color: #1D1D1D;
-        position: relative;
-        left: 70px;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .project1,
-    .project2,
-    .project3,
-    .project4{
-        background-color: #FFFFFF;
-        margin: 10px;
-        position: relative;
-        border-radius: 10px;
-        position: relative;
-        left: 25px;
-        box-shadow: 10px 10px 5px black;
-    }
-    .project-img{
-        height: 400px;
-        margin-bottom: 5px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border-radius: 10px 10px 0px 0px ;
-    }
-    .p1-img,
-    .p2-img,
-    .p3-img,
-    .p4-img{
-        background-image: url("/assets/images/project-image.png");
-    }
-    .projects h3{
-        display: block;
-        text-align: center;
-        color: black;
-        font-size: 30px;
-    }
-    .project-link{
-        font-size: 20px;
-        display: block;
-        text-align: center;
-        position: relative;
-        background-color: #21EFEF;
-        border-radius: 0px 0px 10px 10px ;
-        color: #21EFEF;
-    }
-    .project1:hover,
-    .project2:hover,
-    .project3:hover,
-    .project4:hover{
-        transform: scale(1.05);
-    }   
-    .project1:hover > a,
-    .project2:hover > a,
-    .project3:hover > a,
-    .project4:hover > a{
-        color: black;
-    }
-    .tag1w,
-    .tag2w,
-    .tag3w,
-    .tag4w,
-    .tag5w,
-    .tag6w{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag5w{
-        position: relative;
-        padding-bottom: 10px;
-    }
-    .tag6w{
-        position: relative;
-        padding-top: 10px;
-    }
-    #blogs{
-        position: relative;
-        left: 25px;
-    }
-    .b-title{
-        font-size: 60px;
-        color: #21EFEF; 
-    }
-    .blog-container{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 100px;
-    }
-    #no-blog-list{
-        display: block;
-        text-align: center;
-        font-size: 50px;
-        padding: 5px;
-        width: fit-content;
-        position: relative;
-        left: 150px;
-    }
-    .blog h1,
-    .blog h2{
-        color: black;
-        font-size: 25px;
-        padding: 5px 20px 0px 20px;
-        display: block;
-        text-align: center;
-    }
-    .blog p,
-    .blog h3{
-        color: black;
-        font-size: 20px;
-        padding: 10px 20px 0px 20px;
-    }
-    .blog{
-        background-color: #999696;
-        border-radius: 10px;
-        box-shadow: 10px 10px 5px black;
-        margin: 20px;
-        width: fit-content;
-        
-    }
-    .blog-view{
-        color: #D9D9D9;
-        font-size: 30px;
-        display: block;
-    }
-    .blog{
-        background-color: #999696;
-        box-shadow: 15px 15px 10px black;
-        border-radius: 15px;
-    }
-    .tag1bp,
-    .tag2bp,
-    .tag3bp,
-    .tag4bp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag1bp,
-    .tag2bp,
-    .tag3bp,
-    .tag4bp{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-   
-    #contacts{
-       position: relative;
-       left: 25px;
-    }
-    #sendbtn{
-        background-color: #1D1D1D;
-        color: #21EFEF;
-        width: 50%;
-        height: 50px;
-        font-size: 25px;   
-        position: relative;
-        left: 260px;
-        border: 1px solid #21EFEF;
-    }
-    #message{
-        width: 100%;
-        border: 0;
-        background-color: #2b2b2b;
-        font-size: 30px;
-        color: #8d8d8d;
-        margin: 5px 0px 5px 0px;
-        height: 300px;
-        padding: 20px;
-    }
-    #other-contacts{
-        font-size: 50px;
-        position: relative;
-        left: 50px;
-    }
-    #name,
-    #email{
-        width: 100%;
-        border-bottom: 2px solid #1D1D1D;
-        color: #8d8d8d;
-        padding: 20px;
-        background-color: #2b2b2b;
-        font-size: 30px;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo,
-    .email-logo{
-        width: 50px;
-        height: 50px;
-    }
-    .email{
-        display: flex;
-    }
-    .email p{
-        margin: 0 0 0 10px;
-        font-size: 40px;
-        color: #8d8d8d;
-    }
-    #sendbtn:hover{
-        background-color: #21EFEF;
-        color: black;
-    }
-    #short-message{
-        position: relative;
-        left: 50px;
-        font-size: 35px;
-    }
-    #short-message br{
-        display: none;
-    }
-    #contact-form{
-        position: relative;
-        left: 30px;
-    }
-    .styled-link{
-        font-size: 40px;
-        position: relative;
-        right: 25px;
-        bottom: 15px;
-    }
-    #contacts h2{
-        font-size: 60px;
-        color:#21EFEF;
-    }
-    .tag1cp,
-    .tag2cp,
-    .tag3cp,
-    .tag4cp,
-    .tag5cp,
-    .tag6cp{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag5cp,
-    .tag6cp{
-        position: relative;
-        right: 30px;
-    }
-    .tag3cp,
-    .tag4cp{
-        position: relative;
-        right: 40px;
-    }
-    #login{
-       position: relative;
-       left: 25px;
-    }
-    #login h2{
-        font-size: 60px;
-        color: #21EFEF; 
-    }
-    .tag1logp,
-    .tag2logp,
-    .tag3logp,
-    .tag4logp,
-    .tag5logp,
-    .tag6logp{
-        font-size: 25px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag4logp,
-    .tag3logp{
-        position: relative;
-        left: 30px;
-    }
-    
-    .tag5logp{
-        position: relative;
-        left: 15px;
-    }
-    .login-container{
-        background-color: #2B2B2B;
-        width: 120%;
-        height: 400px;
-        position: relative;
-        left: 70px;
-        border-radius: 15px;    
-    }
-    #login-email,
-    #login-password{
-        font-size: 30px;
-        height: 50px;
-        width: 90%;
-        padding: 25px;
-        border-bottom: 2px solid black;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        background-color: #2B2B2B;
-        position: relative;
-        left: 25px;
-    }
-    #loginbtn{
-        background-color: #2B2B2B;
-        color: #21EFEF;
-        width: 60%;
-        height: 50px;
-        font-size: 30px;   
-        position: relative;
-        top: 20px;
-        left: 80px;
-        padding: 5px;
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    #login-form{
-        position: relative;
-       
-    }
-    .login-container h3{
-        position: relative;
-        padding: 30px 0px 30px 0px;
-        font-size: 35px;
-        display: flex;
-        justify-content: center;
-    }
-    .loginmsg{
-        font-size: 30px;
-        position: relative;
-        top: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    #loginbtn:hover{
-        background-color: #21EFEF;
-        color: black; 
-    }
-    .invalid input{
-        border: 1px solid red !important;
-    }
-    #error-msg{
-        font-size: 30px;
-        color: red;
-        display: block;
-        text-align: center;
-
-    }
-    .success input{
-        border: 1px solid greenyellow !important;
-    }
-    #error-msg1,
-    #error-msg2,
-    #error-msg3{
-        font-size: 15px;
-        color: red;
-    }
-    .invalid-contacts {
-        border: 1px solid red !important;
-    }
-}
-@media only screen and (min-width: 426px) and (max-width: 540px){
-    body{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .logo{
-        width:200px;
-        position: relative;
-        left: 340px;
-        display: flex;
-        justify-content: center;
-    }
-    #navbar p{
-        font-size: 40px;
-        padding: 10px 0px 20px 0px;
-        position: relative;
-        left: 300px;
-        display: flex;
-    }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        width: 332%;
-        background-color: #181818;
-        color: #999696;
-        display: none;
-        position: fixed;
-        z-index: 10;
-    }
-    .dropdown{
-        display: none;
-    }
-    .dropdown:checked ~ #navbar{
-        display: block;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-        font-size: 30px;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login{
-        padding: 20px 0px 20px 0px;
-        display: flex;
-    }
-    a.about-me{
-        padding: 60px 0px 20px 0px;
-        display: flex;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login,
-    a.about-me{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        right: 1030px;
-        font-size: 40px;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #home{
-        background-color: black;        
-    }
-    .dropdown-nav{
-        width: 50px;
-        position: fixed;
-        left: 780px;
-        top: 10px;
-        color: #21EFEF;
-        background-color: #21EFEF;
-        z-index: 10;
-    }
-    .inner-logo{
-        width: 70px;
-        position: relative;
-        top: 28px;
-    }
-    #h1{
-        position: relative;
-        top: 35px;
-    }
-    .welcome{
-        padding-bottom: 20px;
-    }
-    .tag1lp,
-    .tag2lp,
-    .tag3lp,
-    .tag4lp,
-    .tag5lp,
-    .tag6lp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #p{
-        font-size: 25px;
-        position: relative;
-        left: 40px;
-        color: #999696;
-    }
-    
-    .tag2lp{
-        position: relative;
-        left: 15px;
-    }
-    .tag3lp{
-        position: relative;
-        left: 30px;
-    }
-    .tag4lp{
-        position: relative;
-        left: 30px;
-    }
-    .tag5lp{
-        position: relative;
-        left: 25px;
-    }
-    .tag6lp{
-        position: relative;
-        left: 25px;
-    }
-    .welcome,
-    #h1{
-        font-size: 77px;
-        font-weight: bolder;
-    }
-    #landing-page{
-        padding-left: 25px;
-    }
-    #about-me{
-        padding-left: 25px;
-    }
-    #about-me h2{
-        color:#21EFEF;
-        font-size: 100px;
-    }
-    .tag1ap,
-    .tag2ap,
-    .tag3ap,
-    .tag4ap{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .description{
-        font-size: 40px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-    #skills{
-        font-size: 35px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-    }
-    #skills p{
-        padding: 5px;
-    }
-    .picture{
-        width: 90%;
-        position: relative;
-        left: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    #work{
-        padding-left: 25px;
-        position: relative;
-    }
-    #work h2{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    .work-description{
-        font-size: 40px;
-        position: relative;
-        left: 80px;
-    }
-    .projects{
-        display: flex;
-        color: #1D1D1D;
-        position: relative;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .project1,
-    .project2,
-    .project3,
-    .project4{
-        background-color: #FFFFFF;
-        margin: 20px;
-        position: relative;
-        border-radius: 10px;
-        left: 150px;
-        box-shadow: 10px 10px 5px black;
-    }
-    .project-img{
-        height: 400px;
-        margin-bottom: 5px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 10px 10px 0px 0px ;
-    }
-    .p1-img,
-    .p2-img,
-    .p3-img,
-    .p4-img{
-        background-image: url("/assets/images/project-image.png");
-    }
-    .projects h3{
-        display: block;
-        text-align: center;
-        color: black;
-        font-size: 40px;
-    }
-    .project-link{
-        font-size: 35px;
-        display: block;
-        text-align: center;
-        position: relative;
-        background-color: #21EFEF;
-        border-radius: 0px 0px 10px 10px ;
-        color: #21EFEF;
-    }
-    .project1:hover,
-    .project2:hover,
-    .project3:hover,
-    .project4:hover{
-        transform: scale(1.05);
-    }   
-    .project1:hover > a,
-    .project2:hover > a,
-    .project3:hover > a,
-    .project4:hover > a{
-        color: black;
-    }
-    .tag1w,
-    .tag2w,
-    .tag3w,
-    .tag4w,
-    .tag5w,
-    .tag6w{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag3w,
-    .tag4w{
-        position: relative;
-        left: 15px;
-    }
-    #blogs{
-        padding-left: 25px;
-    }
-    .b-title{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    .blog-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #no-blog-list{
-        display: block;
-        text-align: center;
-        font-size: 50px;
-        padding: 5px;
-        width: fit-content;
-        position: relative;
-        left: 200px;
-    }
-    .blog h1,
-    .blog h2{
-        color: black;
-        font-size: 25px;
-        padding: 5px 20px 0px 20px;
-        display: block;
-        text-align: center;
-    }
-    .blog p,
-    .blog h3{
-        color: black;
-        font-size: 20px;
-        padding: 10px 20px 0px 20px;
-    }
-    .blog{
-        background-color: #999696;
-        border-radius: 10px;
-        box-shadow: 10px 10px 5px black;
-        margin: 20px;
-        width: fit-content;
-        
-    }
-    .blog-view{
-        color: #D9D9D9;
-        font-size: 30px;
-        display: block;
-    }
-    .blog{
-        background-color: #999696;
-        box-shadow: 15px 15px 10px black;
-        border-radius: 15px;
-    }
-    .tag1bp,
-    .tag2bp,
-    .tag3bp,
-    .tag4bp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #contacts{
-        padding-left: 25px;
-        position: relative;
-    }
-    #contacts h2{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    #sendbtn{
-        background-color: #1D1D1D;
-        color: #21EFEF;
-        width: 50%;
-        height: 50px;
-        font-size: 25px;   
-        position: relative;
-        left: 270px;
-        border: 1px solid #21EFEF;
-    }
-    #message{
-        width: 100%;
-        border: 0;
-        background-color: #2b2b2b;
-        font-size: 20px;
-        color: #8d8d8d;
-        margin: 5px 0px 5px 0px;
-        height: 200px;
-        padding: 20px;
-    }
-    #other-contacts{
-        font-size: 70px;
-        position: relative;
-        left: 50px;
-    }
-    #name,
-    #email{
-        height: 50px;
-        width: 100%;
-        border: 0px;
-        color: #8d8d8d;
-        padding: 20px;
-        background-color: #2b2b2b;
-        font-size: 20px;
-    }
-    #email{
-        position: relative;
-        margin-top: 5px;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo,
-    .email-logo{
-        width: 55px;
-        height: 55px;
-    }
-    .email{
-        display: flex;
-        flex-direction: row;
-    }
-    .email p{
-        margin: 0 0 0 20px;
-        font-size: 40px;
-        color: #8d8d8d;
-    }
-    #sendbtn:hover{
-        background-color: #21EFEF;
-        color: black;
-    }
-    #short-message{
-        position: relative;
-        left: 25px;
-        font-size: 40px;
-    }
-    #contact-form{
-        position: relative;
-        left: 130px;
-    }
-    .styled-link{
-        font-size: 40px;
-        position: relative;
-        right: 15px;
-        bottom: 15px;
-    }
-    h2{
-        font-size: 100px;
-        color:#21EFEF;
-    }
-    .tag1cp,
-    .tag2cp,
-    .tag3cp,
-    .tag4cp,
-    .tag5cp,
-    .tag6cp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #login{
-        padding-left: 25px; 
-    }
-    .tag1logp,
-    .tag2logp,
-    .tag3logp,
-    .tag4logp,
-    .tag5logp,
-    .tag6logp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag6logp{
-        position: relative;
-    }
-    .tag5logp{
-        position: relative;
-        left: 35px;
-    }
-    .tag4logp,
-    .tag3logp{
-        position: relative;
-    }
-    .login-container{
-        background-color: #2B2B2B;
-        width: 150%;
-        padding: 20px 0px 70px 0px;
-        border-radius: 15px; 
-        position: relative;  
-    }
-    #login-email,
-    #login-password{
-        font-size: 35px;
-        width: 90%;
-        padding: 25px;
-        border-bottom: 2px solid black;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        background-color: #2B2B2B;
-        position: relative;
-        left: 20px;
-    }
-    #loginbtn{
-        background-color: #2B2B2B;
-        color: #21EFEF;
-        width: 80%;
-        height: 50px;
-        font-size: 35px;   
-        position: relative;
-        top: 10px;
-        left: 40px;
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-        display: flex;
-        padding-bottom: 5px;
-        justify-content: center;
-    }
-    #login-form{
-        position: relative;
-        left: 95px;
-    }
-    .login-container h3{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 30px;
-        font-size: 40px;
-    }
-    .loginmsg{
-        font-size: 35px;
-        position: relative;
-        top: 20px;
-        display: flex; 
-        justify-content: center;
-    }
-    #loginbtn:hover{
-        background-color: #21EFEF;
-        color: black; 
-    }
-    .invalid input{
-        border: 1px solid red !important;
-    }
-    #error-msg{
-        font-size: 30px;
-        color: red;
-        display: block;
-        text-align: center;
-
-    }
-    .success input{
-        border: 1px solid greenyellow !important;
-    }
-    #error-msg1,
-    #error-msg2,
-    #error-msg3{
-        font-size: 15px;
-        color: red;
-    }
-    .invalid-contacts {
-        border: 1px solid red !important;
-    }
-}
-@media only screen and (min-width: 541px) and (max-width: 961px){
-    body{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .logo{
-        width:200px;
-        position: relative;
-        left: 340px;
-        display: flex;
-        justify-content: center;
-    }
-    #navbar p{
-        font-size: 40px;
-        padding: 10px 0px 20px 0px;
-        position: relative;
-        left: 300px;
-        display: flex;
-    }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        width:332%;
-        background-color: #181818;
-        color: #999696;
-        display: none;
-        position: fixed;
-        z-index: 10;
-    }
-    .dropdown{
-        display: none;
-    }
-    .dropdown:checked ~ #navbar{
-        display: block;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-        font-size: 30px;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login{
-        padding: 20px 0px 20px 0px;
-        display: flex;
-    }
-    a.about-me{
-        padding: 60px 0px 20px 0px;
-        display: flex;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login,
-    a.about-me{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        right: 1030px;
-        font-size: 40px;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #home{
-        background-color: black;        
-    }
-    .dropdown-nav{
-        width: 50px;
-        position: fixed;
-        left: 780px;
-        top: 10px;
-        color: #21EFEF;
-        background-color: #21EFEF;
-        z-index: 10;
-    }
-    .inner-logo{
-        width: 80px;
-        position: relative;
-        top: 28px;
-    }
-    #h1{
-        position: relative;
-        top: 35px;
-    }
-    .tag1lp,
-    .tag2lp,
-    .tag3lp,
-    .tag4lp,
-    .tag5lp,
-    .tag6lp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #p{
-        font-size: 30px;
-        position: relative;
-        left: 40px;
-        color: #999696;
-    }
-    
-    .tag2lp{
-        position: relative;
-        left: 15px;
-    }
-    .tag3lp{
-        position: relative;
-        left: 30px;
-    }
-    .tag4lp{
-        position: relative;
-        left: 30px;
-    }
-    .tag5lp{
-        position: relative;
-        left: 25px;
-    }
-    .tag6lp{
-        position: relative;
-        left: 25px;
-    }
-    .welcome,
-    #h1{
-        font-size: 110px;
-        font-weight: bolder;
-    }
-    #landing-page{
-        padding-left: 25px;
-    }
-    #about-me{
-        padding-left: 25px;
-    }
-    #about-me h2{
-        color:#21EFEF;
-        font-size: 100px;
-    }
-    .tag1ap,
-    .tag2ap,
-    .tag3ap,
-    .tag4ap{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .description{
-        font-size: 40px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-    #skills{
-        font-size: 35px;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-    }
-    #skills p{
-        padding: 5px;
-    }
-    .picture{
-        width: 90%;
-        position: relative;
-        left: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    #work{
-        padding-left: 25px;
-        position: relative;
-    }
-    #work h2{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    .work-description{
-        font-size: 40px;
-        position: relative;
-        left: 45px;
-    }
-    
-    .projects{
-        display: flex;
-        color: #1D1D1D;
-        position: relative;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .project1,
-    .project2,
-    .project3,
-    .project4{
-        background-color: #FFFFFF;
-        margin: 20px;
-        position: relative;
-        border-radius: 10px;
-        left: 50px;
-        box-shadow: 10px 10px 5px black;
-    }
-    .project-img{
-        height: 600px;
-        margin-bottom: 5px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        border-radius: 10px 10px 0px 0px ;
-    }
-    .p1-img,
-    .p2-img,
-    .p3-img,
-    .p4-img{
-        background-image: url("/assets/images/project-image.png");
-    }
-    .projects h3{
-        display: block;
-        text-align: center;
-        color: black;
-        font-size: 40px;
-    }
-    .project-link{
-        font-size: 35px;
-        display: block;
-        text-align: center;
-        position: relative;
-        background-color: #21EFEF;
-        border-radius: 0px 0px 10px 10px ;
-        color: #21EFEF;
-    }
-    .project1:hover,
-    .project2:hover,
-    .project3:hover,
-    .project4:hover{
-        transform: scale(1.05);
-    }   
-    .project1:hover > a,
-    .project2:hover > a,
-    .project3:hover > a,
-    .project4:hover > a{
-        color: black;
-    }
-    .tag1w,
-    .tag2w,
-    .tag3w,
-    .tag4w,
-    .tag5w,
-    .tag6w{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #blogs{
-        padding-left: 10px;
-    }
-    .b-title{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    .blog-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        position: relative;
-        left: 20px;
-
-    }
-    .blog h1,
-    .blog h2{
-        color: black;
-        font-size: 20px;
-        padding: 5px 20px 0px 20px;
-        display: block;
-        text-align: center;
-    }
-    .blog p,
-    .blog h3{
-        color: black;
-        font-size: 20px;
-        padding: 10px 20px 0px 20px;
-    }
-    .blog{
-        background-color: #999696;
-        border-radius: 10px;
-        box-shadow: 10px 10px 5px black;
-        margin: 10px;
-        
-    }
-    #no-blog-list{
-        display: block;
-        text-align: center;
-        font-size: 50px;
-        padding: 5px;
-        position: relative;
-        width: fit-content;
-        left: 250px;
-    }
-    .blog-view{
-        color: #D9D9D9;
-        font-size: 30px;
-        display: block;
-    }
-    .blog{
-        background-color: #999696;
-        box-shadow: 15px 15px 10px black;
-        border-radius: 15px;
-    }
-    .tag1bp,
-    .tag2bp,
-    .tag3bp,
-    .tag4bp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #contacts{
-        padding-left: 25px;
-        position: relative;
-    }
-    #contacts h2{
-        color: #21EFEF;
-        font-size: 100px;
-    }
-    #sendbtn{
-        background-color: #1D1D1D;
-        color: #21EFEF;
-        width: 50%;
-        height: 50px;
-        font-size: 25px;   
-        position: relative;
-        left: 395px;
-        border: 1px solid #21EFEF;
-    }
-    #message{
-        width: 100%;
-        border: 0;
-        background-color: #2b2b2b;
-        font-size: 20px;
-        color: #8d8d8d;
-        margin: 5px 0px 5px 0px;
-        height: 200px;
-        padding: 20px;
-    }
-    #other-contacts{
-        font-size: 70px;
-        position: relative;
-        left: 50px;
-    }
-    #name,
-    #email{
-        height: 50px;
-        width: 100%;
-        border: 0px;
-        color: #8d8d8d;
-        padding: 20px;
-        background-color: #2b2b2b;
-        font-size: 20px;
-    }
-    #email{
-        position: relative;
-        margin-top: 5px;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo,
-    .email-logo{
-        width: 55px;
-        height: 55px;
-    }
-    .email{
-        display: flex;
-        flex-direction: row;
-    }
-    .email p{
-        margin: 0 0 0 20px;
-        font-size: 40px;
-        color: #8d8d8d;
-    }
-    #sendbtn:hover{
-        background-color: #21EFEF;
-        color: black;
-    }
-    #short-message{
-        position: relative;
-        left: 25px;
-        font-size: 40px;
-    }
-    #contact-form{
-        position: relative;
-        left: 15px;
-    }
-    .styled-link{
-        font-size: 40px;
-        position: relative;
-        right: 15px;
-        bottom: 15px;
-    }
-    h2{
-        font-size: 100px;
-        color:#21EFEF;
-    }
-    .tag1cp,
-    .tag2cp,
-    .tag3cp,
-    .tag4cp,
-    .tag5cp,
-    .tag6cp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #login{
-        padding-left: 25px; 
-    }
-    .tag1logp,
-    .tag2logp,
-    .tag3logp,
-    .tag4logp,
-    .tag5logp,
-    .tag6logp{
-        font-size: 35px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag6logp{
-        position: relative;
-    }
-    .tag5logp{
-        position: relative;
-        left: 35px;
-    }
-    .tag4logp,
-    .tag3logp{
-        position: relative;
-    }
-    .login-container{
-        background-color: #2B2B2B;
-        width: 150%;
-        padding: 20px 0px 70px 0px;
-        border-radius: 15px; 
-        position: relative;  
-    }
-    #login-email,
-    #login-password{
-        font-size: 35px;
-        width: 90%;
-        padding: 25px;
-        border-bottom: 2px solid black;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        background-color: #2B2B2B;
-        position: relative;
-        left: 20px;
-    }
-    #loginbtn{
-        background-color: #2B2B2B;
-        color: #21EFEF;
-        width: 80%;
-        height: 50px;
-        font-size: 35px;   
-        position: relative;
-        top: 10px;
-        left: 40px;
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-        display: flex;
-        padding-bottom: 5px;
-        justify-content: center;
-    }
-    #login-form{
-        position: relative;
-        left: 100px;
-    }
-    .login-container h3{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 30px;
-        font-size: 40px;
-    }
-    .loginmsg{
-        font-size: 35px;
-        position: relative;
-        top: 20px;
-        display: flex; 
-        justify-content: center;
-    }
-    #loginbtn:hover{
-        background-color: #21EFEF;
-        color: black; 
-    }
-    .invalid input{
-        border: 1px solid red !important;
-    }
-    #error-msg{
-        font-size: 35px;
-        color: red;
-        display: block;
-        text-align: center;
-
-    }
-    .success input{
-        border: 1px solid greenyellow !important;
-    }
-    #error-msg1,
-    #error-msg2,
-    #error-msg3{
-        font-size: 15px;
-        color: red;
-    }
-    .invalid-contacts {
-        border: 1px solid red !important;
-    }
-}
-@media only screen and (min-width: 961px){
-    .logo{
-        width:100px;
-    }
-    #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
-    }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        width: 10%;
-        position: fixed;
-        height: 700px;
-        background-color: #181818;
-        color: #999696;
-    }
-    .dropdown{
-        display: none;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    a.work,
-    a.blogs,
-    a.contacts,
-    a.login{
-        padding: 20px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    a.about-me{
-        padding: 60px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    .dropdown-nav{
-        display: none;
-    }
-    #home{
-        background-color: black;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #landing-page{
-        height: 700px;
-    }
-    .inner-logo{
-        width: 80px;
-        position: relative;
-        top: 28px;
-    }
-    #h1{
-        position: relative;
-        top: 50px;
-    }
-    .tag1lp,
-    .tag2lp,
-    .tag3lp,
-    .tag4lp,
-    .tag5lp,
-    .tag6lp{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #p{
-        font-size: 23px;
-        padding-left: 220px;
-        position: relative;
-        bottom: 40px;
-        color: #999696;
-    }
-    .tag1lp{
-        position: relative;
-        top: 20px;
-        left: 170px;
-    }
-    .tag2lp{
-        position: relative;
-        top: 20px;
-        left: 190px;
-    }
-    .tag3lp{
-        position: relative;
-        top: 70px;
-        left: 200px;
-    }
-    .tag4lp{
-        position: relative;
-        left: 680px;
-        bottom: 40px;
-    }
-    .tag5lp{
-        position: relative;
-        left: 200px;
-        bottom: 35px;
-    }
-    .tag6lp{
-        position: relative;
-        left: 200px;
-        bottom: 35px;
-    }
-    .welcome,
-    #h1{
-        font-size: 100px;
-        font-weight: bolder;
-        padding-left: 200px;
-    }
-    #contacts{
-        height: 700px;
-        font-size: 30px;
-        padding-left: 200px;
-    }
-    #sendbtn{
-        background-color: #1D1D1D;
-        color: #21EFEF;
-        width: 24.7%;
-        height: 50px;
-        font-size: 25px;   
-        position: relative;
-        left: 315px;
-        border: 1px solid #21EFEF;
-    }
-    #message{
-        width: 50%;
-        border: 0;
-        background-color: #2b2b2b;
-        font-size: 20px;
-        color: #8d8d8d;
-        margin: 5px 0px 5px 0px;
-        height: 150px;
-        padding: 20px;
-    }
-    #other-contacts{
-        font-size: 50px;
-        position: relative;
-        bottom: 300px;
-        left: 750px;
-    }
-    #name,
-    #email{
-        height: 40px;
-        width: 50%;
-        border: 0px;
-        color: #8d8d8d;
-        padding: 20px;
-        background-color: #2b2b2b;
-        font-size: 20px;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo,
-    .email-logo{
-        width: 35px;
-        height: 35px;
-    }
-    .email{
-        display: flex;
-    }
-    .email p{
-        margin: 0 0 0 10px;
-        font-size: 30px;
-        color: #8d8d8d;
-    }
-    #sendbtn:hover{
-        background-color: #21EFEF;
-        color: black;
-    }
-    #short-message{
-        position: relative;
-        top: 10px;
-    }
-    #contact-form{
-        position: relative;
-        top: 10px;
-    }
-    .styled-link{
-        font-size: 30px;
-        position: relative;
-        right: 25px;
-        bottom: 5px;
-    }
-    h2{
-        font-size: 90px;
-        color:#21EFEF;
-    }
-    .tag1cp,
-    .tag2cp,
-    .tag3cp,
-    .tag4cp,
-    .tag5cp,
-    .tag6cp{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #login{
-        height: 700px;
-        font-size: 30px;
-        padding-left: 200px; 
-    }
-    .tag1logp,
-    .tag2logp,
-    .tag3logp,
-    .tag4logp,
-    .tag5logp,
-    .tag6logp{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag6logp{
-        position: relative;
-        right: 30px;
-    }
-    .tag5logp{
-        position: relative;
-        right: 10px;
-    }
-    .login-container{
-        background-color: #2B2B2B;
-        width: 30%;
-        padding: 20px 0px 130px 0px;
-        border-radius: 15px;    
-    }
-    #login-email,
-    #login-password{
-        font-size: 20px;
-        height: 40px;
-        width: 80%;
-        padding: 25px;
-        border-bottom: 2px solid black;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        background-color: #2B2B2B;
-        position: relative;
-        left: 40px;
-    }
-    #loginbtn{
-        background-color: #2B2B2B;
-        color: #21EFEF;
-        width: 60%;
-        height: 40px;
-        font-size: 20px;   
-        position: relative;
-        left: 70px;
-        top: 40px;
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-    }
-    #login-form{
-        position: relative;
-        left: 400px;
-    }
-    .login-container h3{
-        position: relative;
-        left: 150px;
-        padding-bottom: 30px;
-    }
-    .loginmsg{
-        font-size: 20px;
-        position: relative;
-        top: 70px;
-        left: 100px  
-    }
-    #loginbtn:hover{
-        background-color: #21EFEF;
-        color: black; 
-    }
-    #about-me{
-        height: 700px;
-        font-size: 30px;
-        padding-left: 200px;
-    }
-    .tag1ap,
-    .tag2ap,
-    .tag3ap,
-    .tag4ap{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .tag3ap{
-        position: relative;
-        bottom: 400px;
-    }
-    .tag4ap{
-        position : relative;
-        bottom: 395px;
-    }
-    .description{
-        font-size: 20px;
-        position: relative;
-        bottom: 400px;
-    }
-    #skills{
-        font-size: 25px;
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        bottom: 370px;
-        right: 40px;
-    }
-    .picture{
-        width: 320px;
-        height: 400px;
-        position: relative;
-        left: 650px;
-    }
-    #blogs{
-        font-size: 30px;
-        padding-left: 200px;        
-    }
-    .blog-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .blog h1,
-    .blog h2{
-        color: black;
-        font-size: 20px;
-        padding: 5px 20px 0px 20px;
-        display: block;
-        text-align: center;
-    }
-    .blog p,
-    .blog h3{
-        color: black;
-        font-size: 20px;
-        padding: 10px 20px 0px 20px;
-    }
-    .blog{
-        background-color: #999696;
-        border-radius: 10px;
-        box-shadow: 10px 10px 5px black;
-        margin: 10px;
-        
-    }
-    .blog-view{
-        color: #D9D9D9;
-        font-size: 30px;
-        display: block;
-        text-align: center;
-    }
-    .tag1bp,
-    .tag2bp,
-    .tag3bp,
-    .tag4bp{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    #no-blog-list{
-        display: block;
-        text-align: center;
-        font-size: 40px;
-        padding: 5px;
-    }
-    #work{
-        font-size: 30px;
-        padding-left: 200px;
-        height: 700px;
-    }
-    .work-description{
-        font-size: 20px;
-    }
-    .tag1w,
-    .tag2w,
-    .tag3w,
-    .tag4w,
-    .tag5w,
-    .tag6w{
-        font-size: 15px;
-        font-family: "La Belle Aurore";
-        color: #807e7e;
-    }
-    .projects{
-        display: flex;
-        color: #1D1D1D;
-        position: relative;
-        right: 25px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .project1,
-    .project2,
-    .project3,
-    .project4{
-        background-color: #FFFFFF;
-        width: 20%;
-        margin: 10px;
-        position: relative;
-        border-radius: 10px;
-        box-shadow: 10px 10px 5px black;
-    }
-    .project-img{
-        height: 250px;
-        margin-bottom: 5px;
-        background-size: cover;
-        border-radius: 10px 10px 0px 0px ;
-    }
-    .p1-img,
-    .p2-img,
-    .p3-img,
-    .p4-img{
-        background-image: url("/assets/images/project-image.png");
-    }
-    .projects h3{
-        display: block;
-        text-align: center;
-        color: black;
-        font-size: 30px;
-    }
-    .project-link{
-        font-size: 20px;
-        display: block;
-        text-align: center;
-        position: relative;
-        background-color: #21EFEF;
-        border-radius: 0px 0px 10px 10px ;
-        color: #21EFEF;
-    }
-    .project1:hover,
-    .project2:hover,
-    .project3:hover,
-    .project4:hover{
-        transform: scale(1.05);
-    }   
-    .project1:hover > a,
-    .project2:hover > a,
-    .project3:hover > a,
-    .project4:hover > a{
-        color: black;
-    }
-    .invalid-logins input{
-        border: 1px solid red !important;
-    }
-    #error-msg{
-        font-size: 15px;
-        color: red;
-        display: block;
-        text-align: center;
-
-    }
-    .success input{
-        border: 1px solid greenyellow !important;
-    }
-
-    #error-msg1,
-    #error-msg2,
-    #error-msg3{
-        font-size: 15px;
-        color: red;
-    }
-    .invalid-contacts {
-        border: 1px solid red !important;
-    }
-      
+body {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-family: 'Roboto';
+  overflow-x: hidden;
 }
 
+@media only screen and (max-width: 425px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 200px;
+    position: relative;
+    left: 210px;
+    display: flex;
+    justify-content: center;
+  }
+  #navbar p {
+    font-size: 40px;
+    padding: 10px 0px 20px 0px;
+    position: relative;
+    left: 170px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 236%;
+    background-color: #181818;
+    color: #999696;
+    display: none;
+    position: fixed;
+    z-index: 10;
+  }
+  .dropdown {
+    display: none;
+  }
+  .dropdown:checked ~ #navbar {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    color: #999696;
+    padding-left: 20px;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login {
+    padding: 20px 0px 20px 0px;
+  }
+  a.about-me {
+    padding: 60px 0px 20px 0px;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login,
+  a.about-me {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 430px;
+    font-size: 40px;
+  }
+  a:hover {
+    color: #21efef;
+  }
+  #home {
+    background-color: black;
+  }
+  .dropdown-nav {
+    width: 50px;
+    position: fixed;
+    left: 550px;
+    top: 10px;
+    color: #21efef;
+    background-color: #21efef;
+    z-index: 10;
+  }
+  .inner-logo {
+    width: 15%;
+    position: relative;
+    top: 20px;
+  }
+  .tag1lp,
+  .tag2lp,
+  .tag3lp,
+  .tag4lp,
+  .tag5lp,
+  .tag6lp {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #p {
+    font-size: 19px;
+    position: relative;
+    left: 30px;
+    color: #999696;
+  }
+  .tag1lp {
+    position: relative;
+    left: 10px;
+  }
+  .tag2lp {
+    position: relative;
+    left: 20px;
+  }
+  .tag3lp {
+    position: relative;
+    left: 25px;
+  }
+  .tag5lp {
+    position: relative;
+    left: 25px;
+  }
+  .tag6lp {
+    position: relative;
+    left: 25px;
+  }
+  .welcome,
+  #h1 {
+    font-size: 58px;
+    font-weight: bolder;
+    position: relative;
+    left: 20px;
+  }
+  .welcome {
+    padding-top: 10px;
+  }
+  #h1 {
+    position: relative;
+    top: 30px;
+  }
+  #about-me {
+    position: relative;
+    left: 25px;
+  }
+  .tag1ap,
+  .tag2ap,
+  .tag3ap,
+  .tag4ap {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .description {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+  }
+  #skills {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .picture {
+    width: 80%;
+    position: relative;
+    left: 40px;
+  }
+  #skills p {
+    padding: 5px;
+  }
+  #about-me h2 {
+    color: #21efef;
+    font-size: 60px;
+  }
+  #work {
+    position: relative;
+    left: 25px;
+  }
+  #work h2 {
+    font-size: 60px;
+    color: #21efef;
+  }
+  .work-description {
+    font-size: 35px;
+    position: relative;
+    left: 30px;
+  }
+  .work-description br {
+    display: none;
+  }
+  .projects {
+    display: flex;
+    color: #1d1d1d;
+    position: relative;
+    left: 70px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
+    background-color: #ffffff;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    position: relative;
+    left: 25px;
+    box-shadow: 10px 10px 5px black;
+  }
+  .project-img {
+    height: 400px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .p1-img,
+  .p2-img,
+  .p3-img,
+  .p4-img {
+    background-image: url('/assets/images/project-image.png');
+  }
+  .projects h3 {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+  }
+  .project-link {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: relative;
+    background-color: #21efef;
+    border-radius: 0px 0px 10px 10px;
+    color: #21efef;
+  }
+  .project1:hover,
+  .project2:hover,
+  .project3:hover,
+  .project4:hover {
+    transform: scale(1.05);
+  }
+  .project1:hover > a,
+  .project2:hover > a,
+  .project3:hover > a,
+  .project4:hover > a {
+    color: black;
+  }
+  .tag1w,
+  .tag2w,
+  .tag3w,
+  .tag4w,
+  .tag5w,
+  .tag6w {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag5w {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .tag6w {
+    position: relative;
+    padding-top: 10px;
+  }
+  #blogs {
+    position: relative;
+    left: 25px;
+  }
+  .b-title {
+    font-size: 60px;
+    color: #21efef;
+  }
+  .blog-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 100px;
+  }
+  #no-blog-list {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    width: fit-content;
+    position: relative;
+    left: 150px;
+  }
+  .blog h1,
+  .blog h2 {
+    color: black;
+    font-size: 25px;
+    padding: 5px 20px 0px 20px;
+    display: block;
+    text-align: center;
+  }
+  .blog p,
+  .blog h3 {
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px 0px 20px;
+  }
+  .blog {
+    background-color: #999696;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin: 20px;
+    width: fit-content;
+  }
+  .blog-view {
+    color: #d9d9d9;
+    font-size: 30px;
+    display: block;
+  }
+  .blog {
+    background-color: #999696;
+    box-shadow: 15px 15px 10px black;
+    border-radius: 15px;
+  }
+  .tag1bp,
+  .tag2bp,
+  .tag3bp,
+  .tag4bp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag1bp,
+  .tag2bp,
+  .tag3bp,
+  .tag4bp {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+
+  #contacts {
+    position: relative;
+    left: 25px;
+  }
+  #sendbtn {
+    background-color: #1d1d1d;
+    color: #21efef;
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+    position: relative;
+    left: 260px;
+    border: 1px solid #21efef;
+  }
+  #message {
+    width: 100%;
+    border: 0;
+    background-color: #2b2b2b;
+    font-size: 30px;
+    color: #8d8d8d;
+    margin: 5px 0px 5px 0px;
+    height: 300px;
+    padding: 20px;
+  }
+  #other-contacts {
+    font-size: 50px;
+    position: relative;
+    left: 50px;
+  }
+  #name,
+  #email {
+    width: 100%;
+    border-bottom: 2px solid #1d1d1d;
+    color: #8d8d8d;
+    padding: 20px;
+    background-color: #2b2b2b;
+    font-size: 30px;
+  }
+  .ig-logo,
+  .in-logo,
+  .gt-logo,
+  .email-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .email {
+    display: flex;
+  }
+  .email p {
+    margin: 0 0 0 10px;
+    font-size: 40px;
+    color: #8d8d8d;
+  }
+  #sendbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  #short-message {
+    position: relative;
+    left: 50px;
+    font-size: 35px;
+  }
+  #short-message br {
+    display: none;
+  }
+  #contact-form {
+    position: relative;
+    left: 30px;
+  }
+  .styled-link {
+    font-size: 40px;
+    position: relative;
+    right: 25px;
+    bottom: 15px;
+  }
+  #contacts h2 {
+    font-size: 60px;
+    color: #21efef;
+  }
+  .tag1cp,
+  .tag2cp,
+  .tag3cp,
+  .tag4cp,
+  .tag5cp,
+  .tag6cp {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag5cp,
+  .tag6cp {
+    position: relative;
+    right: 30px;
+  }
+  .tag3cp,
+  .tag4cp {
+    position: relative;
+    right: 40px;
+  }
+  #login {
+    position: relative;
+    left: 25px;
+  }
+  #login h2 {
+    font-size: 60px;
+    color: #21efef;
+  }
+  .tag1logp,
+  .tag2logp,
+  .tag3logp,
+  .tag4logp,
+  .tag5logp,
+  .tag6logp {
+    font-size: 25px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag4logp,
+  .tag3logp {
+    position: relative;
+    left: 30px;
+  }
+
+  .tag5logp {
+    position: relative;
+    left: 15px;
+  }
+  .login-container {
+    background-color: #2b2b2b;
+    width: 120%;
+    height: 400px;
+    position: relative;
+    left: 70px;
+    border-radius: 15px;
+  }
+  #login-email,
+  #login-password {
+    font-size: 30px;
+    height: 50px;
+    width: 90%;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #2b2b2b;
+    position: relative;
+    left: 25px;
+  }
+  #loginbtn {
+    background-color: #2b2b2b;
+    color: #21efef;
+    width: 60%;
+    height: 50px;
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+    left: 80px;
+    padding: 5px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  #login-form {
+    position: relative;
+  }
+  #signup-form {
+    position: relative;
+  }
+  .login-container h3 {
+    position: relative;
+    padding: 30px 0px 30px 0px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+  }
+  .loginmsg {
+    font-size: 30px;
+    position: relative;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  .signup {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    position: relative;
+    top: 20px;
+    color: white;
+  }
+  #loginbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  .invalid input {
+    border: 1px solid red !important;
+  }
+  #error-msg {
+    font-size: 30px;
+    color: red;
+    display: block;
+    text-align: center;
+  }
+  .success input {
+    border: 1px solid greenyellow !important;
+  }
+  #error-msg1,
+  #error-msg2,
+  #error-msg3 {
+    font-size: 15px;
+    color: red;
+  }
+  .invalid-contacts {
+    border: 1px solid red !important;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 540px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 200px;
+    position: relative;
+    left: 340px;
+    display: flex;
+    justify-content: center;
+  }
+  #navbar p {
+    font-size: 40px;
+    padding: 10px 0px 20px 0px;
+    position: relative;
+    left: 300px;
+    display: flex;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 332%;
+    background-color: #181818;
+    color: #999696;
+    display: none;
+    position: fixed;
+    z-index: 10;
+  }
+  .dropdown {
+    display: none;
+  }
+  .dropdown:checked ~ #navbar {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    color: #999696;
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+  }
+  a.about-me {
+    padding: 60px 0px 20px 0px;
+    display: flex;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login,
+  a.about-me {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 1030px;
+    font-size: 40px;
+  }
+  a:hover {
+    color: #21efef;
+  }
+  #home {
+    background-color: black;
+  }
+  .dropdown-nav {
+    width: 50px;
+    position: fixed;
+    left: 780px;
+    top: 10px;
+    color: #21efef;
+    background-color: #21efef;
+    z-index: 10;
+  }
+  .inner-logo {
+    width: 70px;
+    position: relative;
+    top: 28px;
+  }
+  #h1 {
+    position: relative;
+    top: 35px;
+  }
+  .welcome {
+    padding-bottom: 20px;
+  }
+  .tag1lp,
+  .tag2lp,
+  .tag3lp,
+  .tag4lp,
+  .tag5lp,
+  .tag6lp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #p {
+    font-size: 25px;
+    position: relative;
+    left: 40px;
+    color: #999696;
+  }
+
+  .tag2lp {
+    position: relative;
+    left: 15px;
+  }
+  .tag3lp {
+    position: relative;
+    left: 30px;
+  }
+  .tag4lp {
+    position: relative;
+    left: 30px;
+  }
+  .tag5lp {
+    position: relative;
+    left: 25px;
+  }
+  .tag6lp {
+    position: relative;
+    left: 25px;
+  }
+  .welcome,
+  #h1 {
+    font-size: 77px;
+    font-weight: bolder;
+  }
+  #landing-page {
+    padding-left: 25px;
+  }
+  #about-me {
+    padding-left: 25px;
+  }
+  #about-me h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .tag1ap,
+  .tag2ap,
+  .tag3ap,
+  .tag4ap {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .description {
+    font-size: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #skills {
+    font-size: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  #skills p {
+    padding: 5px;
+  }
+  .picture {
+    width: 90%;
+    position: relative;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #work {
+    padding-left: 25px;
+    position: relative;
+  }
+  #work h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .work-description {
+    font-size: 40px;
+    position: relative;
+    left: 80px;
+  }
+  .projects {
+    display: flex;
+    color: #1d1d1d;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
+    background-color: #ffffff;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    left: 150px;
+    box-shadow: 10px 10px 5px black;
+  }
+  .project-img {
+    height: 400px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .p1-img,
+  .p2-img,
+  .p3-img,
+  .p4-img {
+    background-image: url('/assets/images/project-image.png');
+  }
+  .projects h3 {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+  }
+  .project-link {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    position: relative;
+    background-color: #21efef;
+    border-radius: 0px 0px 10px 10px;
+    color: #21efef;
+  }
+  .project1:hover,
+  .project2:hover,
+  .project3:hover,
+  .project4:hover {
+    transform: scale(1.05);
+  }
+  .project1:hover > a,
+  .project2:hover > a,
+  .project3:hover > a,
+  .project4:hover > a {
+    color: black;
+  }
+  .tag1w,
+  .tag2w,
+  .tag3w,
+  .tag4w,
+  .tag5w,
+  .tag6w {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag3w,
+  .tag4w {
+    position: relative;
+    left: 15px;
+  }
+  #blogs {
+    padding-left: 25px;
+  }
+  .b-title {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #no-blog-list {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    width: fit-content;
+    position: relative;
+    left: 200px;
+  }
+  .blog h1,
+  .blog h2 {
+    color: black;
+    font-size: 25px;
+    padding: 5px 20px 0px 20px;
+    display: block;
+    text-align: center;
+  }
+  .blog p,
+  .blog h3 {
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px 0px 20px;
+  }
+  .blog {
+    background-color: #999696;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin: 20px;
+    width: fit-content;
+  }
+  .blog-view {
+    color: #d9d9d9;
+    font-size: 30px;
+    display: block;
+  }
+  .blog {
+    background-color: #999696;
+    box-shadow: 15px 15px 10px black;
+    border-radius: 15px;
+  }
+  .tag1bp,
+  .tag2bp,
+  .tag3bp,
+  .tag4bp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #contacts {
+    padding-left: 25px;
+    position: relative;
+  }
+  #contacts h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  #sendbtn {
+    background-color: #1d1d1d;
+    color: #21efef;
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+    position: relative;
+    left: 270px;
+    border: 1px solid #21efef;
+  }
+  #message {
+    width: 100%;
+    border: 0;
+    background-color: #2b2b2b;
+    font-size: 20px;
+    color: #8d8d8d;
+    margin: 5px 0px 5px 0px;
+    height: 200px;
+    padding: 20px;
+  }
+  #other-contacts {
+    font-size: 70px;
+    position: relative;
+    left: 50px;
+  }
+  #name,
+  #email {
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    color: #8d8d8d;
+    padding: 20px;
+    background-color: #2b2b2b;
+    font-size: 20px;
+  }
+  #email {
+    position: relative;
+    margin-top: 5px;
+  }
+  .ig-logo,
+  .in-logo,
+  .gt-logo,
+  .email-logo {
+    width: 55px;
+    height: 55px;
+  }
+  .email {
+    display: flex;
+    flex-direction: row;
+  }
+  .email p {
+    margin: 0 0 0 20px;
+    font-size: 40px;
+    color: #8d8d8d;
+  }
+  #sendbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  #short-message {
+    position: relative;
+    left: 25px;
+    font-size: 40px;
+  }
+  #contact-form {
+    position: relative;
+    left: 130px;
+  }
+  .styled-link {
+    font-size: 40px;
+    position: relative;
+    right: 15px;
+    bottom: 15px;
+  }
+  h2 {
+    font-size: 100px;
+    color: #21efef;
+  }
+  .tag1cp,
+  .tag2cp,
+  .tag3cp,
+  .tag4cp,
+  .tag5cp,
+  .tag6cp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #login {
+    padding-left: 25px;
+  }
+  .tag1logp,
+  .tag2logp,
+  .tag3logp,
+  .tag4logp,
+  .tag5logp,
+  .tag6logp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag6logp {
+    position: relative;
+  }
+  .tag5logp {
+    position: relative;
+    left: 35px;
+  }
+  .tag4logp,
+  .tag3logp {
+    position: relative;
+  }
+  .login-container {
+    background-color: #2b2b2b;
+    width: 150%;
+    padding: 20px 0px 70px 0px;
+    border-radius: 15px;
+    position: relative;
+  }
+  #login-email,
+  #login-password {
+    font-size: 35px;
+    width: 90%;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #2b2b2b;
+    position: relative;
+    left: 20px;
+  }
+  #loginbtn {
+    background-color: #2b2b2b;
+    color: #21efef;
+    width: 80%;
+    height: 50px;
+    font-size: 35px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+  }
+  #login-form {
+    position: relative;
+    left: 95px;
+  }
+  #signup-form {
+    position: relative;
+    left: 95px;
+  }
+  .login-container h3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    font-size: 40px;
+  }
+  .loginmsg {
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .signup {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    color: white;
+  }
+  #loginbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  .invalid input {
+    border: 1px solid red !important;
+  }
+  #error-msg {
+    font-size: 30px;
+    color: red;
+    display: block;
+    text-align: center;
+  }
+  .success input {
+    border: 1px solid greenyellow !important;
+  }
+  #error-msg1,
+  #error-msg2,
+  #error-msg3 {
+    font-size: 15px;
+    color: red;
+  }
+  .invalid-contacts {
+    border: 1px solid red !important;
+  }
+}
+@media only screen and (min-width: 541px) and (max-width: 961px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 200px;
+    position: relative;
+    left: 340px;
+    display: flex;
+    justify-content: center;
+  }
+  #navbar p {
+    font-size: 40px;
+    padding: 10px 0px 20px 0px;
+    position: relative;
+    left: 300px;
+    display: flex;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 332%;
+    background-color: #181818;
+    color: #999696;
+    display: none;
+    position: fixed;
+    z-index: 10;
+  }
+  .dropdown {
+    display: none;
+  }
+  .dropdown:checked ~ #navbar {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    color: #999696;
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+  }
+  a.about-me {
+    padding: 60px 0px 20px 0px;
+    display: flex;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login,
+  a.about-me {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 1030px;
+    font-size: 40px;
+  }
+  a:hover {
+    color: #21efef;
+  }
+  #home {
+    background-color: black;
+  }
+  .dropdown-nav {
+    width: 50px;
+    position: fixed;
+    left: 780px;
+    top: 10px;
+    color: #21efef;
+    background-color: #21efef;
+    z-index: 10;
+  }
+  .inner-logo {
+    width: 80px;
+    position: relative;
+    top: 28px;
+  }
+  #h1 {
+    position: relative;
+    top: 35px;
+  }
+  .tag1lp,
+  .tag2lp,
+  .tag3lp,
+  .tag4lp,
+  .tag5lp,
+  .tag6lp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #p {
+    font-size: 30px;
+    position: relative;
+    left: 40px;
+    color: #999696;
+  }
+
+  .tag2lp {
+    position: relative;
+    left: 15px;
+  }
+  .tag3lp {
+    position: relative;
+    left: 30px;
+  }
+  .tag4lp {
+    position: relative;
+    left: 30px;
+  }
+  .tag5lp {
+    position: relative;
+    left: 25px;
+  }
+  .tag6lp {
+    position: relative;
+    left: 25px;
+  }
+  .welcome,
+  #h1 {
+    font-size: 110px;
+    font-weight: bolder;
+  }
+  #landing-page {
+    padding-left: 25px;
+  }
+  #about-me {
+    padding-left: 25px;
+  }
+  #about-me h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .tag1ap,
+  .tag2ap,
+  .tag3ap,
+  .tag4ap {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .description {
+    font-size: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  #skills {
+    font-size: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  #skills p {
+    padding: 5px;
+  }
+  .picture {
+    width: 90%;
+    position: relative;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  #work {
+    padding-left: 25px;
+    position: relative;
+  }
+  #work h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .work-description {
+    font-size: 40px;
+    position: relative;
+    left: 45px;
+  }
+
+  .projects {
+    display: flex;
+    color: #1d1d1d;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
+    background-color: #ffffff;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+    left: 50px;
+    box-shadow: 10px 10px 5px black;
+  }
+  .project-img {
+    height: 600px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .p1-img,
+  .p2-img,
+  .p3-img,
+  .p4-img {
+    background-image: url('/assets/images/project-image.png');
+  }
+  .projects h3 {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+  }
+  .project-link {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    position: relative;
+    background-color: #21efef;
+    border-radius: 0px 0px 10px 10px;
+    color: #21efef;
+  }
+  .project1:hover,
+  .project2:hover,
+  .project3:hover,
+  .project4:hover {
+    transform: scale(1.05);
+  }
+  .project1:hover > a,
+  .project2:hover > a,
+  .project3:hover > a,
+  .project4:hover > a {
+    color: black;
+  }
+  .tag1w,
+  .tag2w,
+  .tag3w,
+  .tag4w,
+  .tag5w,
+  .tag6w {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #blogs {
+    padding-left: 10px;
+  }
+  .b-title {
+    color: #21efef;
+    font-size: 100px;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: 20px;
+  }
+  .blog h1,
+  .blog h2 {
+    color: black;
+    font-size: 20px;
+    padding: 5px 20px 0px 20px;
+    display: block;
+    text-align: center;
+  }
+  .blog p,
+  .blog h3 {
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px 0px 20px;
+  }
+  .blog {
+    background-color: #999696;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin: 10px;
+  }
+  #no-blog-list {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    position: relative;
+    width: fit-content;
+    left: 250px;
+  }
+  .blog-view {
+    color: #d9d9d9;
+    font-size: 30px;
+    display: block;
+  }
+  .blog {
+    background-color: #999696;
+    box-shadow: 15px 15px 10px black;
+    border-radius: 15px;
+  }
+  .tag1bp,
+  .tag2bp,
+  .tag3bp,
+  .tag4bp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #contacts {
+    padding-left: 25px;
+    position: relative;
+  }
+  #contacts h2 {
+    color: #21efef;
+    font-size: 100px;
+  }
+  #sendbtn {
+    background-color: #1d1d1d;
+    color: #21efef;
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+    position: relative;
+    left: 395px;
+    border: 1px solid #21efef;
+  }
+  #message {
+    width: 100%;
+    border: 0;
+    background-color: #2b2b2b;
+    font-size: 20px;
+    color: #8d8d8d;
+    margin: 5px 0px 5px 0px;
+    height: 200px;
+    padding: 20px;
+  }
+  #other-contacts {
+    font-size: 70px;
+    position: relative;
+    left: 50px;
+  }
+  #name,
+  #email {
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    color: #8d8d8d;
+    padding: 20px;
+    background-color: #2b2b2b;
+    font-size: 20px;
+  }
+  #email {
+    position: relative;
+    margin-top: 5px;
+  }
+  .ig-logo,
+  .in-logo,
+  .gt-logo,
+  .email-logo {
+    width: 55px;
+    height: 55px;
+  }
+  .email {
+    display: flex;
+    flex-direction: row;
+  }
+  .email p {
+    margin: 0 0 0 20px;
+    font-size: 40px;
+    color: #8d8d8d;
+  }
+  #sendbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  #short-message {
+    position: relative;
+    left: 25px;
+    font-size: 40px;
+  }
+  #contact-form {
+    position: relative;
+    left: 15px;
+  }
+  .styled-link {
+    font-size: 40px;
+    position: relative;
+    right: 15px;
+    bottom: 15px;
+  }
+  h2 {
+    font-size: 100px;
+    color: #21efef;
+  }
+  .tag1cp,
+  .tag2cp,
+  .tag3cp,
+  .tag4cp,
+  .tag5cp,
+  .tag6cp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #login {
+    padding-left: 25px;
+  }
+  .tag1logp,
+  .tag2logp,
+  .tag3logp,
+  .tag4logp,
+  .tag5logp,
+  .tag6logp {
+    font-size: 35px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag6logp {
+    position: relative;
+  }
+  .tag5logp {
+    position: relative;
+    left: 35px;
+  }
+  .tag4logp,
+  .tag3logp {
+    position: relative;
+  }
+  .login-container {
+    background-color: #2b2b2b;
+    width: 150%;
+    padding: 20px 0px 70px 0px;
+    border-radius: 15px;
+    position: relative;
+  }
+  #login-email,
+  #login-password {
+    font-size: 35px;
+    width: 90%;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #2b2b2b;
+    position: relative;
+    left: 20px;
+  }
+  #loginbtn {
+    background-color: #2b2b2b;
+    color: #21efef;
+    width: 80%;
+    height: 50px;
+    font-size: 35px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+  }
+  #login-form {
+    position: relative;
+    left: 100px;
+  }
+  #signup-form {
+    position: relative;
+    left: 100px;
+  }
+  .login-container h3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    font-size: 40px;
+  }
+  .loginmsg {
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .signup {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    position: relative;
+    top: 20px;
+    color: white;
+  }
+  #loginbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  .invalid input {
+    border: 1px solid red !important;
+  }
+  #error-msg {
+    font-size: 35px;
+    color: red;
+    display: block;
+    text-align: center;
+  }
+  .success input {
+    border: 1px solid greenyellow !important;
+  }
+  #error-msg1,
+  #error-msg2,
+  #error-msg3 {
+    font-size: 15px;
+    color: red;
+  }
+  .invalid-contacts {
+    border: 1px solid red !important;
+  }
+}
+@media only screen and (min-width: 961px) {
+  .logo {
+    width: 100px;
+  }
+  #navbar p {
+    font-size: 15px;
+    padding: 10px 0px 20px 20px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    position: fixed;
+    height: 700px;
+    background-color: #181818;
+    color: #999696;
+  }
+  .dropdown {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+    color: #999696;
+    padding-left: 20px;
+  }
+  a.work,
+  a.blogs,
+  a.contacts,
+  a.login {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  a.about-me {
+    padding: 60px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown-nav {
+    display: none;
+  }
+  #home {
+    background-color: black;
+  }
+  a:hover {
+    color: #21efef;
+  }
+  #landing-page {
+    height: 700px;
+  }
+  .inner-logo {
+    width: 80px;
+    position: relative;
+    top: 28px;
+  }
+  #h1 {
+    position: relative;
+    top: 50px;
+  }
+  .tag1lp,
+  .tag2lp,
+  .tag3lp,
+  .tag4lp,
+  .tag5lp,
+  .tag6lp {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #p {
+    font-size: 23px;
+    padding-left: 220px;
+    position: relative;
+    bottom: 40px;
+    color: #999696;
+  }
+  .tag1lp {
+    position: relative;
+    top: 20px;
+    left: 170px;
+  }
+  .tag2lp {
+    position: relative;
+    top: 20px;
+    left: 190px;
+  }
+  .tag3lp {
+    position: relative;
+    top: 70px;
+    left: 200px;
+  }
+  .tag4lp {
+    position: relative;
+    left: 680px;
+    bottom: 40px;
+  }
+  .tag5lp {
+    position: relative;
+    left: 200px;
+    bottom: 35px;
+  }
+  .tag6lp {
+    position: relative;
+    left: 200px;
+    bottom: 35px;
+  }
+  .welcome,
+  #h1 {
+    font-size: 100px;
+    font-weight: bolder;
+    padding-left: 200px;
+  }
+  #contacts {
+    height: 700px;
+    font-size: 30px;
+    padding-left: 200px;
+  }
+  #sendbtn {
+    background-color: #1d1d1d;
+    color: #21efef;
+    width: 24.7%;
+    height: 50px;
+    font-size: 25px;
+    position: relative;
+    left: 315px;
+    border: 1px solid #21efef;
+  }
+  #message {
+    width: 50%;
+    border: 0;
+    background-color: #2b2b2b;
+    font-size: 20px;
+    color: #8d8d8d;
+    margin: 5px 0px 5px 0px;
+    height: 150px;
+    padding: 20px;
+  }
+  #other-contacts {
+    font-size: 50px;
+    position: relative;
+    bottom: 300px;
+    left: 750px;
+  }
+  #name,
+  #email {
+    height: 40px;
+    width: 50%;
+    border: 0px;
+    color: #8d8d8d;
+    padding: 20px;
+    background-color: #2b2b2b;
+    font-size: 20px;
+  }
+  .ig-logo,
+  .in-logo,
+  .gt-logo,
+  .email-logo {
+    width: 35px;
+    height: 35px;
+  }
+  .email {
+    display: flex;
+  }
+  .email p {
+    margin: 0 0 0 10px;
+    font-size: 30px;
+    color: #8d8d8d;
+  }
+  #sendbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  #short-message {
+    position: relative;
+    top: 10px;
+  }
+  #contact-form {
+    position: relative;
+    top: 10px;
+  }
+  .styled-link {
+    font-size: 30px;
+    position: relative;
+    right: 25px;
+    bottom: 5px;
+  }
+  h2 {
+    font-size: 90px;
+    color: #21efef;
+  }
+  .tag1cp,
+  .tag2cp,
+  .tag3cp,
+  .tag4cp,
+  .tag5cp,
+  .tag6cp {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #login {
+    height: 700px;
+    font-size: 30px;
+    padding-left: 200px;
+  }
+  .tag1logp,
+  .tag2logp,
+  .tag3logp,
+  .tag4logp,
+  .tag5logp,
+  .tag6logp {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag6logp {
+    position: relative;
+    right: 30px;
+  }
+  .tag5logp {
+    position: relative;
+    right: 10px;
+  }
+  .login-container {
+    background-color: #2b2b2b;
+    width: 30%;
+    padding: 20px 0px 130px 0px;
+    border-radius: 15px;
+  }
+  #login-email,
+  #login-password {
+    font-size: 20px;
+    height: 40px;
+    width: 80%;
+    padding: 25px;
+    border-bottom: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #2b2b2b;
+    position: relative;
+    left: 40px;
+  }
+  #loginbtn {
+    background-color: #2b2b2b;
+    color: #21efef;
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    left: 70px;
+    top: 40px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+  }
+  #login-form {
+    position: relative;
+    left: 400px;
+  }
+  #signup-form {
+    position: relative;
+    left: 400px;
+  }
+  .login-container h3 {
+    position: relative;
+    left: 150px;
+    padding-bottom: 30px;
+  }
+  .loginmsg {
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 70px;
+  }
+  .signup {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    top: 70px;
+    color: white;
+  }
+  #loginbtn:hover {
+    background-color: #21efef;
+    color: black;
+  }
+  #about-me {
+    height: 700px;
+    font-size: 30px;
+    padding-left: 200px;
+  }
+  .tag1ap,
+  .tag2ap,
+  .tag3ap,
+  .tag4ap {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .tag3ap {
+    position: relative;
+    bottom: 400px;
+  }
+  .tag4ap {
+    position: relative;
+    bottom: 395px;
+  }
+  .description {
+    font-size: 20px;
+    position: relative;
+    bottom: 400px;
+  }
+  #skills {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 370px;
+    right: 40px;
+  }
+  .picture {
+    width: 320px;
+    height: 400px;
+    position: relative;
+    left: 650px;
+  }
+  #blogs {
+    font-size: 30px;
+    padding-left: 200px;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .blog h1,
+  .blog h2 {
+    color: black;
+    font-size: 20px;
+    padding: 5px 20px 0px 20px;
+    display: block;
+    text-align: center;
+  }
+  .blog p,
+  .blog h3 {
+    color: black;
+    font-size: 20px;
+    padding: 10px 20px 0px 20px;
+  }
+  .blog {
+    background-color: #999696;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin: 10px;
+  }
+  .blog-view {
+    color: #d9d9d9;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+  }
+  .tag1bp,
+  .tag2bp,
+  .tag3bp,
+  .tag4bp {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  #no-blog-list {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    padding: 5px;
+  }
+  #work {
+    font-size: 30px;
+    padding-left: 200px;
+    height: 700px;
+  }
+  .work-description {
+    font-size: 20px;
+  }
+  .tag1w,
+  .tag2w,
+  .tag3w,
+  .tag4w,
+  .tag5w,
+  .tag6w {
+    font-size: 15px;
+    font-family: 'La Belle Aurore';
+    color: #807e7e;
+  }
+  .projects {
+    display: flex;
+    color: #1d1d1d;
+    position: relative;
+    right: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .project1,
+  .project2,
+  .project3,
+  .project4 {
+    background-color: #ffffff;
+    width: 20%;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+  }
+  .project-img {
+    height: 250px;
+    margin-bottom: 5px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .p1-img,
+  .p2-img,
+  .p3-img,
+  .p4-img {
+    background-image: url('/assets/images/project-image.png');
+  }
+  .projects h3 {
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+  }
+  .project-link {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    position: relative;
+    background-color: #21efef;
+    border-radius: 0px 0px 10px 10px;
+    color: #21efef;
+  }
+  .project1:hover,
+  .project2:hover,
+  .project3:hover,
+  .project4:hover {
+    transform: scale(1.05);
+  }
+  .project1:hover > a,
+  .project2:hover > a,
+  .project3:hover > a,
+  .project4:hover > a {
+    color: black;
+  }
+  .invalid-logins input {
+    border: 1px solid red !important;
+  }
+  #error-msg {
+    font-size: 15px;
+    color: red;
+    display: block;
+    text-align: center;
+  }
+  .success input {
+    border: 1px solid greenyellow !important;
+  }
+
+  #error-msg1,
+  #error-msg2,
+  #error-msg3 {
+    font-size: 15px;
+    color: red;
+  }
+  .invalid-contacts {
+    border: 1px solid red !important;
+  }
+}

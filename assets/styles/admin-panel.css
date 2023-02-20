@@ -1,778 +1,687 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-body{
-    background-color: #1D1D1D;
-    color: #FFFFFF;  
-    font-family: 'Roboto'; 
-    overflow-x: hidden;
+body {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  font-family: 'Roboto';
+  overflow-x: hidden;
 }
 
-@media only screen and (max-width: 425px){
-    #navbar{
-        display: none;
-    }
-    body{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .admin-title{
-        font-size: 60px;
-        color:#21EFEF;
-        padding: 20px 0px 0px 10px;
-    }
-    #add-post h2{
-        color: white;
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    .add-post-form{
-        display: flex;
-        flex-direction: column;
-    }
-    #labels{
-        padding: 15px 0px 15px 10px;
-        font-size: 35px;
-    }
-    #topic,
-    #title{
-        height: 40px;
-        background-color: #D9D9D9;
-        border: 0px;
-        width: 100%;
-        border-radius: 10px;
-    }
-    #post{
-        height: 200px;
-        background-color: #D9D9D9;
-    }
-    #admin-error1,
-    #admin-error2,
-    #admin-error3{
-        color: red;
-        width: fit-content;
-    }
-    .invalid-article{
-        border: 2px solid red !important;
-    }
-    #image-btn{
-        width: 100%;
-        height: 40px;
-        font-size: 25px;
-        margin-top: 10px;
-        border-radius: 10px;
-        border: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000000;
-        background-color: #dfdcdc;
-    }
-    #postbtn{
-        width: 100%;
-        height: 40px;
-        font-size: 25px;
-        margin-top: 10px;
-        border-radius: 10px;
-        border: 0px;
-        background-color: #dfdcdc;
-    }
-    .blog-title{
-        color: white;
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
-        margin: 10px;
-       
-    }
-    .blogs-part{
-        background-color: #999696;
-        width: 100vw;
-        border-radius: 10px;
-        text-align: center;
-    }
-    #no-blogs{
-        display: block;
-        text-align: center;
-        font-size: 30px;
-        padding: 5px;
-        color: black;
-    }
-    #editbtn-b1{
-        position: relative;
-        height: 27px;
-        width: 55px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-        margin-right: 10px;
-    }
-    #deletebtn-b1{
-        position: relative;
-        height: 27px;
-        width: 65px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog1{
-        font-size: 30px;
-        padding: 20px 5px 10px 40px;
-        color: #000000;
-        position: relative;
-        right: 20px;
-    }
-    .socials{
-        color: white;
-        font-size: 50px;
-        margin: 20px 0px 20px 0px;
-    }
-    .media-visits{
-        font-size: 35px;
-        display: flex;
-        justify-content: center;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo{
-        width: 45px;
-        height: 45px;
-        margin: 20px 20px 10px 20px;
-    }
-    .media-container{
-        position: relative;
-        left: 40px;
-        background-color: #999696;
-        width: fit-content;
-        height: 90px;
-        display: flex;
-        flex-direction: row;
-        border-radius: 10px;
-    }
-    .media-container p{
-        position: relative;
-        top: 60px;
-        right: 50px;
-        color: #000000;
-        font-size: 25px;
-    }
-    .new-queries{
-        font-size: 35px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    .new-queries-container{
-        width: 100%;
-        background-color: #999696;
-        color: #000000;
-        border-radius: 10px;
-    }
-    #no-new-msg{
-        display: block;
-        text-align: center;
-        font-size: 25px;
-        padding: 10px;
-    }
-    .mark-seen{
-        width: fit-content;
-        padding: 5px;
-        font-size: 20px;
-        position: relative;
-        left: 20px;
-        bottom: 10px;
-        border-radius: 10px;
-        border: 0px;
-    }
-    .q-name{
-        padding: 20px 20px 5px 20px;
-        font-size: 25px;
-    }
-    .q-email{
-        padding: 0px 20px 5px 20px;
-        font-size: 25px;
-    }
-    .q-message{
-        padding: 0px 20px 20px 20px;
-        font-size: 25px;
-    }
-    .all-queries{
-        font-size: 35px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    .all-queries-container{
-        background-color: #999696;
-        width: 100%;
-        border-radius: 10px;
-    }
-    #logoutbtn{
-        background-color: #21EFEF;
-        color: #000000;
-        width: 100%;
-        height: 40px;
-        font-size: 25px;   
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-        margin: 20px;
-        position: relative;
-        right: 20px;
-    }
-    #file{
-        display: none;
-    }
-    .all-queries-container p{
-        padding-bottom: 10px;
-        position: relative;
-        left: 10px;
-        color: #000000;
-        font-size: 25px;  
-    }
-    #no-msg{
-        display: block;
-        text-align: center;
-        font-size: 25px;
-        padding: 10px;
-    }
+@media only screen and (max-width: 425px) {
+  #navbar {
+    display: none;
+  }
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .admin-title {
+    font-size: 60px;
+    color: #21efef;
+    padding: 20px 0px 0px 10px;
+  }
+  #add-post h2 {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .add-post-form {
+    display: flex;
+    flex-direction: column;
+  }
+  #labels {
+    padding: 15px 0px 15px 10px;
+    font-size: 35px;
+  }
+  #topic,
+  #title {
+    height: 40px;
+    background-color: #d9d9d9;
+    border: 0px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  #post {
+    height: 200px;
+    background-color: #d9d9d9;
+  }
+  #admin-error1,
+  #admin-error2,
+  #admin-error3 {
+    color: red;
+    width: fit-content;
+  }
+  .invalid-article {
+    border: 2px solid red !important;
+  }
+  #image-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #dfdcdc;
+  }
+  #postbtn {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #dfdcdc;
+  }
+  .blog-title {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  .blogs-part {
+    background-color: #999696;
+    width: 100vw;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #no-blogs {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    color: black;
+  }
+  #editbtn-b1 {
+    position: relative;
+    height: 27px;
+    width: 55px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0px;
+    margin-right: 10px;
+  }
+  #deletebtn-b1 {
+    position: relative;
+    height: 27px;
+    width: 65px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0px;
+  }
+  .blog1 {
+    font-size: 30px;
+    padding: 20px 5px 10px 40px;
+    color: #000000;
+    position: relative;
+    right: 20px;
+  }
+  .socials {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin: 20px 0px 20px 0px;
+  }
+  .new-queries {
+    font-size: 35px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .new-queries-container {
+    width: 100%;
+    background-color: #999696;
+    color: #000000;
+    border-radius: 10px;
+  }
+  #no-new-msg {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+  }
+  .mark-seen {
+    width: fit-content;
+    padding: 5px;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+  }
+  .q-name {
+    padding: 20px 20px 5px 20px;
+    font-size: 25px;
+  }
+  .q-email {
+    padding: 0px 20px 5px 20px;
+    font-size: 25px;
+  }
+  .q-message {
+    padding: 0px 20px 20px 20px;
+    font-size: 25px;
+  }
+  .all-queries {
+    font-size: 35px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .all-queries-container {
+    background-color: #999696;
+    width: 100%;
+    border-radius: 10px;
+  }
+  #logoutbtn {
+    background-color: #21efef;
+    color: #000000;
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    right: 20px;
+  }
+  #file {
+    display: none;
+  }
+  .all-queries-container p {
+    padding-bottom: 10px;
+    position: relative;
+    left: 10px;
+    color: #000000;
+    font-size: 25px;
+  }
+  #no-msg {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+  }
 }
-@media only screen and (min-width: 426px) and (max-width: 960px){
-    #navbar{
-        display: none;
-    }
-    body{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .admin-title{
-        font-size: 100px;
-        color:#21EFEF;
-        display: flex;
-        justify-content: center;
-    }
-    #add-post h2{
-        color: white;
-        font-size: 70px;
-        display: flex;
-        justify-content: center;
-    }
-    .add-post-form{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: 10px;
-    }
-    #add-post{
-        margin: 20px;
-    }
-    #labels{
-        font-size: 40px;
-        margin: 10px;
-    }
-    #topic,
-    #title{
-        height: 50px;
-        background-color: #D9D9D9;
-        border: 0px;
-        width: 90vw;
-        border-radius: 5px;
-    }
-    #post{
-        height: 250px;
-        background-color: #D9D9D9;
-        border: 0px;
-        width: 90vw;
-    }
-    #admin-error1,
-    #admin-error2,
-    #admin-error3{
-        color: red;
-        width: fit-content;
-    }
-    .invalid-article{
-        border: 2px solid red !important;
-    }
-    #image-btn{
-        width: 50vw;
-        height: 60px;
-        font-size: 45px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000000;
-        background-color: #dfdcdc;
-    }
-    #postbtn{
-        width: 50vw;
-        height: 60px;
-        font-size: 45px;
-        margin-top: 10px;
-        border-radius: 5px;
-        border: 0px;
-        background-color: #dfdcdc;
-    }
-    .blog-title{
-        color: white;
-        font-size: 70px;
-        display: flex;
-        justify-content: center;
-        margin: 10px;
-       
-    }
-    .blogs-part{
-        background-color: #999696;
-        width: 96vw;
-        border-radius: 10px;
-        text-align: center;
-    }
-    #no-blogs{
-        display: block;
-        text-align: center;
-        font-size: 35px;
-        padding: 5px;
-        color: black;
-    }
-    #editbtn-b1{
-        position: relative;
-        height: 50px;
-        width: 15%;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-        margin: 10px;
-    }
-    #deletebtn-b1{
-        position: relative;
-        height: 50px;
-        width: 20%;
-        font-size: 45px;
-        border-radius: 5px;
-        border: 0px;
-    }
-    .blog1{
-        font-size: 50px;
-        padding: 20px 5px 10px 45px;
-        color: #000000;
-    }
-    .socials{
-        color: white;
-        font-size: 70px;
-        margin: 20px 0px 20px 0px;
-    }
-    .media-visits{
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo{
-        width: 50px;
-        height: 50px;
-        margin: 20px 50px 0px 40px;
-    }
-    .media-container{
-        position: relative;
-        left: 110px;
-        background-color: #999696;
-        width: 60vw;
-        height: 120px;
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-        border-radius: 10px;
-    }
-    .media-container p{
-        position: relative;
-        top: 80px;
-        right: 85px;
-        color: #000000;
-        font-size: 35px;
-    }
-    .new-queries{
-        font-size: 50px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    .new-queries-container{
-        background-color: #999696;
-        width: 90vw;
-        color: #000000;
-        border-radius: 10px;
-    }
-    #no-new-msg{
-        display: block;
-        text-align: center;
-        font-size: 35px;
-        padding: 10px;
-    }
-    .mark-seen{
-        width: fit-content;
-        padding: 5px;
-        font-size: 25px;
-        position: relative;
-        left: 20px;
-        bottom: 10px;
-        border-radius: 10px;
-        border: 0px;
-    }
-    .q-name{
-        padding: 20px 20px 5px 20px;
-        font-size: 35px;
-    }
-    .q-email{
-        padding: 0px 20px 5px 20px;
-        font-size: 35px;
-    }
-    .q-message{
-        padding: 0px 20px 20px 20px;
-        font-size: 35px;
-    }
-    .all-queries{
-        font-size: 50px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    .all-queries-container{
-        background-color: #999696;
-        width: 90vw;
-        border-radius: 10px;
-    }
-    .c-name{
-        padding: 20px 0px 5px 10px;
-        font-size: 35px;
-        color: #000000;
-    }
-    .c-email{
-        padding: 0px 0px 5px 10px;
-        font-size: 35px;
-        color: #000000;
-    }
-    .c-message{
-        padding: 0px 0px 20px 10px;
-        font-size: 35px;
-        color: #000000;
-    }
-    #logoutbtn{
-        background-color: #21EFEF;
-        color: #000000;
-        width: 100%;
-        height: 60px;
-        font-size: 45px;   
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-        margin: 20px;
-        position: relative;
-        right: 10px;
-    }
-    #file{
-        display: none;
-    }
-    .all-queries-container p{
-        padding-bottom: 10px;
-        position: relative;
-        left: 10px;
-        color: #000000;
-        font-size: 35px;  
-    }
-    #no-msg{
-        display: block;
-        text-align: center;
-        font-size: 35px;
-        padding: 10px;
-    }
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+  #navbar {
+    display: none;
+  }
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .admin-title {
+    font-size: 100px;
+    color: #21efef;
+    display: flex;
+    justify-content: center;
+  }
+  #add-post h2 {
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+  }
+  .add-post-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+  #add-post {
+    margin: 20px;
+  }
+  #labels {
+    font-size: 40px;
+    margin: 10px;
+  }
+  #topic,
+  #title {
+    height: 50px;
+    background-color: #d9d9d9;
+    border: 0px;
+    width: 90vw;
+    border-radius: 5px;
+  }
+  #post {
+    height: 250px;
+    background-color: #d9d9d9;
+    border: 0px;
+    width: 90vw;
+  }
+  #admin-error1,
+  #admin-error2,
+  #admin-error3 {
+    color: red;
+    width: fit-content;
+  }
+  .invalid-article {
+    border: 2px solid red !important;
+  }
+  #image-btn {
+    width: 50vw;
+    height: 60px;
+    font-size: 45px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #dfdcdc;
+  }
+  #postbtn {
+    width: 50vw;
+    height: 60px;
+    font-size: 45px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #dfdcdc;
+  }
+  .blog-title {
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
+  .blogs-part {
+    background-color: #999696;
+    width: 96vw;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #no-blogs {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    padding: 5px;
+    color: black;
+  }
+  #editbtn-b1 {
+    position: relative;
+    height: 50px;
+    width: 15%;
+    font-size: 45px;
+    border-radius: 5px;
+    border: 0px;
+    margin: 10px;
+  }
+  #deletebtn-b1 {
+    position: relative;
+    height: 50px;
+    width: 20%;
+    font-size: 45px;
+    border-radius: 5px;
+    border: 0px;
+  }
+  .blog1 {
+    font-size: 50px;
+    padding: 20px 5px 10px 45px;
+    color: #000000;
+  }
+  .socials {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    margin: 20px 0px 20px 0px;
+  }
+  .new-queries {
+    font-size: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .new-queries-container {
+    background-color: #999696;
+    width: 90vw;
+    color: #000000;
+    border-radius: 10px;
+  }
+  #no-new-msg {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+  }
+  .mark-seen {
+    width: fit-content;
+    padding: 5px;
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+  }
+  .q-name {
+    padding: 20px 20px 5px 20px;
+    font-size: 35px;
+  }
+  .q-email {
+    padding: 0px 20px 5px 20px;
+    font-size: 35px;
+  }
+  .q-message {
+    padding: 0px 20px 20px 20px;
+    font-size: 35px;
+  }
+  .all-queries {
+    font-size: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .all-queries-container {
+    background-color: #999696;
+    width: 90vw;
+    border-radius: 10px;
+  }
+  .c-name {
+    padding: 20px 0px 5px 10px;
+    font-size: 35px;
+    color: #000000;
+  }
+  .c-email {
+    padding: 0px 0px 5px 10px;
+    font-size: 35px;
+    color: #000000;
+  }
+  .c-message {
+    padding: 0px 0px 20px 10px;
+    font-size: 35px;
+    color: #000000;
+  }
+  #logoutbtn {
+    background-color: #21efef;
+    color: #000000;
+    width: 100%;
+    height: 60px;
+    font-size: 45px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    right: 10px;
+  }
+  #file {
+    display: none;
+  }
+  .all-queries-container p {
+    padding-bottom: 10px;
+    position: relative;
+    left: 10px;
+    color: #000000;
+    font-size: 35px;
+  }
+  #no-msg {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+  }
 }
-@media only screen and (min-width: 961px){
-    .logoutbtn{
-        display: none;
-    }
-    .logo{
-        width:100px;
-    }
-    #navbar p{
-        font-size: 15px;
-        padding: 10px 0px 20px 20px;
-    }
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        width: 10%;
-        position: fixed;
-        height: 700px;
-        background-color: #181818;
-        color: #999696;
-    }
-    a{
-        text-decoration: none;
-        color: #999696;
-        padding-left: 20px;
-    }
-    a.add-post,
-    a.blogs-articles,
-    a.queries{
-        padding: 20px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    a.add-post{
-        padding: 30px 0px 20px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    #home{
-        background-color: black;
-    }
-    a:hover{
-        color: #21EFEF;
-    }
-    #logoutbtn{
-        background-color: #21EFEF;
-        color: #000000;
-        width: 70%;
-        height: 40px;
-        font-size: 20px;   
-        position: relative;
-        top: 250px;
-        left: 5px;
-        border: 1px solid #21EFEF;
-        border-radius: 10px;
-    }
-    .admin-title{
-        font-size: 90px;
-        color:#21EFEF;
-        display: block;
-        text-align: center;
-    }
-    #add-post h2{
-        color: white;
-        font-size: 60px;
-        display: block;
-        text-align: center;
-    }
-    .add-post-form{
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        position: relative;
-        left: 500px;
-    }
-    #labels{
-        padding: 12px 0px 12px 0px;
-        font-size: 23px;
-    }
-    #topic,
-    #title{
-        height: 30px;
-        background-color: #D9D9D9;
-        border: 0px;
-        width: 100%;
-        border-radius: 10px;
-    }
-    #post{
-        height: 200px;
-        background-color: #D9D9D9;
-    }
-    #image-btn{
-        height: 30px;
-        width: 50%;
-        font-size: 20px;
-        position: relative;
-        left: 100px;
-        border-radius: 10px;
-        border: 0px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #000000;
-        background-color: #dfdcdc;
-    }
-    #postbtn{
-        height: 30px;
-        width: 50%;
-        font-size: 20px;
-        position: relative;
-        left: 100px;
-        border-radius: 10px;
-        border: 0px;
-        margin-top: 10px;
-        background-color: #dfdcdc;
+@media only screen and (min-width: 961px) {
+  .logoutbtn {
+    display: none;
+  }
+  .logo {
+    width: 100px;
+  }
+  #navbar p {
+    font-size: 15px;
+    padding: 10px 0px 20px 20px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    position: fixed;
+    height: 700px;
+    background-color: #181818;
+    color: #999696;
+  }
+  a {
+    text-decoration: none;
+    color: #999696;
+    padding-left: 20px;
+  }
+  a.add-post,
+  a.blogs-articles,
+  a.queries {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  a.add-post {
+    padding: 30px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  #home {
+    background-color: black;
+  }
+  a:hover {
+    color: #21efef;
+  }
+  #logoutbtn {
+    background-color: #21efef;
+    color: #000000;
+    width: 70%;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 250px;
+    left: 5px;
+    border: 1px solid #21efef;
+    border-radius: 10px;
+  }
+  .admin-title {
+    font-size: 90px;
+    color: #21efef;
+    display: block;
+    text-align: center;
+  }
+  #add-post h2 {
+    color: white;
+    font-size: 60px;
+    display: block;
+    text-align: center;
+  }
+  .add-post-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+    left: 500px;
+  }
+  #labels {
+    padding: 12px 0px 12px 0px;
+    font-size: 23px;
+  }
+  #topic,
+  #title {
+    height: 30px;
+    background-color: #d9d9d9;
+    border: 0px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  #post {
+    height: 200px;
+    background-color: #d9d9d9;
+  }
+  #image-btn {
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
+    position: relative;
+    left: 100px;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #dfdcdc;
+  }
+  #postbtn {
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
+    position: relative;
+    left: 100px;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 10px;
+    background-color: #dfdcdc;
+  }
+  #admin-error1,
+  #admin-error2,
+  #admin-error3 {
+    color: red;
+    width: fit-content;
+  }
+  .invalid-article {
+    border: 2px solid red !important;
+  }
+  .blog-title {
+    color: white;
+    font-size: 60px;
+    display: block;
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+  }
+  .blogs-part {
+    position: relative;
+    left: 520px;
+    background-color: #999696;
+    width: 400px;
+    border-radius: 10px;
+  }
+  #no-blogs {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    color: black;
+  }
+  #editbtn-b1 {
+    position: relative;
+    left: 150px;
+    height: 27px;
+    width: 55px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0px;
+    margin-bottom: 5px;
+  }
+  #deletebtn-b1 {
+    position: relative;
+    left: 150px;
+    height: 27px;
+    width: 65px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0px;
+    margin-bottom: 5px;
+  }
+  .blog1 {
+    font-size: 30px;
+    padding: 10px 5px 5px 30px;
+    color: #000000;
+  }
+  .socials {
+    color: white;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+  }
+  .new-queries {
+    position: relative;
+    left: 620px;
+    font-size: 25px;
+    padding: 20px;
+  }
+  .new-queries-container {
+    background-color: #999696;
+    width: 500px;
+    position: relative;
+    left: 480px;
+    color: #000000;
+    border-radius: 10px;
+  }
+  #no-new-msg {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+  }
+  .mark-seen {
+    width: fit-content;
+    padding: 5px;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+  }
+  .q-name {
+    padding: 20px 20px 5px 20px;
+    font-size: 22px;
+  }
+  .q-email {
+    padding: 0px 20px 5px 20px;
+    font-size: 22px;
+  }
+  .q-message {
+    padding: 0px 20px 20px 20px;
+    font-size: 22px;
+  }
 
-    }
-    #admin-error1,
-    #admin-error2,
-    #admin-error3{
-        color: red;
-        width: fit-content;
-    }
-    .invalid-article{
-        border: 2px solid red !important;
-    }
-    .blog-title{
-        color: white;
-        font-size: 60px;
-        display: block;
-        text-align: center;
-        padding: 0px 0px 20px 0px;
-    }
-    .blogs-part{
-        position: relative;
-        left: 520px;
-        background-color: #999696;
-        width: 400px;
-        border-radius: 10px;
-    }
-    #no-blogs{
-        display: block;
-        text-align: center;
-        font-size: 30px;
-        padding: 5px;
-        color: black;
-    }
-    #editbtn-b1{
-        position: relative;
-        left: 150px;
-        height: 27px;
-        width: 55px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-        margin-bottom: 5px;
-    }
-    #deletebtn-b1{
-        position: relative;
-        left:150px;
-        height: 27px;
-        width: 65px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: 0px;
-        margin-bottom: 5px;
-    }
-    .blog1{
-        font-size: 30px;
-        padding: 10px 5px 5px 30px;
-        color: #000000;
-    }
-    .socials{
-        color: white;
-        font-size: 50px;
-        display: block;
-        text-align: center;
-    }
-    .media-visits{
-        position: relative;
-        left: 400px;
-        top: 20px;
-        font-size: 25px;
-        padding: 20px;
-    }
-    .ig-logo,
-    .in-logo,
-    .gt-logo{
-        width: 45px;
-        height: 45px;
-        margin: 10px 20px 10px 20px;
-    }
-    .media-container{
-        position: relative;
-        left: 370px;
-        top: 20px;
-        background-color: #999696;
-        width: fit-content;
-        height: 90px;
-        display: flex;
-        flex-direction: row;
-        border-radius: 10px;
-    }
-    .media-container p{
-        position: relative;
-        top: 60px;
-        right: 50px;
-        color: #000000;
-    }
-    .new-queries{
-        position: relative;
-        left: 980px;
-        bottom: 100px;
-        font-size: 25px;
-        padding: 20px;
-    }
-    .new-queries-container{
-        background-color: #999696;
-        width: 500px;
-        position: relative;
-        left: 880px;
-        bottom: 100px;
-        color: #000000;
-        border-radius: 10px;
-    }
-    #no-new-msg{
-        display: block;
-        text-align: center;
-        font-size: 30px;
-        padding: 5px;
-    }
-    .mark-seen{
-        width: fit-content;
-        padding: 5px;
-        font-size: 20px;
-        position: relative;
-        left: 20px;
-        bottom: 10px;
-        border-radius: 10px;
-        border: 0px;
-    }
-    .q-name{
-        padding: 20px 20px 5px 20px;
-        font-size: 22px;
-    }
-    .q-email{
-        padding: 0px 20px 5px 20px;
-        font-size: 22px;
-    }
-    .q-message{
-        padding: 0px 20px 20px 20px;
-        font-size: 22px;
-    }
-    
-    .all-queries{
-        position: relative;
-        left: 650px;
-        font-size: 25px;
-        padding-bottom: 20px;
-    }
-    .all-queries-container{
-        position: relative;
-        left: 400px;
-        background-color: #999696;
-        width: 50%;  
-        border-radius: 10px;
-    }
-    .all-queries-container p{
-        padding-bottom: 10px;
-        position: relative;
-        left: 10px;
-        color: #000000;
-        font-size: 20px;  
-    }
-    #no-msg{
-        display: block;
-        text-align: center;
-        font-size: 30px;
-        padding: 5px;
-    }
-    #file{
-        display: none;
-    } 
+  .all-queries {
+    position: relative;
+    left: 650px;
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+  .all-queries-container {
+    position: relative;
+    left: 400px;
+    background-color: #999696;
+    width: 50%;
+    border-radius: 10px;
+  }
+  .all-queries-container p {
+    padding-bottom: 10px;
+    position: relative;
+    left: 10px;
+    color: #000000;
+    font-size: 20px;
+  }
+  #no-msg {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+  }
+  #file {
+    display: none;
+  }
 }

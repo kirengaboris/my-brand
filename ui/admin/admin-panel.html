@@ -13,7 +13,7 @@
         </head>
        
     </head>
-    <body onload="displayLinkVisits()">
+    <body>
         <header>
             <nav id="navbar">
                 <div id="home">
@@ -26,7 +26,7 @@
                 <a class="blogs-articles" href="#blog">Blogs</a><hr>
                 <a class="queries" href="#queries-socials">Queries & Socials</a><hr>
 
-                <a href="/index.html"><button id="logoutbtn" type="button">Logout</button></a>
+                <button id="logoutbtn" type="button">Logout</button>
             </nav>
         </header>
 
@@ -57,7 +57,7 @@
                 
                 <input id="file" type="file">
                 <label for="file" id="image-btn">Add an image</label>
-                <button id="postbtn" type="submit">Preview</button>
+                <button id="postbtn" type="submit">Post</button>
             </form>
 
         </section>
@@ -75,17 +75,7 @@
            
         <section id="queries-socials">
 
-            <h2 class="socials">Queries & Socials</h2>
-
-            <h4 class="media-visits">Social Media Visits</h4>
-            <div class="media-container">
-                <img class="ig-logo" src="/assets/images/instagram.png">
-                <p id="link1-visit-count"></p>
-                <img class="in-logo" src="/assets/images/linkedin.png">
-                <p id="link2-visit-count"></p>
-                <img class="gt-logo" src="/assets/images/github.png">
-                <p id="link3-visit-count"></p>
-            </div>
+            <h2 class="socials">Queries</h2>
 
             <h4 class="new-queries">New Queries</h4>
             <div class="new-queries-container" id="new-queries">
@@ -102,6 +92,7 @@
         <a class="logoutbtn"href="/index.html"><button id="logoutbtn" type="button">Logout</button></a>
 
         <script src="/ui/admin/js/admin-panel.js"></script>
+        <script src="/ui/auth/logout.js"></script>
   
     </body>
 </html>

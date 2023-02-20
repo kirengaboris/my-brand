@@ -1,10 +1,10 @@
-const form = document.getElementById('login-form');
-const { email, password } = form;
+const form = document.getElementById('signup-form');
+const { username, email, password } = form;
 
-const login = async (payload) => {
+const signup = async (payload) => {
   try {
     const response = await fetch(
-      'https://boris-47i2.onrender.com/api/login',
+      'https://boris-47i2.onrender.com/api/signup',
 
       {
         method: 'POST',
@@ -17,38 +17,38 @@ const login = async (payload) => {
 
     const data = await response.json();
     console.log(data);
-    if (data.success === true) {
-      localStorage.setItem('token', JSON.stringify(data.token));
-      const payload = JSON.parse(atob(data.token.split('.')[1]));
 
-      console.log(payload);
-      if (payload.isAdmin == true) {
-        location.href = '/ui/admin/admin-panel.html';
-      } else {
-        location.href = '/index.html#blogs';
-      }
+    if (data.success === true) {
+      setSuccess(form.email);
+      location.href = '/index.html#login';
     } else {
-      console.log('Error Logging in');
+      setInvalid(form.email, data.message);
     }
   } catch (error) {
     console.log(error.message);
   }
 };
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  inputCheck(form);
-  const payload = {
-    email: email.value,
-    password: password.value,
-  };
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-  login(payload);
+  if (inputCheck(form)) {
+    const payload = {
+      username: form.username.value,
+      email: form.email.value,
+      password: form.password.value,
+    };
+    signup(payload);
+  }
 });
 
 function inputCheck(form) {
   let required = true;
 
+  if (form.username.value.trim() === '') {
+    setInvalid(form.username, 'Username is required');
+    required = false;
+  }
   if (form.email.value.trim() === '') {
     setInvalid(form.email, 'Email is required');
     required = false;

@@ -1,228 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width =device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="/assets/styles/index.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=La Belle Aurore' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width =device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/assets/styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=La Belle Aurore"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="dropdown-nav" class="dropdown" />
+      <nav id="navbar">
+        <div id="home">
+          <a class="landing-page" href="#landing-page">
+            <img class="logo" src="/assets/images/logo.png" />
+          </a>
+          <p>Web Developer</p>
+        </div>
+        <a class="about-me" href="#about-me">About Me</a>
+        <hr />
+        <a class="work" href="#work"> My Work</a>
+        <hr />
+        <a class="blogs" href="#blogs">Blogs</a>
+        <hr />
+        <a class="contacts" href="#contacts">Contacts</a>
+        <hr />
+        <a class="login" href="#login">Login</a>
+        <hr />
+      </nav>
+      <label for="dropdown-nav" class="dropdown-nav">
+        <img class="dropdown-nav" src="/assets/images/menu.png" />
+      </label>
+    </header>
 
-    </head>
-    <body>
-        <header>
-            <input type="checkbox" id="dropdown-nav" class="dropdown">
-            <nav id="navbar">
-                <div id="home">
-                    <a class="landing-page" href="#landing-page"> 
-                        <img class="logo" src="/assets/images/logo.png">
-                     </a>
-                     <p>Web Developer</p>
-                </div>
-                <a class="about-me" href="#about-me">About Me</a><hr>
-                <a class="work" href="#work"> My Work</a><hr>
-                <a class="blogs" href="#blogs">Blogs</a><hr>
-                <a class="contacts" href="#contacts">Contacts</a><hr>
-                <a class="login" href="#login">Login</a><hr>
-            </nav>
-            <label for="dropdown-nav" class="dropdown-nav">
-                <img class="dropdown-nav" src="/assets/images/menu.png">
-            </label>
-            
-        </header>
+    <section id="landing-page">
+      <p class="tag1lp">&lthtml&gt</p>
+      <p class="tag2lp">&ltbody&gt</p>
+      <p class="tag3lp">&lth1&gt</p>
+      <h1 id="h1"><strong>Hi,</strong></h1>
+      <h1 class="welcome">
+        <strong
+          >I'm <img class="inner-logo" src="/assets/images/B.png" />oris</strong
+        >
+      </h1>
+      <h1 class="welcome">
+        <strong>Web Developer</strong>
+        <p class="tag4lp">&lth1/&gt</p>
+      </h1>
+      <p class="tag5lp">&ltp&gt</p>
+      <p id="p">
+        Front &nbsp End &nbsp Developer &nbsp / &nbsp WordPress &nbsp Expert
+      </p>
+      <p class="tag6lp">&ltp/&gt</p>
+    </section>
 
-         <section id="landing-page">
-             <p class="tag1lp">&lthtml&gt</p>
-             <p class="tag2lp">&ltbody&gt</p>
-             <p class="tag3lp">&lth1&gt</p>
-            <h1 id="h1"><strong>Hi,</strong></h1>
-            <h1 class="welcome"><strong>I'm <img class="inner-logo" src="/assets/images/B.png">oris</strong></h1>
-            <h1 class="welcome"><strong>Web Developer</strong><p class="tag4lp">&lth1/&gt</p></h1>
-            <p class="tag5lp">&ltp&gt</p>
-            <p id="p">Front &nbsp End &nbsp Developer &nbsp / &nbsp WordPress &nbsp Expert</p>
-            <p class="tag6lp">&ltp/&gt</p>
-           
-        </section>
+    <section id="about-me">
+      <p class="tag1ap">&lth2&gt</p>
+      <h2>About Me</h2>
+      <p class="tag2ap">&lt/h2&gt</p>
+      <div id="profile-picture">
+        <img class="picture" src="/assets/images/Profile.JPG" />
+      </div>
+      <p class="tag3ap">&ltp&gt</p>
+      <p class="description">
+        My name is Kirenga Boris.<br />
+        I am a Rwandan Software Developer<br />
+        Currently taking trainings at Andela.<br />
+        <br />consectetur adipiscing elit, sed do<br />
+        eiusmod tempor incididunt ut labore<br />
+        et dolore magna aliqua. Ut enim ad <br />
+        minim veniam, quis nostrud exercitation <br />
+        ullamco laboris nisi ut aliquip ex ea<br />
+        commodo consequat.<br />
+        <br />consectetur adipiscing elit, sed do <br />
+        eiusmod tempor incididunt ut <br />
+        labore et dolore magna aliqua. <br />
+        Ut enim ad minim veniam, quis <br />
+        nostrud exercitation ullamco laboris.
+      </p>
+      <p class="tag4ap">&lt/p&gt</p>
+      <div id="skills">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>ReactJS</p>
+        <p>JSON</p>
+        <p>PHP</p>
+        <p>ES5/ES6</p>
+      </div>
+    </section>
 
-        <section id="about-me">
-            <p class="tag1ap">&lth2&gt</p>
-            <h2>About Me</h2>
-            <p class="tag2ap">&lt/h2&gt</p>
-            <div id="profile-picture">
-                <img class="picture" src="/assets/images/Profile.JPG">
-            </div>
-            <p class="tag3ap">&ltp&gt</p>
-            <p class="description">My name is Kirenga Boris.<br>
-                I am a Rwandan Software Developer<br>
-                Currently taking trainings at Andela.<br>
-                <br>consectetur adipiscing elit, sed do<br>
-                 eiusmod tempor incididunt ut labore<br>
-                  et dolore magna aliqua. Ut enim ad <br>
-                  minim veniam, quis nostrud exercitation <br>
-                  ullamco laboris nisi ut aliquip ex ea<br>
-                   commodo consequat.<br>
-                <br>consectetur adipiscing elit, sed do <br>
-                eiusmod tempor incididunt ut <br>
-                labore et dolore magna aliqua. <br>
-                Ut enim ad minim veniam, quis <br>
-                nostrud exercitation ullamco laboris.
-            </p>
-            <p class="tag4ap">&lt/p&gt</p>
-            <div id="skills">
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-                <p>ReactJS</p>
-                <p>JSON</p>
-                <p>PHP</p>
-                <p>ES5/ES6</p>
-            </div>
-           
-        </section>
+    <section id="work">
+      <p class="tag1w">&lth2&gt</p>
+      <h2>My Work</h2>
+      <p class="tag2w">&lt/h2&gt</p>
+      <p class="tag3w">&ltp&gt</p>
+      <p class="work-description">
+        Here are the projects I worked on,<br />
+        Some were done by me and others I was <br />
+        among the team that worked on them.
+      </p>
+      <p class="tag4w">&lt/p&gt</p>
+      <p class="tag5w">&ltsection&gt</p>
+      <div class="projects">
+        <div class="project1">
+          <div class="project-img p1-img"></div>
+          <h3>Music App</h3>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+        <div class="project2">
+          <div class="project-img p2-img"></div>
+          <h3>Music App</h3>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+        <div class="project3">
+          <div class="project-img p3-img"></div>
+          <h3>Music App</h3>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+        <div class="project4">
+          <div class="project-img p4-img"></div>
+          <h3>Music App</h3>
+          <a class="project-link" href="#">View Project</a>
+        </div>
+      </div>
+      <p class="tag6w">&lt/section&gt</p>
+    </section>
 
-        <section id="work">
-            <p class="tag1w">&lth2&gt</p>
-            <h2> My Work</h2>
-            <p class="tag2w">&lt/h2&gt</p>
-            <p class="tag3w">&ltp&gt</p>
-            <p class="work-description">Here are the projects I worked on,<br>
-                Some were done by me and others I was <br>
-                among the team that worked on them.
-            </p>
-            <p class="tag4w">&lt/p&gt</p>
-            <p class="tag5w">&ltsection&gt</p>
-            <div class="projects">
-                <div class="project1">
-                    <div class="project-img p1-img"></div>
-                    <h3>Music App</h3>
-                    <a class="project-link" href="#">View Project</a>
-                </div>
-                <div class="project2">
-                    <div class="project-img p2-img"></div>
-                    <h3>Music App</h3>
-                    <a class="project-link" href="#">View Project</a>
-                </div>
-                <div class="project3">
-                    <div class="project-img p3-img"></div>
-                    <h3>Music App</h3>
-                    <a class="project-link" href="#">View Project</a>
-                </div>
-                <div class="project4">
-                    <div class="project-img p4-img"></div>
-                    <h3>Music App</h3>
-                    <a class="project-link" href="#">View Project</a>
-                </div>
-            
-            </div>
-            <p class="tag6w">&lt/section&gt</p>
-        </section>
+    <section id="blogs">
+      <p class="tag1bp">&lth2&gt</p>
+      <h2 class="b-title">Blogs</h2>
+      <p class="tag2bp">&lt/h2&gt</p>
+      <p id="no-blog-list">No Blogs Yet</p>
+      <!-- blog list is rendered here -->
+    </section>
 
-        <section id="blogs">
-            <p class="tag1bp">&lth2&gt</p>
-            <h2 class="b-title">Blogs</h2>
-            <p class="tag2bp">&lt/h2&gt</p>
-            <p id="no-blog-list">No Blogs Yet</p>
-            <!-- blog list is rendered here -->
-        </section>
+    <section id="contacts">
+      <p class="tag1cp">&lth2&gt</p>
+      <h2><strong>Contact Me</strong></h2>
+      <p class="tag2cp">&lth2/&gt</p>
 
-        <section id="contacts">
-            <p class="tag1cp">&lth2&gt</p>
-            <h2><strong>Contact Me</strong></h2>
-            <p class="tag2cp">&lth2/&gt</p>
-            
-            <div id="short-message">
-                <p class="tag3cp">&ltp&gt</p>
-                <p>I'm interested in freelance opportunities.<br>
-                    However, if you have other request or question,<br>
-                    Feel free to use the form.
-                </p>
-                <p class="tag4cp">&ltp/&gt</p>
-            </div>
-            
-            <form id="contact-form">
-                <p class="tag5cp">&ltform&gt</p>
-                <div id="names-label">
-                    <input id="name" name="names"type="text" placeholder="Name">
-                    <div id="error-msg1"></div>
-                </div>
-                <div id="emails-label">
-                    <input id="email" name="email" placeholder="Email"><br>
-                    <div id="error-msg2"></div>
-                </div>
-                <div id="message-label">
-                    <textarea id="message" name="message" placeholder="Message"></textarea><br>
-                    <div id="error-msg3"></div>
-                </div>
-               
-                <button id="sendbtn" type="submit">Send Message</button>
-                <p class="tag6cp">&ltform/&gt</p>
-            </form>
-            
-            <div id="other-contacts">
-                <div class="instagram">
-                    <img class="ig-logo" src="/assets/images/instagram.png">
-                    <a class="styled-link" id="ig-profile link1-visit-count" href="https://www.instagram.com/k.boris5/?hl=en" target="blank" onclick="trackLinkVisit('link1')">Instagram</a>
-                </div>
-                <div class="linkedin">
-                    <img class="in-logo" src="/assets/images/linkedin.png">
-                    <a class="styled-link" id="in-profile link2-visit-count" href="https://www.linkedin.com/in/boris-kirenga-b069341b1/" target="blank" onclick="trackLinkVisit('link2')">Linkedin</a>
-                </div>
-                <div class="github">
-                    <img class="gt-logo" src="/assets/images/github.png">
-                    <a class="styled-link" id="gt-profile link3-visit-count" href="https://github.com/kirengaboris" target="blank" onclick="trackLinkVisit('link3')">Github</a>
-                </div>
-                <div class="email">
-                    <img class="email-logo" src="/assets/images/gmail.png">
-                    <p id="email-link">kirengaboris5@gmail.com</p>
-                </div>
-            </div>
-        </section> 
+      <div id="short-message">
+        <p class="tag3cp">&ltp&gt</p>
+        <p>
+          I'm interested in freelance opportunities.<br />
+          However, if you have other request or question,<br />
+          Feel free to use the form.
+        </p>
+        <p class="tag4cp">&ltp/&gt</p>
+      </div>
 
-        <section id="login">
-            <p class="tag1logp">&lth2&gt</p>
-            <h2>Login</h2>
-            <p class="tag2logp">&lt/h2&gt</p>
-            <form id="login-form">
-                <p class="tag3logp">&ltform&gt</p>
-                <div class="login-container">
-                    <h3>Login</h3>
-                    <div id="email-label">
-                        <input id="login-email" name="email" placeholder="Email" /><br>
-                        <div id="error-msg"></div>
-                    </div>
+      <form id="contact-form">
+        <p class="tag5cp">&ltform&gt</p>
+        <div id="names-label">
+          <input id="name" name="names" type="text" placeholder="Name" />
+          <div id="error-msg1"></div>
+        </div>
+        <div id="emails-label">
+          <input id="email" name="email" placeholder="Email" /><br />
+          <div id="error-msg2"></div>
+        </div>
+        <div id="message-label">
+          <textarea id="message" name="message" placeholder="Message"></textarea
+          ><br />
+          <div id="error-msg3"></div>
+        </div>
 
-                   <div id="password-label">
-                    <input id="login-password" name="password" type="password" placeholder="Password"><br>
-                    <div id="error-msg"></div>
-                   </div>
-                    
-                    <button id="loginbtn" type="submit">Login</button>
-                    <p class="loginmsg">Forgot Password?</p>
-                </div>
-                <p class="tag4logp">&lt/form&gt</p> 
-            </form>
-            <p class="tag5logp">&lt/body&gt</p>
-            <p class="tag6logp">&lt/html&gt</p>
+        <button id="sendbtn" type="submit">Send Message</button>
+        <p class="tag6cp">&ltform/&gt</p>
+      </form>
 
-        </section>
+      <div id="other-contacts">
+        <div class="instagram">
+          <img class="ig-logo" src="/assets/images/instagram.png" />
+          <a
+            class="styled-link"
+            id="ig-profile"
+            href="https://www.instagram.com/k.boris5/?hl=en"
+            target="blank"
+            >Instagram</a
+          >
+        </div>
+        <div class="linkedin">
+          <img class="in-logo" src="/assets/images/linkedin.png" />
+          <a
+            class="styled-link"
+            id="in-profile "
+            href="https://www.linkedin.com/in/boris-kirenga-b069341b1/"
+            target="blank"
+            >Linkedin</a
+          >
+        </div>
+        <div class="github">
+          <img class="gt-logo" src="/assets/images/github.png" />
+          <a
+            class="styled-link"
+            id="gt-profile "
+            href="https://github.com/kirengaboris"
+            target="blank"
+            >Github</a
+          >
+        </div>
+        <div class="email">
+          <img class="email-logo" src="/assets/images/gmail.png" />
+          <p id="email-link">kirengaboris5@gmail.com</p>
+        </div>
+      </div>
+    </section>
 
-        <script src="index.js"></script>
-        <script src="/ui/auth/login.js"></script>
-        <script src="/ui/auth/contact.js"></script>
+    <section id="login">
+      <p class="tag1logp">&lth2&gt</p>
+      <h2>Login</h2>
+      <p class="tag2logp">&lt/h2&gt</p>
+      <form id="login-form">
+        <p class="tag3logp">&ltform&gt</p>
+        <div class="login-container">
+          <h3>Login</h3>
+          <div id="email-label">
+            <input id="login-email" name="email" placeholder="Email" /><br />
+            <div id="error-msg"></div>
+          </div>
 
-    </body>
+          <div id="password-label">
+            <input
+              id="login-password"
+              name="password"
+              type="password"
+              placeholder="Password"
+            /><br />
+            <div id="error-msg"></div>
+          </div>
+
+          <button id="loginbtn" type="submit">Login</button>
+          <p class="loginmsg">you don't have an account?</p>
+          <a class="signup" href="/ui/client/signup.html">SignUp</a>
+        </div>
+        <p class="tag4logp">&lt/form&gt</p>
+      </form>
+      <p class="tag5logp">&lt/body&gt</p>
+      <p class="tag6logp">&lt/html&gt</p>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="/ui/auth/login.js"></script>
+    <script src="/ui/auth/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script></script>
+  </body>
 </html>
-
-        <!-- <div class="likes"> -->
-            <!-- <img class="likes-logo" id="likes-logo1"src="/assets/images/like.png"> -->
-            <!-- <p class="likes-num" id="likes-num1">20</p> -->
-        <!-- </div> -->
-        <!-- <div class="comment"> -->
-            <!-- <img class="comments-logo" id="comments-logo1"src="/assets/images/comments.png"> -->
-            <!-- <p class="comments-num" id="comments-num1">10</p> -->
-        <!-- </div> -->
-                     
-                 
-                
-            
-                

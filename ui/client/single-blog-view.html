@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width =device-width, initial-scale=1.0">
-        <title>Blog</title>
-        <link rel="stylesheet" href="/assets/styles/single-blog-view.css">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Forum" />
-    </head>
-    <body>
-        <input type="checkbox" id="dropdown-nav" class="dropdown">
-        <nav id="navbar">
-            <div id="home">
-                <a class="blog-page" href="/index.html"> 
-                    <img class="logo" src="/assets/images/logo.png">
-                </a>
-                 <p>Web Developer</p>
-            </div>
-            <div id="featured">
-               <!-- render featured blogs -->
-            </div>
-               
-        </nav>
-        <label for="dropdown-nav" class="dropdown-nav">
-            <img class="dropdown-nav" src="/assets/images/menu.png">
-        </label>
-        <div class="blog-container" id="blog-container">
-            <!-- render blogs here -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width =device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/assets/styles/single-blog-view.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Forum"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="dropdown-nav" class="dropdown" />
+    <nav id="navbar">
+      <div id="home">
+        <a class="blog-page" href="/index.html">
+          <img class="logo" src="/assets/images/logo.png" />
+        </a>
+        <p>Web Developer</p>
+      </div>
+      <div id="featured">
+        <!-- render featured blogs -->
+      </div>
+    </nav>
+    <label for="dropdown-nav" class="dropdown-nav">
+      <img class="dropdown-nav" src="/assets/images/menu.png" />
+    </label>
+    <div class="blog-container" id="blog-container">
+      <!-- render blogs here -->
+    </div>
+    <div class="comments-likes">
+      <a class="back" href="/index.html#blogs">Back To Blogs</a>
+      <input type="checkbox" id="likes" class="likes-counter" />
+      <label for="likes" class="likes">
+        <img
+          id="like-icon"
+          class="like"
+          src="/assets/images/like.png"
+          style="transform: scale(1)"
+        />
+      </label>
+
+      <form class="comments-form" id="comment-form">
+        <div id="comment-label">
+          <textarea id="comment" placeholder="Add a comment"></textarea>
+          <div id="error2"></div>
         </div>
-       <div class="comments-likes">
-            <a class="back" href="/index.html#blogs">Back To Blogs</a>
-            <input type="checkbox" id="likes" class="likes-counter">
-            <label for="likes" class="likes">
-               
-                <img id="like-icon" class="like" src="/assets/images/like.png" style="transform: scale(1);">
 
-            </label>
-            
-            <form class="comments-form" id="comment-form">
-                <div id="name-label">
-                    <input id="name" type="text" placeholder="Names">
-                    <div id="error1"></div>
-                </div>
-                <div id="comment-label">
-                    <textarea id="comment" placeholder="Add a comment"></textarea>
-                    <div id="error2"></div>
-                </div>
-                
-                <button id="commentbtn" type="submit">Post</button>
-            </form>
+        <button id="commentbtn" type="submit">Post</button>
+      </form>
 
-            <p class="c-title">Comments</p>
+      <p class="c-title">Comments</p>
 
-            <div class="comments-list" id="comments-list">
-                <p id="no-comment">No comments yet</p>
-            </div>
-       </div>
-       
-        <script src="/ui/auth/single-blog-view.js"></script>
-    </body>
+      <div class="comments-list" id="comments-list">
+        <p id="no-comment">No comments yet</p>
+      </div>
+    </div>
+
+    <script src="/ui/auth/single-blog-view.js"></script>
+  </body>
 </html>
