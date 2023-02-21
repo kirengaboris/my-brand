@@ -29,27 +29,6 @@ contactForm.addEventListener('submit', (e) => {
     .catch((error) => console.log(error));
 });
 
-// contactForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   const formData = new FormData(contactForm);
-//   const payload = {
-//     name: formData.get('names'),
-//     email: formData.get('email'),
-//     message: formData.get('message'),
-//   };
-
-// });
-// function sendQuery(payload) {
-//   const response = fetch('https://boris-47i2.onrender.com/api/queries', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(payload),
-//   });
-//   return response.json;
-// }
-
 function validEmail(email) {
   const re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

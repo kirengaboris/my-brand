@@ -14,6 +14,36 @@ const likeCheckBox = document.getElementById('likes');
 const likeIcon = document.getElementById('like-icon');
 var currentScale = 1;
 
+async function getBlogs() {
+  const url = 'https://boris-47i2.onrender.com/api/blogs';
+
+  try {
+    let res = await fetch(url);
+    return await res.json();
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+getBlogs();
+async function renderBlogs() {
+  let blogs = await getBlogs();
+  let blogsArray = blogs.data;
+  function featuredBlogs(postId) {
+    const featuredBlogs = blogsArray.filter(({ _id }) => _id != postId);
+    featuredBlogs.map(({ _id, title }) => {
+      featured.insertAdjacentHTML(
+        'afterbegin',
+        `
+        <a class="section1" href="/ui/client/single-blog-view.html#${_id}" target="_blank">${title}</a>
+        `,
+      );
+    });
+  }
+  featuredBlogs(postId);
+}
+renderBlogs();
+
 async function getBlog() {
   const getBlogUrl = `https://boris-47i2.onrender.com/api/blogs/${postId}`;
   const getCommentsUrl = `https://boris-47i2.onrender.com/api/blogs/${postId}/comments`;
@@ -111,21 +141,32 @@ commentsForm.addEventListener('submit', (event) => {
   }
 });
 
-likeCheckBox.addEventListener('change', (e) => {
-  if (likeCheckBox.checked) {
-    currentScale = 1.5;
-    likeIcon.style.transform = `scale(${currentScale})`;
-  } else {
-    likeIcon.style.transform = `scale(${currentScale})`;
-    currentScale = 1;
-  }
-  const likesNumber = addLike(postId, likeCheckBox);
-  blogsArray.map((blog) => {
-    if (blog.blogId == postId) {
-      blog.likes = likesNumber;
+const addLike = async (postId) => {
+  try {
+    const response = await fetch(
+      `https://boris-47i2.onrender.com/api/blogs/${postId}/likes`,
+      {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
+        },
+      },
+    );
+    const data = await response.json();
+    console.log(data);
+    if (data.success === true) {
+      location.reload();
     }
-  });
-  localStorage.setItem('Blogs', JSON.stringify(blogsArray));
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+likeCheckBox.addEventListener('change', () => {
+  if (likeCheckBox.checked) {
+    addLike(postId);
+  }
 });
 
 function checkComment(theComment) {
@@ -143,22 +184,4 @@ function checkComment(theComment) {
     }
   }
   return validComment;
-}
-
-function postComment(postId, commentsObject) {
-  const fetchedBlog = blogsArray.filter(({ blogId }) => blogId == `${postId}`);
-  fetchedBlog[0].comments.push(commentsObject);
-
-  return fetchedBlog[0].comments;
-}
-function addLike(postId, checkBox) {
-  const fetchedBlog = blogsArray.filter(({ blogId }) => blogId == `${postId}`);
-  let counter = 0;
-  if (checkBox.checked) {
-    counter++;
-  } else {
-    counter = 0;
-  }
-  fetchedBlog[0].likes.push(counter);
-  return fetchedBlog[0].likes;
 }

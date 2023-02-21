@@ -44,14 +44,3 @@ async function renderBlogs() {
   }
 }
 renderBlogs();
-
-let linkVisits = JSON.parse(localStorage.getItem('linkVisits')) || {
-  link1: 0,
-  link2: 0,
-  link3: 0,
-};
-
-function trackLinkVisit(linkId) {
-  linkVisits[linkId]++;
-  localStorage.setItem('linkVisits', JSON.stringify(linkVisits));
-}

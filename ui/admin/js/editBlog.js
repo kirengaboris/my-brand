@@ -11,19 +11,21 @@ const reader = new FileReader();
 const href = new URL(location.href);
 const postId = href.hash.replace('#', '');
 
-async function updateBlog(updatedBlog) {
+async function updateBlog(postId, payload) {
   const url = `https://boris-47i2.onrender.com/api/blogs/${postId}`;
   try {
     let res = await fetch(url, {
       method: 'PATCH',
+      body: payload,
       headers: {
         Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
-        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedBlog),
     });
-    const updatedData = await res.json();
-    console.log(updatedData);
+    const data = await res.json();
+    console.log(data);
+    if (data.success === true) {
+      location.href = '/index.html#blogs';
+    }
   } catch (error) {
     console.error(error);
   }
@@ -54,14 +56,12 @@ async function fetchBlog(blogId) {
 
     articlesForm.addEventListener('submit', (event) => {
       event.preventDefault();
-      const updatedBlog = {
-        id: currentBlog.data.id,
-        topic: topic.value,
-        title: title.value,
-        content: post.value,
-        image: file.files[0],
-      };
-      updateBlog(updatedBlog);
+      const formData = new FormData();
+      formData.append('topic', topic.value);
+      formData.append('title', title.value);
+      formData.append('content', tinymce.activeEditor.getContent());
+      formData.append('image', file.files[0]);
+      updateBlog(postId, formData);
     });
   } catch (error) {
     console.error(error);
@@ -69,84 +69,6 @@ async function fetchBlog(blogId) {
 }
 
 fetchBlog(postId);
-
-// let currentBlog = null;
-
-// async function fetchBlog(blogId) {
-//   const url = `https://boris-47i2.onrender.com/api/blogs/${blogId}`;
-//   try {
-//     let res = await fetch(url, {
-//       method: 'GET',
-//       headers: {
-//         Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
-//       },
-//     });
-//     const fetchedBlog = await res.json();
-
-//     currentBlog = fetchedBlog;
-//     editingBlog = currentBlog.data;
-//     console.log(editingBlog);
-
-//     const { topic, title, post, image } = articlesForm;
-//     topic.value = editingBlog.topic;
-//     title.value = editingBlog.title;
-//     post.value = editingBlog.content;
-//     console.log(editingBlog.content);
-//     console.log(post);
-//     image.result = editingBlog.image;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// fetchBlog(postId);
-
-// let blogsArray = JSON.parse(localStorage.getItem("Blogs"))??[];
-
-// let currentBlog = null;
-
-// function fetchBlog(postId){
-//     const fetchedBlog = blogsArray.filter(({blogId}) => blogId == postId)
-//     if(fetchedBlog){
-
-//         currentBlog = fetchedBlog;
-//         const { topic, title, content, image} = articlesForm;
-//         fetchedBlog.map((blog) => {
-//             imagePreview.src= blog.image;
-//             topic.value = blog.topic;
-//             title.value = blog.title;
-//             content.value = blog.article;
-//             image.result = blog.image;
-//         })
-//     }
-// }
-//  fetchBlog(postId)
-
-// images.addEventListener("change", function(){
-//     reader.readAsDataURL(this.files[0])
-// })
-
-// articlesForm.addEventListener("submit", e =>{
-//     e.preventDefault();
-//     var myContent = tinymce.activeEditor.getContent();
-//     var topicName = topic.value;
-//     var tittleName = title.value;
-
-//     if(checkBlog(topicName,tittleName,myContent)){
-//         blog = {
-//             ...currentBlog[0],
-//             topic : topicName,
-//             title : tittleName,
-//             article : myContent,
-//             image : reader.result,
-//             summary : myContent.substring(0, 200)+ "...",
-//         }
-
-//         const index = blogsArray.findIndex(blog => blog.blogId === currentBlog[0].blogId);
-//         blogsArray[index] = blog;
-//         localStorage.setItem("Blogs", JSON.stringify(blogsArray));
-//         location.href = "/index.html"
-//     }
-// })
 
 function checkBlog(topicName, tittleName, myContent) {
   let valid = true;
