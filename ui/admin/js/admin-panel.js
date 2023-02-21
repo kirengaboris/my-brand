@@ -139,7 +139,7 @@ async function getQueries() {
 }
 getQueries();
 async function renderQueries() {
-  let queriesArray = await getQueries();
+  let queriesArray = (await getQueries()) ?? [];
   queriesArray.forEach((element) => {
     noMessageDiv.style.display = 'none';
 
