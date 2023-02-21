@@ -91,7 +91,7 @@ async function getBlog() {
               `
            <p>Names: ${user.username}</p>
            <p>Comment: ${comment}</p>
-           <p>Posted on: ${createdAt}</p><br/>
+           <p>Posted on: ${new Date(createdAt).toLocaleString()}</p><br/>
             `,
             );
           }

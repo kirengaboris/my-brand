@@ -49,7 +49,7 @@ async function fetchBlog(blogId) {
     const { topic, title, post, file } = articlesForm;
     topic.value = editingBlog.topic;
     title.value = editingBlog.title;
-    post.innerHTML = editingBlog.content;
+    post.value = tinymce.activeEditor.setContent(editingBlog.content);
     console.log(editingBlog.content);
     console.log(post);
     file.result = editingBlog.image;

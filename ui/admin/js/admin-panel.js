@@ -22,6 +22,9 @@ const createBlog = async (payload) => {
     });
     const data = await response.json();
     console.log(data);
+    if (data.success === true) {
+      location.reload();
+    }
   } catch (error) {
     console.log(error.message);
   }
@@ -38,9 +41,6 @@ articlesForm.addEventListener('submit', (event) => {
   formData.append('content', tinymce.activeEditor.getContent());
   formData.append('image', file.files[0]);
   createBlog(formData);
-  setTimeout(function () {
-    location.reload();
-  }, 2000);
 });
 
 async function getBlogs() {
@@ -86,7 +86,10 @@ async function deleteBlog(blogId) {
         Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
       },
     });
-    return await res.json();
+    const data = await res.json();
+    if (data.success === true) {
+      location.reload();
+    }
   } catch (error) {
     console.log(error);
     return null;
@@ -114,9 +117,6 @@ async function renderBlogs() {
       deleteButton.addEventListener('click', async () => {
         const response = await deleteBlog(element._id);
         deleteButton.parentElement.remove();
-        setTimeout(function () {
-          location.reload();
-        }, 2000);
       });
     }
   });
@@ -140,7 +140,6 @@ async function getQueries() {
 getQueries();
 async function renderQueries() {
   let queriesArray = await getQueries();
-  console.log(queriesArray);
   queriesArray.forEach((element) => {
     noMessageDiv.style.display = 'none';
 
@@ -156,6 +155,13 @@ async function renderQueries() {
         <button class="mark-seen" type="button" data-id=${element?._id}>Mark as read</button>
         `,
       );
+
+      const markSeen = document.querySelector('.mark-seen');
+      console.log(markSeen);
+      markSeen.addEventListener('click', () => {
+        const id = markSeen.dataset.id;
+        markAsRead(id);
+      });
     } else {
       queriesOutput.insertAdjacentHTML(
         'afterbegin',
@@ -170,24 +176,27 @@ async function renderQueries() {
 }
 renderQueries();
 
-const deleteBtns = [...document.getElementsByClassName('mark-seen')];
-
-deleteBtns.forEach((button) => {
-  button.addEventListener('click', (e) => {
-    const targetBtn = e.currentTarget.dataset.id;
-    markSeen(targetBtn);
-  });
-});
-
-function markSeen(messageId) {
-  queriesArray.forEach((element) => {
-    if (element.id == messageId) {
-      element.seen = true;
+const markAsRead = async (id) => {
+  try {
+    const response = await fetch(
+      `https://boris-47i2.onrender.com/api/queries/${id}`,
+      {
+        method: 'PATCH',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
+        },
+      },
+    );
+    const data = await response.json();
+    console.log(data);
+    if (data.success === true) {
+      location.reload();
     }
-  });
-  localStorage.setItem('Queries', JSON.stringify(queriesArray));
-  location.reload();
-}
+  } catch (error) {
+    console.log(error.message);
+  }
+};
 
 function checkBlog(myContent, topicName, tittleName) {
   let valid = true;
