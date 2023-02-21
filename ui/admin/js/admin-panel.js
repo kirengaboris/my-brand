@@ -31,7 +31,6 @@ const createBlog = async (payload) => {
 };
 
 const { topic, title, post, file } = articlesForm;
-console.log(post);
 
 articlesForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -40,7 +39,15 @@ articlesForm.addEventListener('submit', (event) => {
   formData.append('title', title.value);
   formData.append('content', tinymce.activeEditor.getContent());
   formData.append('image', file.files[0]);
-  createBlog(formData);
+
+  const isValid = checkBlog(
+    topic.value,
+    title.value,
+    tinymce.activeEditor.getContent(),
+  );
+  if (isValid) {
+    createBlog(formData);
+  }
 });
 
 async function getBlogs() {
@@ -198,7 +205,7 @@ const markAsRead = async (id) => {
   }
 };
 
-function checkBlog(myContent, topicName, tittleName) {
+function checkBlog(topicName, tittleName, myContent) {
   let valid = true;
 
   if (topicName == null || topicName === '') {
