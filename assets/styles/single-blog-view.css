@@ -1073,6 +1073,14 @@ body {
     position: relative;
     right: 10px;
   }
+  .likes-count {
+    position: relative;
+    left: 650px;
+    bottom: 15px;
+    color: white;
+    font-family: Forum;
+    font-size: 20px;
+  }
   #likes {
     display: none;
   }
