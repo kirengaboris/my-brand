@@ -13,6 +13,7 @@ const featured = document.getElementById('featured');
 const likeCheckBox = document.getElementById('likes');
 const likeIcon = document.getElementById('like-icon');
 var currentScale = 1;
+const likeCounter = document.getElementById('like-counter');
 
 async function getBlogs() {
   const url = 'https://boris-47i2.onrender.com/api/blogs';
@@ -73,6 +74,10 @@ async function getBlog() {
             <p class="para">${fetchedBlog.content}</p>
             </article>
             `,
+      );
+      likeCounter.insertAdjacentHTML(
+        'afterbegin',
+        `${fetchedBlog.likes.length}`,
       );
       // handle comment response
       if (commentsResponse.status === 'rejected') {

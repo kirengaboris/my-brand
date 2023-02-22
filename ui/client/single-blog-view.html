@@ -32,7 +32,7 @@
     </div>
     <div class="comments-likes">
       <a class="back" href="/index.html#blogs">Back To Blogs</a>
-      <input type="checkbox" id="likes" class="likes-counter" />
+      <input type="checkbox" id="likes" style="display: none" />
       <label for="likes" class="likes">
         <img
           id="like-icon"
@@ -40,6 +40,7 @@
           src="/assets/images/like.png"
           style="transform: scale(1)"
         />
+        <span class="likes-count" id="like-counter"></span>
       </label>
 
       <form class="comments-form" id="comment-form">
