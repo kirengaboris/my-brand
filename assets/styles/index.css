@@ -2066,7 +2066,8 @@ body {
   .invalid-logins input {
     border: 1px solid red !important;
   }
-  #error-msg {
+  #error-msg,
+  #error-credential {
     font-size: 15px;
     color: red;
     display: block;

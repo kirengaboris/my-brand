@@ -31,6 +31,8 @@ const login = async (payload) => {
       console.log('Error Logging in');
     }
   } catch (error) {
+    const errorMsg = document.getElementById('error-credential');
+    errorMsg.innerHTML = 'Credentials Invalid';
     console.log(error.message);
   }
 };
