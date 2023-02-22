@@ -825,21 +825,15 @@ body {
   .dropdown-nav {
     display: none;
   }
-  a.section1 {
-    padding: 20px 20px 10px 10px;
-    position: relative;
-    left: 15px;
+  #featured a {
+    text-decoration: none;
+    color: #999696;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
   }
-  a.section2,
-  a.section3,
-  a.section4,
-  a.section5,
-  a.section6,
-  a.section7,
-  a.section8 {
-    padding-bottom: 10px;
-    position: relative;
-    left: 15px;
+  #featured a:hover {
+    color: #21efef;
   }
   h1,
   h2 {
