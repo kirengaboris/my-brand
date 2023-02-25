@@ -539,7 +539,8 @@ body {
   .invalid input {
     border: 1px solid red !important;
   }
-  #error-msg {
+  #error-msg,
+  #error-credential {
     font-size: 30px;
     color: red;
     display: block;
@@ -1069,7 +1070,8 @@ body {
   .invalid input {
     border: 1px solid red !important;
   }
-  #error-msg {
+  #error-msg,
+  #error-credential {
     font-size: 30px;
     color: red;
     display: block;
@@ -1593,7 +1595,8 @@ body {
   .invalid input {
     border: 1px solid red !important;
   }
-  #error-msg {
+  #error-msg,
+  #error-credential {
     font-size: 35px;
     color: red;
     display: block;
