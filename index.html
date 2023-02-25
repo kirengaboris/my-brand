@@ -13,10 +13,16 @@
       href="https://fonts.googleapis.com/css?family=La Belle Aurore"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
-    />
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
   </head>
   <body>
     <header>
@@ -139,10 +145,6 @@
     </section>
 
     <section id="blogs">
-      <p class="tag1bp">&lth2&gt</p>
-      <h2 class="b-title">Blogs</h2>
-      <p class="tag2bp">&lt/h2&gt</p>
-      <p id="no-blog-list">No Blogs Yet</p>
       <!-- blog list is rendered here -->
     </section>
 
@@ -253,10 +255,71 @@
       <p class="tag6logp">&lt/html&gt</p>
     </section>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
     <script src="/ui/auth/login.js"></script>
     <script src="/ui/auth/contact.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-    <script></script>
+    <script type="text/babel">
+      function FetchApi() {
+        const [blogs, setBlogs] = React.useState([]);
+
+        const apiGet = async () => {
+          const url = 'https://boris-47i2.onrender.com/api/blogs';
+
+          try {
+            const res = await fetch(url);
+            const data = await res.json();
+            const blogsArray = data.data;
+            console.log(blogsArray);
+            setBlogs(blogsArray);
+          } catch (error) {
+            console.log(error);
+          }
+        };
+
+        React.useEffect(() => {
+          apiGet();
+        }, []);
+
+        return (
+          <div className="blog-container">
+            {blogs.length > 0 ? (
+              blogs.map((blog) => (
+                <div key={blog._id} className="blog-card">
+                  <p className="tag1bp">&lt;h2&gt;</p>
+                  <h2 className="b-title">Blogs</h2>
+                  <p className="tag2bp">&lt;/h2&gt;</p>
+                  <div className="blog">
+                    <h1>{blog.topic}</h1>
+                    <h2>{blog.title}</h2>
+                    <p className="teaser">
+                      {blog.content.replace(/<[^>]+>/g, '').substring(0, 200) +
+                        '...'}
+                    </p>
+                  </div>
+                  <a
+                    className="blog-view"
+                    href={`/ui/client/single-blog-view.html#${blog._id}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Read More
+                  </a>
+                </div>
+              ))
+            ) : (
+              <div>
+                <p className="tag1bp">&lt;h2&gt;</p>
+                <h2 className="b-title">Blogs</h2>
+                <p className="tag2bp">&lt;/h2&gt;</p>
+                <p id="no-blog-list">No Blogs Yet!</p>
+              </div>
+            )}
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById('blogs'));
+      root.render(<FetchApi />);
+    </script>
   </body>
 </html>
